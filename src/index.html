@@ -452,10 +452,9 @@
                     <div class="action__side">
                         <div class="action__board">
                             <form name="excursion" action="">
-                                <div class="controllers">
-                                    <div class="select__fields">
+                                    <div class="select__fields clearfix">
                                         <div class="field date">
-                                            <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required>
+                                            <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required readonly>
                                         </div>
                                         <div class="field adults">
                                             <span>Взрослых</span>
@@ -491,7 +490,11 @@
                                                 <option>Англоязычный гид</option>
                                             </select>
                                         </div>
+                                        <div class="field date kid__bithd">
+                                            <input id="datepicker-1" class="calendar__field" type="text" placeholder="Дата рождения ребёнка" readonly>
+                                        </div>
                                     </div>
+                                <div class="filter">
                                     <div class="action__filter">
                                         <ul class="filter__list">
                                             <li class="title"><h4>Выберите варианты:</h4></li>
@@ -501,82 +504,82 @@
                                             <li class="item"><a href="#">Свой</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="filter__results">
-                                    <div class="filter__results__col">
-                                        <h5 class="title">Трансфер</h5>
-                                        <ul class="transfer__selectors">
-                                            <li>
-                                                <input type="radio" name="vehicle" value="cab" id="cab" />
-                                                <label for="cab">
-                                                    <span class="tooltip">Такси</span> (2 шт по $22) $44
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
-                                                <label for="bigCab">
-                                                    <span class="tooltip">Маршрутное такси</span> $30
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="vehicle" value="microBus" id="microBus" />
-                                                <label for="microBus">
-                                                    <span class="tooltip">Микроавтобус</span> $55
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="vehicle" value="bus" id="bus" />
-                                                <label for="bus">
-                                                    <span class="tooltip">Автобус - групповая (<a href="#">расписание</a>)</span> $80
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="vehicle" value="limo" id="limo" />
-                                                <label for="limo">
-                                                    <span class="tooltip">Лимузин</span> $120
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="filter__results__col">
-                                        <h5 class="title">Ужин</h5>
-                                        <ul class="transfer__selectors">
-                                            <li>
-                                                <input type="radio" name="dinner" value="thai" id="thai" />
-                                                <label for="thai">
-                                                    <span class="tooltip">Тайское</span> $15
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="dinner" value="euro" id="euro" />
-                                                <label for="euro">
-                                                    <span class="tooltip">Европейское</span> $20
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="dinner" value="veg" id="veg" />
-                                                <label for="veg">
-                                                    <span class="tooltip">Вегетарианское</span> $15
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="filter__results__col">
-                                        <h5 class="title">Обед</h5>
-                                        <ul class="transfer__selectors">
-                                            <li>
-                                                <input type="radio" name="lunch" value="none" id="none" />
-                                                <label for="none">
-                                                    <span>Не нужно</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="lunch" value="сambodia" id="сambodia" />
-                                                <label for="сambodia">
-                                                    <span class="tooltip">Камбоджийское</span> $15
-                                                </label>
-                                            </li>
-                                        </ul>
+                                    <div class="filter__results">
+                                        <div class="filter__results__col">
+                                            <h5 class="title">Трансфер</h5>
+                                            <ul class="transfer__selectors">
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="cab" id="cab" />
+                                                    <label for="cab">
+                                                        <span class="tooltip">Такси</span> (2 шт по $22) $44
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
+                                                    <label for="bigCab">
+                                                        <span class="tooltip">Маршрутное такси</span> $30
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="microBus" id="microBus" />
+                                                    <label for="microBus">
+                                                        <span class="tooltip">Микроавтобус</span> $55
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="bus" id="bus" />
+                                                    <label for="bus">
+                                                        <span class="tooltip">Автобус - групповая (<a href="#">расписание</a>)</span> $80
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="limo" id="limo" />
+                                                    <label for="limo">
+                                                        <span class="tooltip">Лимузин</span> $120
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="filter__results__col">
+                                            <h5 class="title">Ужин</h5>
+                                            <ul class="transfer__selectors">
+                                                <li>
+                                                    <input type="radio" name="dinner" value="thai" id="thai" />
+                                                    <label for="thai">
+                                                        <span class="tooltip">Тайское</span> $15
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="dinner" value="euro" id="euro" />
+                                                    <label for="euro">
+                                                        <span class="tooltip">Европейское</span> $20
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="dinner" value="veg" id="veg" />
+                                                    <label for="veg">
+                                                        <span class="tooltip">Вегетарианское</span> $15
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="filter__results__col">
+                                            <h5 class="title">Обед</h5>
+                                            <ul class="transfer__selectors">
+                                                <li>
+                                                    <input type="radio" name="lunch" value="none" id="none" />
+                                                    <label for="none">
+                                                        <span>Не нужно</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="lunch" value="сambodia" id="сambodia" />
+                                                    <label for="сambodia">
+                                                        <span class="tooltip">Камбоджийское</span> $15
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="total">

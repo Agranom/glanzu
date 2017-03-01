@@ -62,65 +62,57 @@
   .tour__description__info .item p a {
     color: #da4e80; }
 
-.controllers {
-  padding: 30px 30px 0; }
-  .controllers .select__fields {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-    .controllers .select__fields .field {
-      position: relative; }
-      .controllers .select__fields .field.date {
-        width: 130px; }
-        .controllers .select__fields .field.date:before {
-          content: '*';
-          font-size: 40px;
-          position: absolute;
-          left: -12px;
-          top: -19px;
-          color: #e44c82; }
-      .controllers .select__fields .field.adults, .controllers .select__fields .field.kids {
-        text-align: center; }
-  .controllers .action__filter {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-top: 25px; }
-    .controllers .action__filter .filter__list li {
-      display: inline-block;
-      line-height: 2.4em; }
-      .controllers .action__filter .filter__list li.title {
-        margin-right: 60px; }
-        .controllers .action__filter .filter__list li.title h4 {
-          font-size: 19px;
-          margin: 0; }
-      .controllers .action__filter .filter__list li.item {
-        margin-right: 20px; }
-        .controllers .action__filter .filter__list li.item.active a {
-          color: #da4e80;
-          border-bottom: 2px solid #da4e80;
-          padding: 0 5px;
-          line-height: 20px; }
-        .controllers .action__filter .filter__list li.item a {
-          font-size: 14px;
-          font-family: PTSans-Bold;
-          text-transform: uppercase;
-          color: #008da1;
-          display: inline-block; }
+.select__fields {
+  padding: 30px 0 0 30px; }
+  .select__fields .field {
+    position: relative;
+    float: left;
+    margin: 0 30px 25px 0; }
+    .select__fields .field.date {
+      width: 130px; }
+      .select__fields .field.date:before {
+        content: '*';
+        font-size: 40px;
+        position: absolute;
+        left: -12px;
+        top: -19px;
+        color: #e44c82; }
+    .select__fields .field.adults, .select__fields .field.kids {
+      text-align: center; }
+    .select__fields .field.kid__bithd {
+      width: 200px; }
+
+.action__filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 30px; }
+  .action__filter .filter__list li {
+    display: inline-block;
+    line-height: 2.4em; }
+    .action__filter .filter__list li.title {
+      margin-right: 60px; }
+      .action__filter .filter__list li.title h4 {
+        font-size: 19px;
+        margin: 0; }
+    .action__filter .filter__list li.item {
+      margin-right: 20px; }
+      .action__filter .filter__list li.item.active a {
+        color: #da4e80;
+        border-bottom: 2px solid #da4e80;
+        padding: 0 5px;
+        line-height: 20px; }
+      .action__filter .filter__list li.item a {
+        font-size: 14px;
+        font-family: PTSans-Bold;
+        text-transform: uppercase;
+        color: #008da1;
+        display: inline-block; }
 
 .filter__results {
   padding: 15px 30px 20px;
