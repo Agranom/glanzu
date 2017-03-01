@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta name="viewport" content="width=1024">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/base/jquery.ui.all.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- ===========================
+    WRAP SECTION
+    =========================== -->
+    <div class="wrapper">
+        <div id="up__btn">
+        </div>
+        <header class="header">
+            <div class="inner">
+                <div class="header__col1">
+                    <a class="logo" href="index.html" title="">&nbsp;</a>
+                </div>
+                <div class="header__col2">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Турпакеты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="hotels.html" title="">Отели</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Трансфер / Билеты</a>
+                            </li>
+                            <li class="nav__item nav__item--activ">
+                                <a class="nav__link" href="excursions.html" title="">Экскурсии</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Медпрограммы</a>
+                            </li>
+                            <li class="nav__item nav__item--hasSub">
+                                <a class="nav__link nav__link--curr js-link" href="#" title="">Информация</a>
+                                <ul class="nav__sub js-sub">
+                                    <li class="nav__subItem">
+                                        <a class="nav__subLink" href="#" title="">1</a>
+                                    </li>
+                                    <li class="nav__subItem">
+                                        <a class="nav__subLink" href="#" title="">2</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__col3">
+                    <ul class="icons-list">
+                        <li class="item__rollMenu">
+                            <a href="#" class="rollMenu js-roll">
+                                <span class="rollMenu__row"></span>
+                                <span class="rollMenu__row"></span>
+                                <span class="rollMenu__row"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="cart icons">
+                                <span class="cart__icon"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="profile icons">
+                                <span class="profile__icon"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="languages">
+                        <li class="languages__item">
+                            <a class="languages__link" href="#" title="">
+                                <span class="flag flag-ru"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="currencies">
+                        <li class="currencies__item">
+                            <a class="currencies__link js--currencies" href="#" title="">RUB</a>
+                            <ul class="currencies__sub">
+                                <li class="currencies__subItem">
+                                    <a class="currencies__subLink" href="#" title="">USD</a>
+                                </li>
+                                <li class="currencies__subItem">
+                                    <a class="currencies__subLink" href="#" title="">EUR</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </header>
+        <!-- ===========================
+        MAIN SECTION
+        =========================== -->
+        <main class="main">
+            <div class="inner">
+                <div class="container">
+                    <div class="page">
+                        &nbsp;
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <h1 class="sidebar__title">Отели</h1>
+                    <div class="filter">
+                        <form method="post" action="#">
+                            <div class="filter__location">
+                                <div class="chosen-wrap">
+                                    <select class="classic-select" style="width: 100%">
+                                        <option selected="selected" value="0">Любой населенный пункт</option>
+                                        <option value="1">Атланта, Джорджия, США</option>
+                                        <option value="2">Атлантик-Сити, Нью-Джерси, США</option>
+                                        <option value="3">Атлон, Уэстмит, Ирландия</option>
+                                        <option value="4">Сан-Педро-де- Атакама, Антофагаста, Чили</option>
+                                        <option value="5">Международный аэропорт Стамбула имени Ататюрка, Стамбул, Мраморноморский регион, Турция</option>
+                                        <option value="6">Атланта</option>
+                                        <option value="7">Джорджия</option>
+                                        <option value="8">Уэстмит</option>
+                                        <option value="9">ан-Педро-де- Атакама</option>
+                                        <option value="10">Сан-Педро-де- Атакама</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="calendar">
+                                <div class="calendar__data">
+                                    <input id="datepicker" class="calendar__field" type="text" placeholder="Дата заезда">
+                                </div>
+                                <div class="calendar__line">-</div>
+                                <div class="calendar__data">
+                                    <input id="datepicker-1" class="calendar__field" type="text" placeholder="Дата выезда">
+                                </div>
+                            </div>
+                            <div class="filter__count">
+                                <ul class="countList">
+                                    <li class="countList__item">
+                                        <div class="countList__text">Взрослых</div>
+                                        <div class="chosen-wrap">
+                                            <select class="nosearch-select" style="width: 100%">
+                                                <option selected value="0">1</option>
+                                                <option value="1">2</option>
+                                                <option value="2">3</option>
+                                                <option value="3">4</option>
+                                                <option value="4">5</option>
+                                                <option value="5">6</option>
+                                                <option value="6">7</option>
+                                                <option value="7">8</option>
+                                                <option value="8">9</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="countList__item">
+                                        <div class="countList__text">
+                                            <i class="countList__choose js-explanations">Детей</i>
+                                            <div class="explanations">
+                                                <span>Туристы считаются детьми до 17 лет.  От 18 - взрослыми.</span>
+                                            </div>
+                                        </div>
+                                        <div class="chosen-wrap">
+                                            <select class="nosearch-select" style="width: 100%">
+                                                <option selected value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter__price">
+                                <div class="chosen-wrap">
+                                    <select class="nosearchFull-select" style="width: 100%">
+                                        <option selected value="0">До 6 500 р. за номер</option>
+                                        <option value="1">До 7 500 р. за номер</option>
+                                        <option value="2">До 8 500 р. за номер</option>
+                                        <option value="3">До 9 500 р. за номер</option>
+                                        <option value="4">До 10 500 р. за номер</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter__rating">
+                                <ul class="rating">
+                                    <li class="rating__item">
+                                        <a class="rating__link" href="#" title=""><i class="star"></i></a>
+                                    </li>
+                                    <li class="rating__item">
+                                        <a class="rating__link" href="#" title=""><i class="star"></i></a>
+                                    </li>
+                                    <li class="rating__item">
+                                        <a class="rating__link" href="#" title=""><i class="star"></i></a>
+                                    </li>
+                                    <li class="rating__item">
+                                        <a class="rating__link" href="#" title=""><i class="star star-default"></i></a>
+                                    </li>
+                                    <li class="rating__item">
+                                        <a class="rating__link" href="#" title=""><i class="star star-default"></i></a>
+                                    </li>
+                                    <li class="rating__item">
+                                        <a class="rating__link rating__link--more" href="#" title="">и выше</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter__results">
+                                <div class="results">
+                                    <button disabled="disabled" class="bnt">Показать</button>
+                                </div>
+                            </div>
+                            <div class="filter__search">
+                                <div class="searchForm">
+                                    <button class="searchForm__btn"></button>
+                                    <input class="searchForm__field" type="text" placeholder="Название отеля" name="q" id="search" autocomplete="off">
+                                    <div id="tipue_drop_content"></div>
+                                </div>
+                            </div>
+                            <div class="filter__settings">
+                                <dl class="settingsList">
+                                    <dt>Бронирование</dt>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-0">
+                                            <label for="check-0">Бесплатная отмена брони</label>
+                                        </div>
+                                        <span class="settingsList__count">41</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-1">
+                                            <label for="check-1">Бронь без кредитной карты</label>
+                                        </div>
+                                        <span class="settingsList__count">8</span>
+                                        <div class="settingsList__popap">
+                                            <p>Ничего не найдено. Измените сочетание параметров</p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-2">
+                                            <label for="check-2">Без предоплаты</label>
+                                        </div>
+                                        <span class="settingsList__count">116</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 8 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="settingsList">
+                                    <dt>Популярное</dt>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-00">
+                                            <label for="check-00">Завтрак включен</label>
+                                        </div>
+                                        <span class="settingsList__count">86</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 7 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-01">
+                                            <label for="check-01">Отели</label>
+                                        </div>
+                                        <span class="settingsList__count">207</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 1 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-02">
+                                            <label for="check-02">Супер​​предложение</label>
+                                        </div>
+                                        <span class="settingsList__count">77</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 12 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-03">
+                                            <label for="check-03">Бесплатная отмена брони</label>
+                                        </div>
+                                        <span class="settingsList__count">41</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 14 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-04">
+                                            <label for="check-04">Можно с домашними животными</label>
+                                        </div>
+                                        <span class="settingsList__count">127</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 177 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="settingsList">
+                                    <dt>Удобства в номере</dt>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-000">
+                                            <label for="check-000">Ванна</label>
+                                        </div>
+                                        <span class="settingsList__count">43</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-001">
+                                            <label for="check-001">Кондиционер</label>
+                                        </div>
+                                        <span class="settingsList__count">131</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 8 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-002">
+                                            <label for="check-002">Собственная ванная комната</label>
+                                        </div>
+                                        <span class="settingsList__count">133</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 99 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="checkboxWrap">
+                                            <input type="checkbox" class="checkbox" id="check-003">
+                                            <label for="check-003">Бесплатная отмена брони</label>
+                                        </div>
+                                        <span class="settingsList__count">82</span>
+                                        <div class="settingsList__popap">
+                                            <p>Найдено 3 <a href="#" title="">Показать</a></p>
+                                        </div>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </main><!-- MAIN SECTION END-->
+
+    </div><!-- WRAP SECTION END-->
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--build:js js/libs.min.js -->
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/datepicker-ru.min.js"></script>
+
+
+    <!-- endbuild -->
+    <script src="js/tipuedrop.js"></script>
+    <script src="js/device.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search_content.js"></script>
+</body>
+</html>
