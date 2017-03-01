@@ -31,11 +31,6 @@ $(function () {
     $('.hidMenu').append('<div class="hidFirstChild">');
     var hidMFirst = $(".hidFirstChild");
 
-    //$(".js-roll").click(function () {
-    //    $(this).toggleClass("active");
-    //    hidM.slideToggle("fast");
-    //});
-
     $(".js-roll").click(function () {
 
         $(this).toggleClass("active")
@@ -47,11 +42,12 @@ $(function () {
         }
 
     });
-    $(document).on("touchstart click", function (e) { // событие клика по веб-документу
+    // Hide menu if your target isn't "hamburger" or menu
+    $(document).on("touchstart click", function (e) {
         var element = $(".hidMenu");
-        var element2 = $(".js-roll");// тут указываем ID элемента
-        if (!element.is(e.target) // если клик был не по нашему блоку
-            && element.has(e.target).length === 0 && !element2.is(e.target)) { // и не по его дочерним элементам
+        var element2 = $(".js-roll");
+        if (!element.is(e.target)
+            && element.has(e.target).length === 0 && !element2.is(e.target)) {
             $(".hidMenu").hide();
             if ($(element2).hasClass("active")) {
                 $(element2).removeClass("active")
@@ -84,40 +80,44 @@ $(function () {
     /*********************************************************/
     /* Start CUSTOM SELECT  */
     /********************************************************/
-    $(".chosen-select").select2();
+    function initSelect() {
+        $(".chosen-select").select2();
 
-    $(".classic-select").select2({
-        theme: "classic"
-    }).on("select2:open", addShadow);
+        $(".classic-select").select2({
+            theme: "classic"
+        }).on("select2:open", addShadow);
 
-    $(".classic-select").select2({
-        theme: "classic"
-    }).on("select2:open", setNiceScroll);
+        $(".classic-select").select2({
+            theme: "classic"
+        }).on("select2:open", setNiceScroll);
 
-    $(".nosearch-select").select2(
-    {
-    theme: "nosearch",
-    minimumResultsForSearch: Infinity
-    }).on("select2:open", addShadow);
+        $(".nosearch-select").select2(
+        {
+            theme: "nosearch",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", addShadow);
 
-    $(".nosearch-select").select2(
-    {
-        theme: "nosearch",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", setNiceScroll);
+        $(".nosearch-select").select2(
+        {
+            theme: "nosearch",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", setNiceScroll);
 
-    $(".nosearchFull-select").select2(
-    {
-        theme: "nosearchFull",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", addShadow);
+        $(".nosearchFull-select").select2(
+        {
+            theme: "nosearchFull",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", addShadow);
 
 
-    $(".nosearchFull-select").select2(
-    {
-        theme: "nosearchFull",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", setNiceScroll);
+        $(".nosearchFull-select").select2(
+        {
+            theme: "nosearchFull",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", setNiceScroll)
+    };
+
+    initSelect();
 
     function setNiceScroll() {
         $(".select2-results__options").niceScroll({
@@ -130,7 +130,7 @@ $(function () {
             autohidemode: false,
             grabcursorenabled: false,
         });
-    }
+    };
 
 
     //Add shadow 
@@ -154,7 +154,7 @@ $(function () {
             else
                 $(".select2-results").addClass("shadowAfter");
         })
-    }
+    };
 
 
     /*********************************************************/
@@ -165,7 +165,11 @@ $(function () {
     /*********************************************************/
     /* Start CUSTOM SELECT  */
     /********************************************************/
-    $('#search').tipuedrop();
+    function initSearch() {
+        $('#search').tipuedrop();
+    };
+
+    initSearch();
     /*********************************************************/
     /* End CUSTOM SELECT  */
     /********************************************************/
@@ -204,11 +208,11 @@ $(function () {
             $(this).parent('.checkboxWrap').nextAll(".settingsList__popap").hide();
         }
     });
-    $(document).mouseup(function (e) { // событие клика по веб-документу
-        var element = $(".settingsList input"); // тут указываем ID элемента
-        if (!element.is(e.target) // если клик был не по нашему блоку
-            && element.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(".settingsList__popap").hide(); // скрываем его
+    $(document).mouseup(function (e) {
+        var element = $(".settingsList input");
+        if (!element.is(e.target)
+            && element.has(e.target).length === 0) {
+            $(".settingsList__popap").hide();
         }
     });
 
@@ -219,9 +223,12 @@ $(function () {
     /*********************************************************/
     /* START CALENDAR  */
     /********************************************************/
-    $("#datepicker,#datepicker-1").datepicker({
-        dateFormat: "dd.mm.yy"
-    });
+    function initDateInput() {
+        $("#datepicker,#datepicker-1").datepicker({
+            dateFormat: "dd.mm.yy"
+        });
+    };
+    initDateInput();
     /*********************************************************/
     /* END CALENDAR  */
     /********************************************************/
@@ -253,15 +260,14 @@ $(function () {
 
     /* END SCROLL TOP */
     /********************************************************/
-
-    //$('.kids__list').on('change', function () {
-    //    switch ($(".kids__list option:selected").val()) {
-    //        case 1:
-
-    //        default:
-
-    //    }
-
-    //});
-
+    /* SHOW TOOLTIP */
+    /********************************************************/
+    $('.tooltip').on('mouseover', function () {
+        $(this).children('.tooltip__view').css('display', 'block');
+    });
+    $('.tooltip').on('mouseout', function () {
+        $(this).children('.tooltip__view').css('display', 'none');
+    });
+    /* END SHOW TOOLTIP */
+    /********************************************************/
 });

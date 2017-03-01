@@ -1,10 +1,20 @@
+@charset "UTF-8";
+.required:before {
+  content: '*';
+  font-size: 40px;
+  position: absolute;
+  left: -12px;
+  top: -19px;
+  color: #e44c82; }
+
 .excursion {
   padding: 80px 60px 50px;
   background-color: #fff; }
 
 .back__link {
+  display: inline-block;
   color: #007fbb;
-  line-height: 2.8em; }
+  margin-bottom: 10px; }
 
 .about__title {
   display: -webkit-box;
@@ -48,8 +58,11 @@
     .info__blok .action__side .action__board {
       background-color: #f4f6f8; }
 
-.tour__description__info:nth-child(odd) {
+.tour__description__info:nth-child(even) {
   margin: 25px 0; }
+
+.tour__description__info:nth-child(1) {
+  margin-top: 5px; }
 
 .tour__description__info .title {
   font-size: 15px;
@@ -69,14 +82,15 @@
     float: left;
     margin: 0 30px 25px 0; }
     .select__fields .field.date {
-      width: 130px; }
-      .select__fields .field.date:before {
-        content: '*';
-        font-size: 40px;
-        position: absolute;
-        left: -12px;
-        top: -19px;
-        color: #e44c82; }
+      width: 130px;
+      /*&:before {
+                content: '*';
+                font-size: 40px;
+                position: absolute;
+                left: -12px;
+                top: -19px;
+                color: #e44c82;
+            }*/ }
     .select__fields .field.adults, .select__fields .field.kids {
       text-align: center; }
     .select__fields .field.kid__bithd {
@@ -156,7 +170,10 @@
         -webkit-border-radius: 50%;
                 border-radius: 50%; }
       .filter__results__col .transfer__selectors li label .tooltip {
-        border-bottom: 1px dashed #a0a4a9; }
+        border-bottom: 1px dashed #a0a4a9;
+        position: relative; }
+        .filter__results__col .transfer__selectors li label .tooltip:hover {
+          border-bottom: 0; }
       .filter__results__col .transfer__selectors li label a {
         color: #007fbb; }
     .filter__results__col .transfer__selectors li input[type=radio] {
@@ -167,10 +184,40 @@
         font-size: 30px;
         text-align: center;
         line-height: 14px; }
-      .filter__results__col .transfer__selectors li input[type=radio]:checked + label span {
+      .filter__results__col .transfer__selectors li input[type=radio]:checked + label .tooltip {
         color: #da4e80; }
     .filter__results__col .transfer__selectors li:not(:last-child) {
       margin-bottom: 35px; }
+
+.tooltip__view {
+  display: none;
+  background-color: #f4f8fb;
+  padding: 16px;
+  width: 360px;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
+  position: absolute;
+  z-index: 10;
+  bottom: -277px;
+  left: 50%;
+  margin-left: -180px; }
+  .tooltip__view:before {
+    content: "";
+    width: 34px;
+    height: 22px;
+    background: url(../img/mx.png) -500px 0 no-repeat;
+    position: absolute;
+    left: 50%;
+    top: -22px;
+    margin-left: -17px; }
+  .tooltip__view span {
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0 0 0;
+    line-height: 1.125em;
+    padding: 0 10px;
+    text-align: justify;
+    color: #485059; }
 
 .total {
   padding: 30px;
@@ -202,7 +249,7 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   padding: 0 30px;
-  margin: 30px 0 50px; }
+  margin-top: 30px; }
   .useful__info .useful__link {
     margin: 0; }
     .useful__info .useful__link a {
@@ -224,28 +271,73 @@
       vertical-align: bottom;
       cursor: default; }
 
-.other__events .place {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 30px;
-  margin: 10px 0; }
-  .other__events .place h5 {
+.other__events {
+  margin: 60px 0; }
+
+.place {
+  padding: 0 0 0 30px; }
+  .place:nth-child(even) {
+    margin-top: 10px; }
+  .place h5 {
     font-size: 17px;
-    margin: 0;
-    -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-            flex-basis: 25%;
+    margin: 0 0 15px;
     font-family: GothamProNarrow-Medium; }
-  .other__events .place .events__list li {
+  .place .events__list li {
     display: inline-block;
-    margin-left: 20px;
+    margin-right: 25px;
     padding-bottom: 10px;
     font-size: 15px; }
-    .other__events .place .events__list li a {
+    .place .events__list li a {
       color: #007fbb; }
+
+.tags {
+  padding-left: 30px;
+  margin-bottom: 60px; }
+  .tags .tag {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: #e8ebef;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    margin-right: 15px; }
+    .tags .tag p {
+      font-size: 15px;
+      line-height: 18px;
+      margin: 0;
+      color: #576069; }
+      .tags .tag p:before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background-color: #fff;
+        display: inline-block;
+        margin-right: 10px; }
+
+.socials {
+  float: right;
+  margin: 0 30px 0 0; }
+  .socials ul li {
+    display: inline-block;
+    margin-left: 15px; }
+    .socials ul li.icon a {
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+      .socials ul li.icon a:hover {
+        background-color: #81878d; }
+    .socials ul li.icon .vk {
+      background: url("../img/svgicons/В.svg") no-repeat center center, #979ca2; }
+    .socials ul li.icon .fb {
+      background: url("../img/svgicons/Facebook.svg") no-repeat center center, #979ca2; }
+    .socials ul li.icon .ok {
+      background: url("../img/svgicons/ok.svg") no-repeat center center, #979ca2; }
+    .socials ul li.icon .tw {
+      background: url("../img/svgicons/Twitter.svg") no-repeat center center, #979ca2; }
+    .socials ul li.icon .google {
+      background: url("../img/svgicons/1488391239_40-google-plus.svg") no-repeat center center, #979ca2; }
+    .socials ul li.icon .plus {
+      background: url("../img/svgicons/+.svg") no-repeat center center, #979ca2; }
