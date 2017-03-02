@@ -4,7 +4,7 @@
   font-size: 40px;
   position: absolute;
   left: -12px;
-  top: -19px;
+  top: -21px;
   color: #e44c82; }
 
 .excursion {
@@ -82,19 +82,12 @@
     float: left;
     margin: 0 30px 25px 0; }
     .select__fields .field.date {
-      width: 130px;
-      /*&:before {
-                content: '*';
-                font-size: 40px;
-                position: absolute;
-                left: -12px;
-                top: -19px;
-                color: #e44c82;
-            }*/ }
-    .select__fields .field.adults, .select__fields .field.kids {
-      text-align: center; }
+      width: 130px; }
     .select__fields .field.kid__bithd {
       width: 200px; }
+
+.filter {
+  padding-bottom: 30px; }
 
 .action__filter {
   display: -webkit-box;
@@ -113,7 +106,8 @@
       margin-right: 60px; }
       .action__filter .filter__list li.title h4 {
         font-size: 19px;
-        margin: 0; }
+        margin: 0;
+        font-family: PTSans-Bold; }
     .action__filter .filter__list li.item {
       margin-right: 20px; }
       .action__filter .filter__list li.item.active a {
@@ -121,15 +115,19 @@
         border-bottom: 2px solid #da4e80;
         padding: 0 5px;
         line-height: 20px; }
+        .action__filter .filter__list li.item.active a:hover {
+          color: #da4e80; }
       .action__filter .filter__list li.item a {
         font-size: 14px;
         font-family: PTSans-Bold;
         text-transform: uppercase;
         color: #008da1;
         display: inline-block; }
+        .action__filter .filter__list li.item a:hover {
+          color: #007687; }
 
 .filter__results {
-  padding: 15px 30px 20px;
+  padding: 15px 30px 30px;
   background-color: #e8ebef;
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,11 +142,12 @@
         -ms-flex-preferred-size: 33%;
             flex-basis: 33%;
     padding-left: 15px; }
-    .filter__results__col:not(:last-child) {
-      border-right: 1px solid #d6dadf; }
+    .filter__results__col:not(:first-child) {
+      border-left: 1px solid #d6dadf; }
     .filter__results__col .title {
       font-size: 17px;
-      margin: 0 0 15px; }
+      margin: 0 0 15px;
+      font-family: PTSans-Bold; }
     .filter__results__col .transfer__selectors li label {
       display: inline-block;
       cursor: pointer;
@@ -175,13 +174,16 @@
         .filter__results__col .transfer__selectors li label .tooltip:hover {
           border-bottom: 0; }
       .filter__results__col .transfer__selectors li label a {
-        color: #007fbb; }
+        color: #007fbb;
+        border-bottom: 1px dashed #007fbb; }
+        .filter__results__col .transfer__selectors li label a:hover {
+          border-bottom: 0; }
     .filter__results__col .transfer__selectors li input[type=radio] {
       display: none; }
       .filter__results__col .transfer__selectors li input[type=radio]:checked + label:before {
         content: "\2022";
         color: #33363a;
-        font-size: 30px;
+        font-size: 29px;
         text-align: center;
         line-height: 14px; }
       .filter__results__col .transfer__selectors li input[type=radio]:checked + label .tooltip {
@@ -198,7 +200,7 @@
           box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
   position: absolute;
   z-index: 10;
-  bottom: -277px;
+  bottom: -270px;
   left: 50%;
   margin-left: -180px; }
   .tooltip__view:before {
@@ -212,15 +214,39 @@
     margin-left: -17px; }
   .tooltip__view span {
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
     margin: 15px 0 0 0;
     line-height: 1.125em;
     padding: 0 10px;
     text-align: justify;
     color: #485059; }
 
+/*-----FOR SINGLE COLUMN-----*/
+.single__result .demonstration {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .single__result .demonstration .demonstration__col {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; }
+  .single__result .demonstration .preview p {
+    font-size: 15px;
+    margin: 15px 0 0 0;
+    line-height: 1.125em;
+    padding: 0 10px;
+    text-align: justify; }
+  .single__result .demonstration .transfer__selectors li input[type=radio]:checked + label span {
+    color: #da4e80; }
+
+/*-----//FOR SINGLE COLUMN-----*/
 .total {
-  padding: 30px;
+  padding: 0 30px 30px;
   text-align: right; }
   .total .total__price {
     font-size: 24px;
@@ -235,6 +261,8 @@
   .total .cart__btn {
     background-color: #f8679a;
     font-size: 16px; }
+    .total .cart__btn:hover {
+      background-color: #e95b8d; }
 
 .useful__info {
   display: -webkit-box;
@@ -255,12 +283,14 @@
     .useful__info .useful__link a {
       color: #007fbb;
       font-size: 15px;
-      border-bottom: 1px dashed #a0a4a9;
+      border-bottom: 1px dashed #007fbb;
       position: relative; }
+      .useful__info .useful__link a:hover {
+        border-bottom: 0; }
     .useful__info .useful__link span {
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 19px;
+      height: 19px;
       border: 2px solid #82868b;
       color: #82868b;
       font-family: PTSans-Bold;
@@ -268,6 +298,7 @@
               border-radius: 50%;
       text-align: center;
       line-height: 15px;
+      font-size: 15px;
       vertical-align: bottom;
       cursor: default; }
 
@@ -289,6 +320,8 @@
     font-size: 15px; }
     .place .events__list li a {
       color: #007fbb; }
+      .place .events__list li a:hover {
+        text-decoration: underline; }
 
 .tags {
   padding-left: 30px;
@@ -304,7 +337,8 @@
       font-size: 15px;
       line-height: 18px;
       margin: 0;
-      color: #576069; }
+      color: #576069;
+      cursor: default; }
       .tags .tag p:before {
         content: '';
         width: 9px;
@@ -338,6 +372,6 @@
     .socials ul li.icon .tw {
       background: url("../img/svgicons/Twitter.svg") no-repeat center center, #979ca2; }
     .socials ul li.icon .google {
-      background: url("../img/svgicons/1488391239_40-google-plus.svg") no-repeat center center, #979ca2; }
+      background: url("../img/svgicons/G+.svg") no-repeat center center, #979ca2; }
     .socials ul li.icon .plus {
       background: url("../img/svgicons/+.svg") no-repeat center center, #979ca2; }

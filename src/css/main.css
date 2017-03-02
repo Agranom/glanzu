@@ -514,8 +514,7 @@ li.item__rollMenu {
 .calendar__data {
   width: 47.41%;
   float: left;
-  position: relative;
-  z-index: 1002; }
+  position: relative; }
 
 .kids__bthd {
   width: 100%;
@@ -785,8 +784,7 @@ li.item__rollMenu {
     border-color: #999da0; }
 
 .searchForm__field[type="text"] {
-  position: relative;
-  z-index: 1001; }
+  position: relative; }
 
 .searchForm__btn {
   border: 1px solid #c4ccd5;
@@ -794,7 +792,6 @@ li.item__rollMenu {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1002;
   width: 37px;
   height: 36px;
   background: #fff;

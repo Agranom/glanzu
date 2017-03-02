@@ -6,7 +6,7 @@
         font-size: 40px;
         position: absolute;
         left: -12px;
-        top: -19px;
+        top: -21px;
         color: #e44c82;
     }
 }
@@ -17,9 +17,9 @@
 }
 
 .back__link {
-    display:inline-block;
+    display: inline-block;
     color: $link-color;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .about__title {
@@ -103,18 +103,6 @@
 
         &.date {
             width: 130px;
-            /*&:before {
-                content: '*';
-                font-size: 40px;
-                position: absolute;
-                left: -12px;
-                top: -19px;
-                color: #e44c82;
-            }*/
-        }
-
-        &.adults, &.kids {
-            text-align: center;
         }
 
         &.kid__bithd {
@@ -122,7 +110,9 @@
         }
     }
 }
-
+.filter {
+    padding-bottom:30px;
+}
 .action__filter {
     display: flex;
     justify-content: space-between;
@@ -139,6 +129,7 @@
                 h4 {
                     font-size: 19px;
                     margin: 0;
+                    font-family: PTSans-Bold;
                 }
             }
 
@@ -151,6 +142,10 @@
                         border-bottom: 2px solid $page-link-color;
                         padding: 0 5px;
                         line-height: 20px;
+
+                        &:hover {
+                            color: $page-link-color;
+                        }
                     }
                 }
 
@@ -160,6 +155,10 @@
                     text-transform: uppercase;
                     color: #008da1;
                     display: inline-block;
+
+                    &:hover {
+                        color: #007687;
+                    }
                 }
             }
         }
@@ -167,7 +166,7 @@
 }
 
 .filter__results {
-    padding: 15px 30px 20px;
+    padding: 15px 30px 30px;
     background-color: #e8ebef;
     display: flex;
 
@@ -176,13 +175,14 @@
         flex-basis: 33%;
         padding-left: 15px;
 
-        &:not(:last-child) {
-            border-right: 1px solid #d6dadf;
+        &:not(:first-child) {
+            border-left: 1px solid #d6dadf;
         }
 
         .title {
             font-size: 17px;
             margin: 0 0 15px;
+            font-family: PTSans-Bold;
         }
 
         .transfer__selectors {
@@ -221,6 +221,11 @@
 
                     a {
                         color: $link-color;
+                        border-bottom: 1px dashed $link-color;
+
+                        &:hover {
+                            border-bottom: 0;
+                        }
                     }
                 }
 
@@ -231,7 +236,7 @@
                         + label:before {
                             content: "\2022";
                             color: #33363a;
-                            font-size: 30px;
+                            font-size: 29px;
                             text-align: center;
                             line-height: 14px;
                         }
@@ -260,7 +265,7 @@
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
     position: absolute;
     z-index: 10;
-    bottom: -277px;
+    bottom: -270px;
     left: 50%;
     margin-left: -180px;
 
@@ -277,7 +282,7 @@
 
     span {
         display: inline-block;
-        font-size: 16px;
+        font-size: 15px;
         margin: 15px 0 0 0;
         line-height: 1.125em;
         padding: 0 10px;
@@ -285,9 +290,46 @@
         color: #485059;
     }
 }
+/*-----FOR SINGLE COLUMN-----*/
+.single__result {
+    .demonstration {
+        display: flex;
+        justify-content: space-between;
 
+        .demonstration__col {
+            flex-basis: 50%;
+        }
+
+        .preview {
+            p {
+                font-size: 15px;
+                margin: 15px 0 0 0;
+                line-height: 1.125em;
+                padding: 0 10px;
+                text-align: justify;
+            }
+        }
+
+        .transfer__selectors {
+            li {
+
+                input[type=radio] {
+
+                    &:checked {
+                        + label {
+                            span {
+                                color: $page-link-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*-----//FOR SINGLE COLUMN-----*/
 .total {
-    padding: 30px;
+    padding:0 30px 30px;
     text-align: right;
 
     .total__price {
@@ -307,6 +349,10 @@
     .cart__btn {
         background-color: #f8679a;
         font-size: 16px;
+
+        &:hover {
+            background-color: #e95b8d;
+        }
     }
 }
 
@@ -323,21 +369,26 @@
         a {
             color: $link-color;
             font-size: 15px;
-            border-bottom: 1px dashed $border-bottom-dashed;
+            border-bottom: 1px dashed $link-color;
             position: relative;
+
+            &:hover {
+                border-bottom: 0;
+            }
         }
 
 
         span {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             border: 2px solid #82868b;
             color: #82868b;
             font-family: PTSans-Bold;
             @include border-radius(50%);
             text-align: center;
             line-height: 15px;
+            font-size: 15px;
             vertical-align: bottom;
             cursor: default;
         }
@@ -370,6 +421,10 @@
 
             a {
                 color: $link-color;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -391,6 +446,7 @@
             line-height: 18px;
             margin: 0;
             color: #576069;
+            cursor: default;
 
             &:before {
                 content: '';
@@ -443,7 +499,7 @@
                 }
 
                 .google {
-                    background: url('../img/svgicons/1488391239_40-google-plus.svg') no-repeat center center, $social-color;
+                    background: url('../img/svgicons/G+.svg') no-repeat center center, $social-color;
                 }
 
                 .plus {

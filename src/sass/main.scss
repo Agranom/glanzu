@@ -485,7 +485,6 @@ li.item__rollMenu {
     width: 47.41%;
     float: left;
     position: relative;
-    z-index: 1002;
 }
 
 .kids__bthd {
@@ -853,7 +852,6 @@ li.item__rollMenu {
 
 .searchForm__field[type="text"] {
     position: relative;
-    z-index: 1001;
 }
 
 .searchForm__btn {
@@ -862,7 +860,6 @@ li.item__rollMenu {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1002;
     width: 37px;
     height: 36px;
     background: #fff;
