@@ -286,7 +286,6 @@
         margin: 15px 0 0 0;
         line-height: 1.125em;
         padding: 0 10px;
-        text-align: justify;
         color: #485059;
     }
 }
@@ -306,7 +305,6 @@
                 margin: 15px 0 0 0;
                 line-height: 1.125em;
                 padding: 0 10px;
-                text-align: justify;
             }
         }
 
@@ -499,7 +497,7 @@
                 }
 
                 .google {
-                    background: url('../img/svgicons/G+.svg') no-repeat center center, $social-color;
+                    background: url('../img/svgicons/G+.svg') no-repeat left -5px center, $social-color;
                 }
 
                 .plus {

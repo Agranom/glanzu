@@ -218,7 +218,6 @@
     margin: 15px 0 0 0;
     line-height: 1.125em;
     padding: 0 10px;
-    text-align: justify;
     color: #485059; }
 
 /*-----FOR SINGLE COLUMN-----*/
@@ -239,8 +238,7 @@
     font-size: 15px;
     margin: 15px 0 0 0;
     line-height: 1.125em;
-    padding: 0 10px;
-    text-align: justify; }
+    padding: 0 10px; }
   .single__result .demonstration .transfer__selectors li input[type=radio]:checked + label span {
     color: #da4e80; }
 
@@ -372,6 +370,6 @@
     .socials ul li.icon .tw {
       background: url("../img/svgicons/Twitter.svg") no-repeat center center, #979ca2; }
     .socials ul li.icon .google {
-      background: url("../img/svgicons/G+.svg") no-repeat center center, #979ca2; }
+      background: url("../img/svgicons/G+.svg") no-repeat left -5px center, #979ca2; }
     .socials ul li.icon .plus {
       background: url("../img/svgicons/+.svg") no-repeat center center, #979ca2; }
