@@ -154,7 +154,8 @@
       position: relative;
       padding-left: 25px;
       color: #485059;
-      font-size: 15px; }
+      font-size: 15px;
+      position: relative; }
       .filter__results__col .transfer__selectors li label:before {
         content: "";
         display: inline-block;
@@ -169,10 +170,11 @@
         -webkit-border-radius: 50%;
                 border-radius: 50%; }
       .filter__results__col .transfer__selectors li label .tooltip {
-        border-bottom: 1px dashed #a0a4a9;
-        position: relative; }
+        border-bottom: 1px dashed #a0a4a9; }
         .filter__results__col .transfer__selectors li label .tooltip:hover {
           border-bottom: 0; }
+      .filter__results__col .transfer__selectors li label .price {
+        position: relative; }
       .filter__results__col .transfer__selectors li label a {
         color: #007fbb;
         border-bottom: 1px dashed #007fbb; }
@@ -200,18 +202,20 @@
           box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
   position: absolute;
   z-index: 10;
-  bottom: -270px;
-  left: 50%;
-  margin-left: -180px; }
+  bottom: -117px;
+  right: -380px; }
   .tooltip__view:before {
     content: "";
     width: 34px;
     height: 22px;
     background: url(../img/mx.png) -500px 0 no-repeat;
     position: absolute;
-    left: 50%;
-    top: -22px;
-    margin-left: -17px; }
+    left: -27px;
+    top: 50%;
+    margin-top: -11px;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
   .tooltip__view span {
     display: inline-block;
     font-size: 15px;

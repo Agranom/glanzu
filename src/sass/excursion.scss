@@ -110,9 +110,11 @@
         }
     }
 }
+
 .filter {
-    padding-bottom:30px;
+    padding-bottom: 30px;
 }
+
 .action__filter {
     display: flex;
     justify-content: space-between;
@@ -195,6 +197,7 @@
                     padding-left: 25px;
                     color: #485059;
                     font-size: 15px;
+                    position: relative;
 
                     &:before {
                         content: "";
@@ -212,11 +215,14 @@
 
                     .tooltip {
                         border-bottom: 1px dashed $border-bottom-dashed;
-                        position: relative;
 
                         &:hover {
                             border-bottom: 0;
                         }
+                    }
+
+                    .price {
+                        position: relative;
                     }
 
                     a {
@@ -265,9 +271,8 @@
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
     position: absolute;
     z-index: 10;
-    bottom: -270px;
-    left: 50%;
-    margin-left: -180px;
+    bottom: -117px;
+    right: -380px;
 
     &:before {
         content: "";
@@ -275,9 +280,10 @@
         height: 22px;
         background: url(../img/mx.png) -500px 0 no-repeat;
         position: absolute;
-        left: 50%;
-        top: -22px;
-        margin-left: -17px;
+        left: -27px;
+        top: 50%;
+        margin-top: -11px;
+        transform: rotate(-90deg);
     }
 
     span {
@@ -327,7 +333,7 @@
 }
 /*-----//FOR SINGLE COLUMN-----*/
 .total {
-    padding:0 30px 30px;
+    padding: 0 30px 30px;
     text-align: right;
 
     .total__price {

@@ -263,10 +263,10 @@ $(function () {
     /* SHOW TOOLTIP */
     /********************************************************/
     $('.tooltip').on('mouseover', function () {
-        $(this).children('.tooltip__view').css('display', 'block');
+        $(this).nextAll('.price').children('.tooltip__view').css('display', 'block');
     });
     $('.tooltip').on('mouseout', function () {
-        $(this).children('.tooltip__view').css('display', 'none');
+        $(this).nextAll('.price').children('.tooltip__view').css('display', 'none');
     });
     /* END SHOW TOOLTIP */
     /********************************************************/

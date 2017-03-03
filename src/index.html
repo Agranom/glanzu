@@ -187,7 +187,7 @@
                                     .html5gallery-toolbox-0 .html5gallery-right-0 {
                                         display: block;
                                         left: auto !important;
-                                        right: 8px;
+                                        right: 12px;
                                         width: 36px;
                                         height: 80px;
                                         border-radius: 40px 0 0 40px;
@@ -267,8 +267,25 @@
                                 }
 
                                     .html5gallery-box-0 .html5gallery-elem-0 .html5gallery-elem-img-0 {
-                                        margin: 0;
+                                        margin: 0 !important;
                                     }
+
+                                        .html5gallery-box-0 .html5gallery-elem-0 .html5gallery-elem-img-0::after {
+                                            content: '1 из 7';
+                                            color: #fff;
+                                            font-size: 15px;
+                                            line-height: 34px;
+                                            width: 80px;
+                                            height: 80px;
+                                            background-color: rgba(104, 105, 103, 0.9);
+                                            -moz-border-radius: 50%;
+                                            -webkit-border-radius: 50%;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            bottom: -50px;
+                                            left: 50%;
+                                            margin-left: -38px;
+                                        }
 
                                 .html5gallery-car-list-0 {
                                     width: 100% !important;
@@ -297,7 +314,7 @@
                                     -moz-border-radius: 3px;
                                     -webkit-border-radius: 3px;
                                     border-radius: 3px;
-                                    cursor:pointer;
+                                    cursor: pointer;
                                 }
 
                                 .html5gallery-car-left-0 {
@@ -452,48 +469,48 @@
                     <div class="action__side">
                         <div class="action__board">
                             <form name="excursion" action="">
-                                    <div class="select__fields clearfix">
-                                        <div class="field date required">
-                                            <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required readonly>
-                                        </div>
-                                        <div class="field adults">
-                                            <span>Взрослых</span>
-                                            <select class="nosearch-select" style="width:50px;">
-                                                <option selected value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </div>
-                                        <div class="field kids">
-                                            <span>Детей</span>
-                                            <select class="nosearch-select" style="width:50px;">
-                                                <option selected value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                            </select>
-                                        </div>
-                                        <div class="field guide">
-                                            <select class="nosearchFull-select">
-                                                <option>Рускоязычный гид</option>
-                                                <option>Англоязычный гид</option>
-                                            </select>
-                                        </div>
-                                        <div class="field kid__bithd required">
-                                            <input id="datepicker-1" class="calendar__field" type="text" placeholder="Дата рождения ребёнка" readonly>
-                                        </div>
+                                <div class="select__fields clearfix">
+                                    <div class="field date required">
+                                        <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required readonly>
                                     </div>
+                                    <div class="field adults">
+                                        <span>Взрослых</span>
+                                        <select class="nosearch-select" style="width:50px;">
+                                            <option selected value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <div class="field kids">
+                                        <span>Детей</span>
+                                        <select class="nosearch-select" style="width:50px;">
+                                            <option selected value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <div class="field guide">
+                                        <select class="nosearchFull-select">
+                                            <option>Рускоязычный гид</option>
+                                            <option>Англоязычный гид</option>
+                                        </select>
+                                    </div>
+                                    <div class="field kid__bithd required">
+                                        <input id="datepicker-1" class="calendar__field" type="text" placeholder="Дата рождения ребёнка" readonly>
+                                    </div>
+                                </div>
                                 <div class="filter">
                                     <div class="action__filter">
                                         <ul class="filter__list">
@@ -513,51 +530,9 @@
                                                     <label for="cab">
                                                         <span class="tooltip">
                                                             Такси
-                                                            <span class="tooltip__view">
-                                                                <img src="img/bulli.jpg" />
-                                                                <span>
-                                                                    Комфортная поездка на микроавтобусе Volkswagen
-                                                                    Bulli подарит Вам нереальное счастье!
-                                                                </span>
-                                                            </span>
-                                                        </span> (2 шт по $22) $44
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
-                                                    <label for="bigCab">
-                                                        <span class="tooltip">
-                                                            Маршрутное такси
-                                                            <span class="tooltip__view">
-                                                                <img src="img/bulli.jpg" />
-                                                                <span>
-                                                                    Комфортная поездка на микроавтобусе Volkswagen
-                                                                    Bulli подарит Вам нереальное счастье!
-                                                                </span>
-                                                            </span>
-                                                        </span> $30
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="vehicle" value="microBus" id="microBus" />
-                                                    <label for="microBus">
-                                                        <span class="tooltip">
-                                                            Микроавтобус
-                                                            <span class="tooltip__view">
-                                                                <img src="img/bulli.jpg" />
-                                                                <span>
-                                                                    Комфортная поездка на микроавтобусе Volkswagen
-                                                                    Bulli подарит Вам нереальное счастье!
-                                                                </span>
-                                                            </span>
-                                                        </span> $55
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" name="vehicle" value="bus" id="bus" />
-                                                    <label for="bus">
-                                                        <span class="tooltip">
-                                                            Автобус - групповая
+                                                        </span>
+                                                        <span class="price">
+                                                            (2 шт по $22) $44
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -566,16 +541,16 @@
                                                                 </span>
                                                             </span>
                                                         </span>
-                                                        <span>
-                                                            (<a href="#">расписание</a>)
-                                                        </span> $80
                                                     </label>
                                                 </li>
                                                 <li>
-                                                    <input type="radio" name="vehicle" value="limo" id="limo" />
-                                                    <label for="limo">
+                                                    <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
+                                                    <label for="bigCab">
                                                         <span class="tooltip">
-                                                            Лимузин
+                                                            Маршрутное такси
+                                                        </span>
+                                                        <span class="price">
+                                                            $30
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -583,7 +558,65 @@
                                                                     Bulli подарит Вам нереальное счастье!
                                                                 </span>
                                                             </span>
-                                                        </span> $120
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="microBus" id="microBus" />
+                                                    <label for="microBus">
+                                                        <span class="tooltip">
+                                                            Микроавтобус
+                                                        </span>
+                                                        <span class="price">
+                                                            $55
+                                                            <span class="tooltip__view">
+                                                                <img src="img/bulli.jpg" />
+                                                                <span>
+                                                                    Комфортная поездка на микроавтобусе Volkswagen
+                                                                    Bulli подарит Вам нереальное счастье!
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="bus" id="bus" />
+                                                    <label for="bus">
+                                                        <span class="tooltip">
+                                                            Автобус - групповая
+                                                        </span>
+                                                        <span>
+                                                            (<a href="#">расписание</a>)
+                                                        </span>
+                                                        <span class="price">
+                                                            $80
+                                                            <span class="tooltip__view">
+                                                                <img src="img/bulli.jpg" />
+                                                                <span>
+                                                                    Комфортная поездка на микроавтобусе Volkswagen
+                                                                    Bulli подарит Вам нереальное счастье!
+                                                                </span>
+                                                            </span>
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="vehicle" value="limo" id="limo" />
+                                                    <label for="limo">
+                                                        <span class="tooltip">
+                                                            Лимузин
+                                                        </span>
+                                                        <span class="price">
+                                                            $120
+                                                            <span class="tooltip__view">
+                                                                <img src="img/bulli.jpg" />
+                                                                <span>
+                                                                    Комфортная поездка на микроавтобусе Volkswagen
+                                                                    Bulli подарит Вам нереальное счастье!
+                                                                </span>
+                                                            </span>
+                                                        </span>
                                                     </label>
                                                 </li>
                                             </ul>
@@ -596,6 +629,9 @@
                                                     <label for="thai">
                                                         <span class="tooltip">
                                                             Тайское
+                                                        </span>
+                                                        <span class="price">
+                                                            $15
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -603,7 +639,7 @@
                                                                     Bulli подарит Вам нереальное счастье!
                                                                 </span>
                                                             </span>
-                                                        </span> $15
+                                                        </span>
                                                     </label>
                                                 </li>
                                                 <li>
@@ -611,6 +647,9 @@
                                                     <label for="euro">
                                                         <span class="tooltip">
                                                             Европейское
+                                                        </span>
+                                                        <span class="price">
+                                                            $20
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -618,7 +657,7 @@
                                                                     Bulli подарит Вам нереальное счастье!
                                                                 </span>
                                                             </span>
-                                                        </span> $20
+                                                        </span>
                                                     </label>
                                                 </li>
                                                 <li>
@@ -626,6 +665,9 @@
                                                     <label for="veg">
                                                         <span class="tooltip">
                                                             Вегетарианское
+                                                        </span>
+                                                        <span class="price">
+                                                            $15
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -633,7 +675,7 @@
                                                                     Bulli подарит Вам нереальное счастье!
                                                                 </span>
                                                             </span>
-                                                        </span> $15
+                                                        </span>
                                                     </label>
                                                 </li>
                                             </ul>
@@ -652,6 +694,9 @@
                                                     <label for="сambodia">
                                                         <span class="tooltip">
                                                             Камбоджийское
+                                                        </span>
+                                                        <span class="price">
+                                                            $15
                                                             <span class="tooltip__view">
                                                                 <img src="img/bulli.jpg" />
                                                                 <span>
@@ -659,7 +704,7 @@
                                                                     Bulli подарит Вам нереальное счастье!
                                                                 </span>
                                                             </span>
-                                                        </span> $15
+                                                        </span>
                                                     </label>
                                                 </li>
                                             </ul>
