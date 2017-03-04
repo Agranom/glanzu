@@ -198,6 +198,7 @@
                     color: #485059;
                     font-size: 15px;
                     position: relative;
+                    line-height:18px;
 
                     &:before {
                         content: "";
@@ -215,6 +216,7 @@
 
                     .tooltip {
                         border-bottom: 1px dashed $border-bottom-dashed;
+                        display:inline-block;
 
                         &:hover {
                             border-bottom: 0;
@@ -375,6 +377,8 @@
             font-size: 15px;
             border-bottom: 1px dashed $link-color;
             position: relative;
+            display:inline-block;
+            line-height:18px;
 
             &:hover {
                 border-bottom: 0;

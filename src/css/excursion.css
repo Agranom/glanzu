@@ -155,7 +155,8 @@
       padding-left: 25px;
       color: #485059;
       font-size: 15px;
-      position: relative; }
+      position: relative;
+      line-height: 18px; }
       .filter__results__col .transfer__selectors li label:before {
         content: "";
         display: inline-block;
@@ -170,7 +171,8 @@
         -webkit-border-radius: 50%;
                 border-radius: 50%; }
       .filter__results__col .transfer__selectors li label .tooltip {
-        border-bottom: 1px dashed #a0a4a9; }
+        border-bottom: 1px dashed #a0a4a9;
+        display: inline-block; }
         .filter__results__col .transfer__selectors li label .tooltip:hover {
           border-bottom: 0; }
       .filter__results__col .transfer__selectors li label .price {
@@ -286,7 +288,9 @@
       color: #007fbb;
       font-size: 15px;
       border-bottom: 1px dashed #007fbb;
-      position: relative; }
+      position: relative;
+      display: inline-block;
+      line-height: 18px; }
       .useful__info .useful__link a:hover {
         border-bottom: 0; }
     .useful__info .useful__link span {
