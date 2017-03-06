@@ -246,6 +246,12 @@ function initSelect() {
         theme: "nosearchFull",
         minimumResultsForSearch: Infinity
     }).on("select2:open", setNiceScroll)
+
+    $(".time__select").select2(
+    {
+        theme: "nosearchFull",
+        minimumResultsForSearch: Infinity
+    }).on("select2:open", setNiceScroll)
 };
 
 function setNiceScroll() {

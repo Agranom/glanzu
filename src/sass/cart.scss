@@ -1,0 +1,231 @@
+﻿@import "_variables.scss";
+
+.question__mark {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border: 2px solid #f8679a;
+    font-size: 16px;
+    color: #f8679a;
+    @include border-radius(50%);
+    text-align: center;
+    line-height: 18px;
+    font-family: 'PT Sans Caption', sans-serif;
+    vertical-align: bottom;
+}
+
+.pseudo__link {
+    display: inline-block;
+    line-height: 17px;
+    color: $link-color;
+    border-bottom: 1px dashed $link-color;
+
+    &:hover {
+        border-bottom: 0;
+    }
+}
+
+.order {
+    padding: 115px 220px 75px;
+    background-color: #fff;
+}
+
+.about_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .title {
+        margin: 0 5px 0 0;
+        line-height: 1em;
+    }
+
+    .subtitle {
+        margin: 0;
+        color: #949692;
+
+        a {
+            color: $link-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.order__view {
+    margin: 30px 0 45px;
+    padding: 0 20px;
+}
+
+.order__info {
+    padding: 20px 0;
+    border-top: 1px dashed rgb(196, 206, 216);
+
+    .main__titles {
+        margin-bottom: 20px;
+
+        li {
+            display: inline-block;
+            margin-right: 15px;
+
+            .day__number {
+                font-size: 18px;
+                font-family: 'PTSans-Bold';
+                margin: 0;
+            }
+
+            .date {
+                color: #e44c82;
+                margin: 0;
+            }
+
+            .change__date {
+                color: $link-color;
+                display: inline-block;
+                line-height: 17px;
+                border-bottom: 1px dashed $link-color;
+
+                &:hover {
+                    border-bottom: 0;
+                }
+            }
+
+            span {
+                color: #949692;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.package {
+    padding-left: 20px;
+    margin-bottom: 15px;
+
+    .package__time {
+        position: relative;
+        float: left;
+        width: 75px;
+        text-align: center;
+        /*.time__select {
+            width: 75px;
+            height: 36px;
+            @include border-radius(4px);
+            line-height: 34px;
+            display: block;
+            padding-left: 14px;
+            padding-right: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 15px;
+        }*/
+        .searchForm__field {
+            text-align: center;
+            color: $text-color;
+        }
+
+        &:after {
+            content: '';
+            width: 41px;
+            height: 1px;
+            display: inline-block;
+            background-color: rgb(210, 234, 238);
+            position: absolute;
+            top: 50%;
+            right: -41px;
+        }
+    }
+
+    .select2-container {
+        .select2-selection--single {
+            margin: 0 !important;
+        }
+    }
+
+    .package__description {
+        float: right;
+        width: 730px;
+        @include border-radius(2px);
+        box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
+        background-color: #e6ecf2;
+    }
+
+    .package__description__info {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 40px 0 55px;
+
+        &:nth-child(even) {
+            background-color:#d8dfe5;
+        }
+        .icon {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            background-image: url(../img/chosen-sprite.png);
+            background-repeat: no-repeat;
+            top: 50%;
+            margin-top: -7.5px;
+            cursor: pointer;
+
+            &.drag {
+                background-position: 0 -16px;
+                left: 14px;
+            }
+
+            &.delete {
+                background-position: -18px -16px;
+                right: 14px;
+            }
+        }
+
+
+        .main__info {
+
+
+            li {
+                display: inline-block;
+                line-height: 36px;
+
+                &:not(:last-child) {
+                    margin-right: 25px;
+                }
+
+                &.title {
+                    font-family: 'PTSans-Bold';
+
+                    a {
+                        font-family: PTSans-Regular;
+                        color: $link-color;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .other__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 36px;
+
+            .variants {
+                margin-right: 30px;
+            }
+
+            .price {
+                display: inline-block;
+                font-family: 'PTSans-Bold';
+            }
+        }
+    }
+}
