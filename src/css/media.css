@@ -46,13 +46,16 @@
   .catalogList__title, .catalogList__entry {
     font-size: 14px; } }
 
-@media (min-width: 1025px) and (max-width: 1270px) {
-  .select__fields, .action__filter, .filter__results {
-    padding-left: 15px; }
-  .filter__results__col {
-    padding-left: 8px;
-    padding-right: 7px; } }
-
+/*@media (min-width:1025px) and (max-width: 1270px) {
+    .select__fields, .action__filter, .filter__results  {
+        padding-left:15px;
+    }
+    .filter__results__col {
+        padding-left:8px;
+        padding-right:7px;
+    }
+    
+}*/
 @media only screen and (max-width: 1200px) {
   .catalog__item {
     padding-left: 25px; } }
@@ -61,7 +64,7 @@
   .catalogList__title, .catalogList__entry {
     font-size: 13px; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1299px) {
   /*---HOTELS END EXCURCIONS---*/
   .page {
     padding-right: 21px; }
