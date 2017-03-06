@@ -207,8 +207,8 @@
                     &:before {
                         content: "";
                         display: inline-block;
-                        width: 17px;
-                        height: 17px;
+                        width: 15px;
+                        height: 15px;
                         margin-right: 7px;
                         position: absolute;
                         left: 0;
@@ -228,10 +228,6 @@
                         }
                     }
 
-                    .price {
-                        position: relative;
-                    }
-
                     a {
                         color: $link-color;
                         border-bottom: 1px dashed $link-color;
@@ -249,9 +245,9 @@
                         + label:before {
                             content: "\2022";
                             color: #33363a;
-                            font-size: 29px;
+                            font-size: 24px;
                             text-align: center;
-                            line-height: 14px;
+                            line-height: 13px;
                         }
 
                         + label {
@@ -279,7 +275,7 @@
     position: absolute;
     z-index: 10;
     bottom: -117px;
-    left: -380px;
+    left: -410px;
 
     &:after {
         content: "";
@@ -391,20 +387,35 @@
         }
 
 
-        span {
+        .exclamation {
             display: inline-block;
-            width: 19px;
-            height: 19px;
+            width: 23px;
+            height: 23px;
             border: 2px solid #82868b;
-            color: #82868b;
-            font-family: PTSans-Bold;
+
+            
             @include border-radius(50%);
-            text-align: center;
-            line-height: 15px;
-            font-size: 15px;
             vertical-align: bottom;
             cursor: default;
+            position:relative;
+
+            &:before {
+                content:'!';
+                font-size:15px;
+                line-height:19px;
+                font-family: PTSans-Bold;
+                color: #82868b;
+                position:absolute;
+                left:50%;
+                margin-left:-2.5px;
+            }
         }
+        .exclamation_2 {
+            &:before {
+                margin-left:-2.8px;
+            }
+        }
+        
     }
 }
 

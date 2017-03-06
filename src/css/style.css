@@ -676,7 +676,7 @@ li.item__rollMenu {
   .rating__item a {
     color: #8e9297;
     position: relative;
-    cursor: default; }
+    cursor: pointer; }
     .rating__item a.rating__link--more {
       top: 1px; }
 
@@ -993,8 +993,7 @@ li.item__rollMenu {
 
 .catalogList__pic {
   -webkit-border-radius: 2px;
-  border-radius: 2px;
-  width: 100%; }
+  border-radius: 2px; }
 
 .catalogList__rate {
   width: 32px;

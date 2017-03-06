@@ -162,8 +162,8 @@
       .filter__results__col .transfer__selectors li label:before {
         content: "";
         display: inline-block;
-        width: 17px;
-        height: 17px;
+        width: 15px;
+        height: 15px;
         margin-right: 7px;
         position: absolute;
         left: 0;
@@ -178,8 +178,6 @@
         position: relative; }
         .filter__results__col .transfer__selectors li label .tooltip:hover {
           border-bottom: 1px dashed transparent; }
-      .filter__results__col .transfer__selectors li label .price {
-        position: relative; }
       .filter__results__col .transfer__selectors li label a {
         color: #007fbb;
         border-bottom: 1px dashed #007fbb; }
@@ -190,9 +188,9 @@
       .filter__results__col .transfer__selectors li input[type=radio]:checked + label:before {
         content: "\2022";
         color: #33363a;
-        font-size: 29px;
+        font-size: 24px;
         text-align: center;
-        line-height: 14px; }
+        line-height: 13px; }
       .filter__results__col .transfer__selectors li input[type=radio]:checked + label .tooltip {
         color: #da4e80; }
     .filter__results__col .transfer__selectors li:not(:last-child) {
@@ -208,7 +206,7 @@
   position: absolute;
   z-index: 10;
   bottom: -117px;
-  left: -380px; }
+  left: -410px; }
   .tooltip__view:after {
     content: "";
     width: 34px;
@@ -296,20 +294,27 @@
       line-height: 17px; }
       .useful__info .useful__link a:hover {
         border-bottom: 1px dashed transparent; }
-    .useful__info .useful__link span {
+    .useful__info .useful__link .exclamation {
       display: inline-block;
-      width: 19px;
-      height: 19px;
+      width: 23px;
+      height: 23px;
       border: 2px solid #82868b;
-      color: #82868b;
-      font-family: PTSans-Bold;
       -webkit-border-radius: 50%;
               border-radius: 50%;
-      text-align: center;
-      line-height: 15px;
-      font-size: 15px;
       vertical-align: bottom;
-      cursor: default; }
+      cursor: default;
+      position: relative; }
+      .useful__info .useful__link .exclamation:before {
+        content: '!';
+        font-size: 15px;
+        line-height: 19px;
+        font-family: PTSans-Bold;
+        color: #82868b;
+        position: absolute;
+        left: 50%;
+        margin-left: -2.5px; }
+    .useful__info .useful__link .exclamation_2:before {
+      margin-left: -2.8px; }
 
 .other__events {
   margin: 60px 0; }
