@@ -202,7 +202,7 @@
                     color: #485059;
                     font-size: 15px;
                     position: relative;
-                    line-height: 18px;
+                    line-height: 17px;
 
                     &:before {
                         content: "";
@@ -221,9 +221,10 @@
                     .tooltip {
                         border-bottom: 1px dashed $border-bottom-dashed;
                         display: inline-block;
+                        position:relative;
 
                         &:hover {
-                            border-bottom: 0;
+                            border-bottom: 1px dashed transparent;
                         }
                     }
 
@@ -236,7 +237,7 @@
                         border-bottom: 1px dashed $link-color;
 
                         &:hover {
-                            border-bottom: 0;
+                            border-bottom: 1px dashed transparent;
                         }
                     }
                 }
@@ -278,18 +279,18 @@
     position: absolute;
     z-index: 10;
     bottom: -117px;
-    right: -380px;
+    left: -380px;
 
-    &:before {
+    &:after {
         content: "";
         width: 34px;
         height: 22px;
         background: url(../img/mx.png) -500px 0 no-repeat;
         position: absolute;
-        left: -27px;
+        right: -27px;
         top: 50%;
         margin-top: -11px;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
 
     span {
@@ -382,10 +383,10 @@
             border-bottom: 1px dashed $link-color;
             position: relative;
             display: inline-block;
-            line-height: 18px;
+            line-height: 17px;
 
             &:hover {
-                border-bottom: 0;
+                border-bottom: 1px dashed transparent;
             }
         }
 
