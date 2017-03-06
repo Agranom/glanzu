@@ -76,7 +76,7 @@ body {
 
 a.logo {
     display: block;
-    background: url(../img/mx.png) no-repeat;
+    background: url(../img/mx.png) 0 -32px no-repeat;
     width: 123px;
     height: 27px;
     text-indent: -9000px;
@@ -85,7 +85,7 @@ a.logo {
     margin: 7px 0 0 20px;
 
     &:hover {
-        background-position: 0 -100px;
+        background-position: 0 -63px;
     }
 }
 
@@ -273,6 +273,7 @@ li.item__rollMenu {
 .flag-gb {
     background-position: -300px -29px;
 }
+
 .currencies, .icons-list {
     float: left;
     cursor: default;
@@ -624,11 +625,11 @@ li.item__rollMenu {
     a {
         color: #8e9297;
         position: relative;
-        cursor: pointer;
+    }
 
-        &.rating__link--more {
-            top: 1px;
-        }
+    .rating__link--more {
+        top: 1px;
+        color: #8e9297;
     }
 }
 
@@ -714,7 +715,7 @@ li.item__rollMenu {
 
     dt {
         color: $text-color;
-        font-family:PTSans-Bold;
+        font-family: PTSans-Bold;
     }
 
     dd {
@@ -1057,6 +1058,7 @@ li.item__rollMenu {
 .catalogList__pic {
     -webkit-border-radius: 2px;
     border-radius: 2px;
+    width: 100%;
 }
 
 .catalogList__rate {

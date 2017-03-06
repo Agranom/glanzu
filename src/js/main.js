@@ -80,81 +80,14 @@ $(function () {
     /*********************************************************/
     /* Start CUSTOM SELECT  */
     /********************************************************/
-    function initSelect() {
-        $(".chosen-select").select2();
-
-        $(".classic-select").select2({
-            theme: "classic"
-        }).on("select2:open", addShadow);
-
-        $(".classic-select").select2({
-            theme: "classic"
-        }).on("select2:open", setNiceScroll);
-
-        $(".nosearch-select").select2(
-        {
-            theme: "nosearch",
-            minimumResultsForSearch: Infinity
-        }).on("select2:open", addShadow);
-
-        $(".nosearch-select").select2(
-        {
-            theme: "nosearch",
-            minimumResultsForSearch: Infinity
-        }).on("select2:open", setNiceScroll);
-
-        $(".nosearchFull-select").select2(
-        {
-            theme: "nosearchFull",
-            minimumResultsForSearch: Infinity
-        }).on("select2:open", addShadow);
-
-
-        $(".nosearchFull-select").select2(
-        {
-            theme: "nosearchFull",
-            minimumResultsForSearch: Infinity
-        }).on("select2:open", setNiceScroll)
-    };
+    
 
     initSelect();
 
-    function setNiceScroll() {
-        $(".select2-results__options").niceScroll({
-            cursorcolor: "#e5e5e5",
-            cursoropacitymin: 1,
-            cursorwidth: "7px",
-            cursorborder: 0,
-            hidecursordelay: 0,
-            touchbehavior: false,
-            autohidemode: false,
-            grabcursorenabled: false,
-        });
-    };
 
 
-    //Add shadow 
-    function addShadow() {
-        $(".select2-results").addClass("shadowAfter");
 
-        $(".select2-results__options").scroll(function () {
 
-            var elementHeight = document.querySelector(".select2-results__options").scrollHeight;
-
-            if ($(this).scrollTop() > 20
-                && (elementHeight - $(this).scrollTop()) >= 200) {
-
-                $(".select2-results").addClass("shadowBefore");
-            }
-            else {
-                $(".select2-results").removeClass("shadowBefore");
-            }
-            if ((elementHeight - $(this).scrollTop()) == 200)
-                $(".select2-results").removeClass("shadowAfter");
-            else
-                $(".select2-results").addClass("shadowAfter");
-        })
-    };
 
 
     /*********************************************************/
@@ -165,9 +98,6 @@ $(function () {
     /*********************************************************/
     /* Start CUSTOM SELECT  */
     /********************************************************/
-    function initSearch() {
-        $('#search').tipuedrop();
-    };
 
     initSearch();
     /*********************************************************/
@@ -223,11 +153,7 @@ $(function () {
     /*********************************************************/
     /* START CALENDAR  */
     /********************************************************/
-    function initDateInput() {
-        $("#datepicker,#datepicker-1").datepicker({
-            dateFormat: "dd.mm.yy"
-        });
-    };
+
     initDateInput();
     /*********************************************************/
     /* END CALENDAR  */
@@ -262,14 +188,109 @@ $(function () {
     /********************************************************/
     /* SHOW TOOLTIP */
     /********************************************************/
-    $('.tooltip').on('mouseover', function () {
+
+    
+
+    $(document).on('mouseover', '.tooltip', function () {
         $(this).children('.tooltip__view').css('display', 'block');
     });
-    $('.tooltip').on('mouseout', function () {
+    $(document).on('mouseout', '.tooltip', function () {
         $(this).children('.tooltip__view').css('display', 'none');
+    });
+
+    $(document).on("touchstart", function (e) {
+        var element = $(".tooltip");
+        if (!element.is(e.target)
+            && element.has(e.target).length === 0) {
+            $(".tooltip__view").hide();
+
+        }
     });
     /* END SHOW TOOLTIP */
     /********************************************************/
 
 
 });
+function initSelect() {
+    $(".chosen-select").select2();
+
+    $(".classic-select").select2({
+        theme: "classic"
+    }).on("select2:open", addShadow);
+
+    $(".classic-select").select2({
+        theme: "classic"
+    }).on("select2:open", setNiceScroll);
+
+    $(".nosearch-select").select2(
+    {
+        theme: "nosearch",
+        minimumResultsForSearch: Infinity
+    }).on("select2:open", addShadow);
+
+    $(".nosearch-select").select2(
+    {
+        theme: "nosearch",
+        minimumResultsForSearch: Infinity
+    }).on("select2:open", setNiceScroll);
+
+    $(".nosearchFull-select").select2(
+    {
+        theme: "nosearchFull",
+        minimumResultsForSearch: Infinity
+    }).on("select2:open", addShadow);
+
+
+    $(".nosearchFull-select").select2(
+    {
+        theme: "nosearchFull",
+        minimumResultsForSearch: Infinity
+    }).on("select2:open", setNiceScroll)
+};
+
+function setNiceScroll() {
+    $(".select2-results__options").niceScroll({
+        cursorcolor: "#e5e5e5",
+        cursoropacitymin: 1,
+        cursorwidth: "7px",
+        cursorborder: 0,
+        hidecursordelay: 0,
+        touchbehavior: true,
+        autohidemode: false,
+        grabcursorenabled: true,
+    });
+};
+
+//Add shadow 
+function addShadow() {
+    $(".select2-results").addClass("shadowAfter");
+
+    $(".select2-results__options").scroll(function () {
+
+        var elementHeight = document.querySelector(".select2-results__options").scrollHeight;
+
+        if ($(this).scrollTop() > 20
+            && (elementHeight - $(this).scrollTop()) >= 200) {
+
+            $(".select2-results").addClass("shadowBefore");
+        }
+        else {
+            $(".select2-results").removeClass("shadowBefore");
+        }
+        if ((elementHeight - $(this).scrollTop()) == 200)
+            $(".select2-results").removeClass("shadowAfter");
+        else
+            $(".select2-results").addClass("shadowAfter");
+    })
+};
+
+function initSearch() {
+    $('#search').tipuedrop();
+};
+
+function initDateInput() {
+    $("#datepicker,#datepicker-1").datepicker({
+        dateFormat: "dd.mm.yy"
+    });
+};
+

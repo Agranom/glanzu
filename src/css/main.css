@@ -192,7 +192,7 @@ body {
 
 a.logo {
   display: block;
-  background: url(../img/mx.png) no-repeat;
+  background: url(../img/mx.png) 0 -32px no-repeat;
   width: 123px;
   height: 27px;
   text-indent: -9000px;
@@ -200,7 +200,7 @@ a.logo {
   text-decoration: none;
   margin: 7px 0 0 20px; }
   a.logo:hover {
-    background-position: 0 -100px; }
+    background-position: 0 -63px; }
 
 .nav {
   padding: 0 0 0 1px;
@@ -625,10 +625,10 @@ li.item__rollMenu {
   padding: 0 0 0 11px; }
   .rating__item a {
     color: #8e9297;
-    position: relative;
-    cursor: pointer; }
-    .rating__item a.rating__link--more {
-      top: 1px; }
+    position: relative; }
+  .rating__item .rating__link--more {
+    top: 1px;
+    color: #8e9297; }
 
 .bnt {
   border: 0;
@@ -943,7 +943,8 @@ li.item__rollMenu {
 
 .catalogList__pic {
   -webkit-border-radius: 2px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  width: 100%; }
 
 .catalogList__rate {
   width: 32px;

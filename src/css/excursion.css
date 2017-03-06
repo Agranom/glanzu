@@ -180,9 +180,13 @@
           border-bottom: 1px dashed transparent; }
       .filter__results__col .transfer__selectors li label a {
         color: #007fbb;
-        border-bottom: 1px dashed #007fbb; }
+        border-bottom: 1px dashed #007fbb;
+        display: inline-block;
+        line-height: 17px; }
         .filter__results__col .transfer__selectors li label a:hover {
           border-bottom: 1px dashed transparent; }
+      .filter__results__col .transfer__selectors li label .tooltip__link {
+        display: inline-block; }
     .filter__results__col .transfer__selectors li input[type=radio] {
       display: none; }
       .filter__results__col .transfer__selectors li input[type=radio]:checked + label:before {
