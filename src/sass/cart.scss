@@ -26,7 +26,7 @@
 }
 
 .order {
-    padding: 115px 220px 75px;
+    padding: 115px 0 75px;
     background-color: #fff;
 }
 
@@ -55,8 +55,9 @@
 }
 
 .order__view {
-    margin: 30px 0 45px;
+    margin: 30px auto 45px;
     padding: 0 20px;
+    width:845px;
 }
 
 .order__info {
@@ -191,7 +192,7 @@
 
             li {
                 display: inline-block;
-                line-height: 36px;
+                line-height: 35px;
 
                 &:not(:last-child) {
                     margin-right: 25px;
