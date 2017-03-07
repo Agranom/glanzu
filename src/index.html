@@ -146,7 +146,7 @@
                                 <i class="icon delete"></i>
                             </div>
                         </div>
-                        <div class="package clearfix">
+                        <div class="package even clearfix">
                             <div class="package__time">
                                 <input type="text" value="11:00" class="searchForm__field" readonly />
                             </div>
@@ -158,32 +158,28 @@
                                         <li class="title">Въезд в отель <a href="#">Sichang Shine Khao Resort</a></li>
                                         <li class="period">После 12:00</li>
                                         <li class="room__sort">Standart NO ABF</li>
-                                    </ul>
-
-                                </div>
-                                <div class="package__description__info even">
-                                    <ul class="main__info">
                                         <li class="room__count">Комнат: 1</li>
                                         <li class="room__type">DBL/TWN (2 человека)</li>
-                                        <li class="day__count">Standart NO ABF</li>
+                                        <li class="day__count">Ночей: 6</li>
                                     </ul>
                                     <div class="other__info">
                                         <a class="variants pseudo__link" href="#">Варианты</a>
-                                        <span class="price">$54</span>
+                                        <span class="price">$135</span>
                                     </div>
                                 </div>
+                                    
                                 <i class="icon delete"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="order__info">
+                    <div class="order__info empty">
                         <ul class="main__titles">
                             <li><h4 class="day__number">День 2</h4></li>
                             <li><p class="date">20.01.2017</p></li>
                         </ul>
                         <i class="icon delete"></i>
                     </div>
-                    <div class="order__info">
+                    <div class="order__info empty">
                         <ul class="main__titles">
                             <li><h4 class="day__number">День 3</h4></li>
                             <li><p class="date">21.01.2017</p></li>
@@ -239,7 +235,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order__info">
+                    <div class="order__info empty">
                         <ul class="main__titles">
                             <li><h4 class="day__number">День 6</h4></li>
                             <li><p class="date">24.01.2017</p></li>
@@ -272,7 +268,12 @@
                         <ul class="action__links clearfix">
                             <li><a href="#" class="pseudo__link">Добавить день</a></li>
                             <li><a href="#" class="pseudo__link">Действия со списком</a></li>
-                            <li class="authorization"><a href="#" class="pseudo__link">Авторизуйтесь</a> <span>для сохранения</span></li>
+                            <li class="authorization">
+                                <a href="#" class="pseudo__link">Авторизуйтесь</a> <span>для сохранения</span>
+                            </li>
+                            <li class="loged__in">
+                                <a href="#" class="pseudo__link">Сохранить получившийся турпакет в избранные</a>
+                            </li>
                         </ul>
                         <ul class="action__btns">
                             <li class="price"><p class="total__price">$1750 <span class="exchanged">(~ 100 584 руб.)</span></p></li>
@@ -307,6 +308,260 @@
                 </div>
             </div>
         </section>
+        <div class="popap__window">
+            <div class="action__board">
+                <i class="close"></i>
+                <h2>Экскурсия „Камбоджа 3 дня / 2 ночи“ из г. Ко Чанг</h2>
+                <form name="excursion" action="">
+                    <div class="select__fields clearfix">
+                        <div class="field date required">
+                            <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required readonly>
+                        </div>
+                        <div class="field adults">
+                            <span>Взрослых</span>
+                            <select class="nosearch-select" style="width:50px;">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                        <div class="field kids">
+                            <span>Детей</span>
+                            <select class="nosearch-select" style="width:50px;">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                        <div class="field guide">
+                            <select class="nosearchFull-select">
+                                <option>Рускоязычный гид</option>
+                                <option>Англоязычный гид</option>
+                            </select>
+                        </div>
+                        <div class="field kid__bithd required">
+                            <input id="datepicker-1" class="calendar__field" type="text" placeholder="Дата рождения ребёнка" readonly>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <div class="action__filter">
+                            <ul class="filter__list">
+                                <li class="title"><h4>Выберите варианты:</h4></li>
+                                <li class="item"><a href="#">Эконом($300)</a></li>
+                                <li class="item active"><a href="#">Стандарт($975)</a></li>
+                                <li class="item"><a href="#">VIP($1600)</a></li>
+                                <li class="item"><a href="#">Свой</a></li>
+                            </ul>
+                        </div>
+                        <div class="filter__results">
+                            <div class="filter__results__col">
+                                <h5 class="title">Трансфер</h5>
+                                <ul class="transfer__selectors">
+                                    <li>
+                                        <input type="radio" name="vehicle" value="cab" id="cab" />
+                                        <label for="cab">
+                                            <span class="tooltip">
+                                                Такси
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                (2 шт по $22) $44
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
+                                        <label for="bigCab">
+                                            <span class="tooltip">
+                                                Маршрутное такси
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $30
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vehicle" value="microBus" id="microBus" />
+                                        <label for="microBus">
+                                            <span class="tooltip">
+                                                Микроавтобус
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $55
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vehicle" value="bus" id="bus" />
+                                        <label for="bus">
+                                            <span class="tooltip">
+                                                Автобус - групповая
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="tooltip__link">
+                                                (<a href="#">расписание</a>)
+                                            </span>
+                                            <span class="price">
+                                                $80
+                                            </span>
+
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vehicle" value="limo" id="limo" />
+                                        <label for="limo">
+                                            <span class="tooltip">
+                                                Лимузин
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $120
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter__results__col">
+                                <h5 class="title">Ужин</h5>
+                                <ul class="transfer__selectors">
+                                    <li>
+                                        <input type="radio" name="dinner" value="thai" id="thai" />
+                                        <label for="thai">
+                                            <span class="tooltip">
+                                                Тайское
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $15
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="dinner" value="euro" id="euro" />
+                                        <label for="euro">
+                                            <span class="tooltip">
+                                                Европейское
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $20
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="dinner" value="veg" id="veg" />
+                                        <label for="veg">
+                                            <span class="tooltip">
+                                                Вегетарианское
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $15
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter__results__col">
+                                <h5 class="title">Обед</h5>
+                                <ul class="transfer__selectors">
+                                    <li>
+                                        <input type="radio" name="lunch" value="none" id="none" />
+                                        <label for="none">
+                                            <span>Не нужно</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="lunch" value="сambodia" id="сambodia" />
+                                        <label for="сambodia">
+                                            <span class="tooltip">
+                                                Камбоджийское
+                                                <span class="tooltip__view">
+                                                    <img src="img/bulli.jpg" />
+                                                    <span>
+                                                        Комфортная поездка на микроавтобусе Volkswagen
+                                                        Bulli подарит Вам нереальное счастье!
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="price">
+                                                $15
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <p class="total__price">$975 <span class="exchanged">(~ 55 907 руб.)</span></p>
+                        <button class="bnt cart__btn" type="submit">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <!-- ===========================
     NECESSARY SCRIPTS
