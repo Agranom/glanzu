@@ -221,7 +221,7 @@
                     .tooltip {
                         border-bottom: 1px dashed $border-bottom-dashed;
                         display: inline-block;
-                        position:relative;
+                        position: relative;
 
                         &:hover {
                             border-bottom: 1px dashed transparent;
@@ -231,15 +231,16 @@
                     a {
                         color: $link-color;
                         border-bottom: 1px dashed $link-color;
-                        display:inline-block;
-                        line-height:17px;
+                        display: inline-block;
+                        line-height: 17px;
 
                         &:hover {
                             border-bottom: 1px dashed transparent;
                         }
                     }
+
                     .tooltip__link {
-                        display:inline-block;
+                        display: inline-block;
                     }
                 }
 
@@ -340,22 +341,25 @@
     }
 }
 /*-----//FOR SINGLE COLUMN-----*/
+.total__price {
+    font-size: 24px;
+    font-family: GothamProNarrow-Bold;
+    display: inline-block;
+    vertical-align: middle;
+
+    .exchanged {
+        font-size: 22px;
+        color: #8e9297;
+        font-family: GothamProNarrow-Medium;
+    }
+}
+
 .total {
     padding: 0 30px 30px;
     text-align: right;
 
     .total__price {
-        font-size: 24px;
-        font-family: GothamProNarrow-Bold;
-        display: inline-block;
-        vertical-align: middle;
         margin: 0 15px 0 0;
-
-        .exchanged {
-            font-size: 22px;
-            color: #8e9297;
-            font-family: GothamProNarrow-Medium;
-        }
     }
 
     .cart__btn {
@@ -398,29 +402,29 @@
             height: 23px;
             border: 2px solid #82868b;
 
-            
+
             @include border-radius(50%);
             vertical-align: bottom;
             cursor: default;
-            position:relative;
+            position: relative;
 
             &:before {
-                content:'!';
-                font-size:15px;
-                line-height:19px;
+                content: '!';
+                font-size: 15px;
+                line-height: 19px;
                 font-family: PTSans-Bold;
                 color: #82868b;
-                position:absolute;
-                left:50%;
-                margin-left:-2.5px;
+                position: absolute;
+                left: 50%;
+                margin-left: -2.5px;
             }
         }
+
         .exclamation_2 {
             &:before {
-                margin-left:-2.8px;
+                margin-left: -2.8px;
             }
         }
-        
     }
 }
 

@@ -21,16 +21,56 @@
     border-bottom: 1px dashed $link-color;
 
     &:hover {
-        border-bottom: 0;
+        border-bottom: 1px dashed transparent;
     }
 }
 
 .order {
     padding: 115px 0 75px;
     background-color: #fff;
+
+    .icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-image: url(../img/chosen-sprite.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 2;
+
+        &.drag {
+            background-position: 0 -16px;
+        }
+
+        &.delete {
+            background-position: -18px -16px;
+        }
+    }
+
+    .other__events {
+        margin: 90px 0 75px;
+
+        h3 {
+            margin: 0;
+            font-size: 18px;
+            color: $text-color;
+        }
+
+        .place {
+            padding-left: 20px;
+            &:nth-child(even) {
+                margin:25px 0 15px;
+            }
+            h5 {
+                color:$text-color;
+            }
+        }
+    }
 }
 
 .about_title {
+    padding: 0 220px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -56,16 +96,27 @@
 
 .order__view {
     margin: 30px auto 45px;
-    padding: 0 20px;
-    width:845px;
+    width: 850px;
 }
 
 .order__info {
     padding: 20px 0;
     border-top: 1px dashed rgb(196, 206, 216);
+    position: relative;
+
+    &:last-child {
+        border-bottom: 1px dashed rgb(196, 206, 216);
+    }
+
+    .icon {
+        &.delete {
+            right: 0;
+            top: 50%;
+            margin-top: -7.5px;
+        }
+    }
 
     .main__titles {
-        margin-bottom: 20px;
 
         li {
             display: inline-block;
@@ -75,11 +126,16 @@
                 font-size: 18px;
                 font-family: 'PTSans-Bold';
                 margin: 0;
+                color: $text-color;
             }
 
             .date {
-                color: #e44c82;
                 margin: 0;
+                color: #8e9297;
+
+                &.start__date {
+                    color: #e44c82;
+                }
             }
 
             .change__date {
@@ -103,14 +159,15 @@
 
 .package {
     padding-left: 20px;
-    margin-bottom: 15px;
+    margin-top: 20px;
 
     .package__time {
         position: relative;
         float: left;
         width: 75px;
         text-align: center;
-        /*.time__select {
+
+        .time__select {
             width: 75px;
             height: 36px;
             @include border-radius(4px);
@@ -122,7 +179,8 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             font-size: 15px;
-        }*/
+        }
+
         .searchForm__field {
             text-align: center;
             color: $text-color;
@@ -130,13 +188,13 @@
 
         &:after {
             content: '';
-            width: 41px;
+            width: 25px;
             height: 1px;
             display: inline-block;
             background-color: rgb(210, 234, 238);
             position: absolute;
             top: 50%;
-            right: -41px;
+            right: -25px;
         }
     }
 
@@ -152,6 +210,22 @@
         @include border-radius(2px);
         box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
         background-color: #e6ecf2;
+        position: relative;
+
+        .icon {
+
+            &.drag {
+                top: 10px;
+                left: 14px;
+                margin: 0;
+            }
+
+            &.delete {
+                margin: 0;
+                top: 10px;
+                right: 14px;
+            }
+        }
     }
 
     .package__description__info {
@@ -161,72 +235,105 @@
         align-items: flex-end;
         padding: 0 40px 0 55px;
 
-        &:nth-child(even) {
-            background-color:#d8dfe5;
+        &.even {
+            background-color: #d8dfe5;
         }
-        .icon {
+    }
+
+
+    .main__info {
+
+
+        li {
             display: inline-block;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            background-image: url(../img/chosen-sprite.png);
-            background-repeat: no-repeat;
-            top: 50%;
-            margin-top: -7.5px;
-            cursor: pointer;
+            line-height: 35px;
 
-            &.drag {
-                background-position: 0 -16px;
-                left: 14px;
+            &:not(:last-child) {
+                margin-right: 25px;
             }
 
-            &.delete {
-                background-position: -18px -16px;
-                right: 14px;
-            }
-        }
+            &.title {
+                font-family: 'PTSans-Bold';
 
+                a {
+                    font-family: PTSans-Regular;
+                    color: $link-color;
 
-        .main__info {
-
-
-            li {
-                display: inline-block;
-                line-height: 35px;
-
-                &:not(:last-child) {
-                    margin-right: 25px;
-                }
-
-                &.title {
-                    font-family: 'PTSans-Bold';
-
-                    a {
-                        font-family: PTSans-Regular;
-                        color: $link-color;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
             }
         }
+    }
 
-        .other__info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            line-height: 36px;
+    .other__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 36px;
 
-            .variants {
+        .variants {
+            margin-right: 30px;
+        }
+
+        .price {
+            display: inline-block;
+            font-family: 'PTSans-Bold';
+        }
+    }
+}
+
+.order__actions {
+    margin: 50px 0 0;
+
+    .action__links {
+        margin-bottom: 50px;
+
+        li {
+            float: left;
+
+            &:not(:first-child) {
+                margin-left: -.26em;
+            }
+
+            &:not(:last-child) {
                 margin-right: 30px;
             }
 
-            .price {
-                display: inline-block;
-                font-family: 'PTSans-Bold';
+            &.authorization {
+                float: right;
             }
+
+            span {
+                color: #8e9297;
+            }
+        }
+    }
+
+    .action__btns {
+        li {
+            display: inline-block;
+
+            &:not(:first-child) {
+                margin-left: -.26em;
+            }
+
+            .bnt {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .price {
+            margin-right: 42px;
+        }
+
+        .action__btn {
+            margin-right: 25px;
         }
     }
 }

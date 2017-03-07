@@ -254,19 +254,21 @@
     color: #da4e80; }
 
 /*-----//FOR SINGLE COLUMN-----*/
+.total__price {
+  font-size: 24px;
+  font-family: GothamProNarrow-Bold;
+  display: inline-block;
+  vertical-align: middle; }
+  .total__price .exchanged {
+    font-size: 22px;
+    color: #8e9297;
+    font-family: GothamProNarrow-Medium; }
+
 .total {
   padding: 0 30px 30px;
   text-align: right; }
   .total .total__price {
-    font-size: 24px;
-    font-family: GothamProNarrow-Bold;
-    display: inline-block;
-    vertical-align: middle;
     margin: 0 15px 0 0; }
-    .total .total__price .exchanged {
-      font-size: 22px;
-      color: #8e9297;
-      font-family: GothamProNarrow-Medium; }
   .total .cart__btn {
     background-color: #f8679a;
     font-size: 16px; }
