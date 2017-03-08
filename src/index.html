@@ -121,7 +121,11 @@
                         <ul class="main__titles">
                             <li><h4 class="day__number">День 1</h4></li>
                             <li><p class="date start__date">19.01.2017</p></li>
-                            <li><a href="#" class="change__date">Изменить дату  начала тура</a><span>(возможен пересчет услуг)</span></li>
+                            <li style="position:relative;">
+                                <a href="#" class="change__date" id="date__change">Изменить дату  начала тура </a>
+                                <input type="text" id="dp" style="width:0; position:absolute; left:0; top:-10px; border:none; padding:0;"  />
+                                <span>(возможен пересчет услуг)</span>
+                            </li>
                         </ul>
                         <div class="package clearfix">
                             <div class="package__time">

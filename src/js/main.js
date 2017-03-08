@@ -342,5 +342,15 @@ function initDateInput() {
     $("#datepicker,#datepicker-1").datepicker({
         dateFormat: "dd.mm.yy"
     });
+    $("#dp").datepicker({
+        dateFormat: "dd.mm.yy",
+        onSelect: function (dateText, inst) {
+            console.log(dateText);
+        }
+    });
+
+    $("#date__change").click(function () {
+        $("#dp").datepicker("show");
+    });
 };
 
