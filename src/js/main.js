@@ -2,7 +2,7 @@ $(function () {
     /*********************************************************/
     /* START CURRENCIES DROP-DOWN LIST  */
     /********************************************************/
-    $(".js--currencies,.nav__link--curr").click(function (event) {
+    $(".js--currencies,.nav__link--curr, .js--languages").click(function (event) {
         event.preventDefault();
         $(this).next('ul').toggle();
     });
@@ -219,7 +219,7 @@ $(function () {
             $('.popap__window').css('display', 'none');
         });
         $(document).on("touchstart click", function (e) {
-            var element = $(".other__info .variants");
+            var element = $(".action__board");
             if (!element.is(e.target)
                 && element.has(e.target).length === 0) {
                 $(".popap__window").hide();

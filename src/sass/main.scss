@@ -219,8 +219,30 @@ li.item__rollMenu {
     float: left;
 }
 
+.languages__item {
+    position: relative;
+}
+
 .inner .languages__item:hover {
     background-color: #515559;
+}
+
+.languages__sub {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 38px;
+    z-index: 100;
+    padding: 8px 0 10px 0;
+    background: #fff;
+    -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
+    display: none;
+}
+
+.languages__subItem {
+    padding: 13px 3px;
+    text-align: center;
 }
 
 .hidMenu .languages__item {
@@ -339,7 +361,7 @@ li.item__rollMenu {
 }
 
 .currencies__subItem {
-    padding: 13px 4px;
+    padding: 13px 3px;
 }
 
 .currencies__subLink {
