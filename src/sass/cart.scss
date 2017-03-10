@@ -109,6 +109,12 @@
 
     &.empty {
         padding: 20px 0 17px;
+
+        .icon {
+            &.delete {
+                display:inline-block;
+            }
+        }
     }
 
     &:nth-child(odd) {
@@ -118,6 +124,7 @@
 
     .icon {
         &.delete {
+            display:none;
             right: 0;
             top: 50%;
             margin-top: -7.5px;
@@ -225,10 +232,9 @@
         background-color: #e6ecf2;
         position: relative;
         cursor: pointer;
+        z-index: 2;
 
-        &.drag__start {
-            box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
-        }
+
 
         .icon {
 
@@ -248,9 +254,6 @@
 
     .package__description__info {
         position: relative;
-        /*display: flex;
-        justify-content: space-between;
-        align-items: flex-end;*/
         padding: 0 40px 0 59px;
 
         &.even {
@@ -297,6 +300,12 @@
                 font-family: 'PTSans-Bold';
             }
         }
+    }
+}
+
+.drag__start {
+    .package__description {
+        box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
     }
 }
 
@@ -403,4 +412,8 @@
 
 .select2-container--nosearch.select2-container--open .select2-dropdown {
     z-index: 6;
+}
+
+#ui-datepicker-div {
+    z-index: 10 !important;
 }

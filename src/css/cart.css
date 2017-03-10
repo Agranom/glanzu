@@ -85,12 +85,15 @@
   position: relative; }
   .order__info.empty {
     padding: 20px 0 17px; }
+    .order__info.empty .icon.delete {
+      display: inline-block; }
   .order__info:nth-child(odd) {
     background: -webkit-gradient(linear, left top, right top, from(#c4ced8), color-stop(50%, #c4ced8), color-stop(50%, transparent), to(transparent)) repeat-x left top, -webkit-gradient(linear, left top, right top, from(#c4ced8), color-stop(50%, #c4ced8), color-stop(50%, transparent), to(transparent)) repeat-x left bottom;
     background: -webkit-linear-gradient(left, #c4ced8 0%, #c4ced8 50%, transparent 50%, transparent 100%) repeat-x left top, -webkit-linear-gradient(left, #c4ced8 0%, #c4ced8 50%, transparent 50%, transparent 100%) repeat-x left bottom;
     background: linear-gradient(to right, #c4ced8 0%, #c4ced8 50%, transparent 50%, transparent 100%) repeat-x left top, linear-gradient(to right, #c4ced8 0%, #c4ced8 50%, transparent 50%, transparent 100%) repeat-x left bottom;
     background-size: 17px 1px; }
   .order__info .icon.delete {
+    display: none;
     right: 0;
     top: 50%;
     margin-top: -7.5px; }
@@ -166,10 +169,8 @@
             box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
     background-color: #e6ecf2;
     position: relative;
-    cursor: pointer; }
-    .package .package__description.drag__start {
-      -webkit-box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
-              box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17); }
+    cursor: pointer;
+    z-index: 2; }
     .package .package__description .icon.drag {
       top: 10px;
       left: 12px;
@@ -180,9 +181,6 @@
       right: 14px; }
   .package .package__description__info {
     position: relative;
-    /*display: flex;
-        justify-content: space-between;
-        align-items: flex-end;*/
     padding: 0 40px 0 59px; }
     .package .package__description__info.even {
       background-color: #d8dfe5; }
@@ -206,6 +204,10 @@
     .package .main__info .other__info .price {
       display: inline-block;
       font-family: 'PTSans-Bold'; }
+
+.drag__start .package__description {
+  -webkit-box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
+          box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17); }
 
 .order__actions {
   margin: 46px 0 0; }
@@ -278,3 +280,6 @@
 
 .select2-container--nosearch.select2-container--open .select2-dropdown {
   z-index: 6; }
+
+#ui-datepicker-div {
+  z-index: 10 !important; }
