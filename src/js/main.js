@@ -230,7 +230,8 @@ $(function () {
     });
     /* END SHOW FILTER */
     /********************************************************/
-    // Drag and Drop
+    /* DRAG AND DROP */
+    /********************************************************/
     var source = document.querySelectorAll('.package'),
         target = document.querySelectorAll('.target');
 
@@ -243,9 +244,18 @@ $(function () {
         el.addEventListener('dragover', handlerDragOver, false);
         el.addEventListener('drop', handlerDrop, false);
     });
-
-
+    /* END DRAG AND DROP */
+    /********************************************************/
+    /* SHOW DESCRIPTION TOOLTIP */
+    /********************************************************/
+    $(document).on('click', '.order .question__mark', function () {
+        $('.order .description__popap').show();
+    });
+    /*END SHOW DESCRIPTION TOOLTIP */
+    /********************************************************/
 });
+/* DRAG AND DROP */
+/********************************************************/
 function handlerDragStart(e) {
 
     this.classList.add('drag__start');
@@ -287,9 +297,9 @@ function isEmpty() {
             $(this).removeClass("empty");
 
     });
-
 }
-
+/*END DRAG AND DROP */
+/********************************************************/
 
 
 function initSelect() {

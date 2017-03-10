@@ -120,8 +120,39 @@
         <section class="order">
             <div class="inner clearfix">
                 <div class="about_title">
-                    <h1 class="title">Корзина-турпакет <span class="question__mark">?</span></h1>
-                    <p class="subtitle">Вы можете добавлять в качестве основы <a href="#">готовые турпакеты</a></p>
+                    <h1 class="title">
+                        Корзина-турпакет <span class="question__mark">?</span>
+                        <div class="description__popap">
+                            <i class="close icon delete"></i>
+                            <p class="text">
+                                В нашей умной корзине все добавляемые Вами услуги встают по дням
+                                в виде турпакета
+                            </p>
+                            <h6>Здесь вы можете:</h6>
+                            <ul>
+                                <li>Удалять и добавлять дни</li>
+                                <li>Удалять и редактировать услуги, а также перетаскивать  их на другие дни</li>
+                                <li>Добавить готовый турпакет и дополнить / изменить его состав</li>
+                                <li>
+                                    Сохранить для сравнения (и на потом) несколько вариантов турпакетов
+                                    (нужно авторизоваться)
+                                </li>
+                            </ul>
+                            <h6>Примечания</h6>
+                            <p style="margin-bottom:15px;">Услуги учитывают время на их выполнение, указывайте его, где возможно</p>
+                            <p>
+                                При изменении даты начала тура пересчитаются даты всех услуг в туре,
+                                что может изменить условия их предоставления (мы сообщим об этом)
+                            </p>
+                        </div>
+                    </h1>
+                    <p class="subtitle active">
+                        Вы можете добавлять в качестве основы <a href="#">готовые турпакеты</a>
+                    </p>
+                    <p class="subtitle">
+                        В качестве основы был добавлен <a href="#">этот турпакет</a>
+                    </p>
+                     
                 </div>
                 <div class="order__view">
                     <div class="order__info target" data-day="1">
@@ -130,7 +161,7 @@
                             <li><p class="date start__date">19.01.2017</p></li>
                             <li style="position:relative;">
                                 <a href="#" class="change__date" id="date__change">Изменить дату  начала тура </a>
-                                <input type="text" id="dp" style="width:0; position:absolute; left:0; top:-10px; border:none; padding:0;"  />
+                                <input type="text" id="dp" style="width:0; position:absolute; left:0; top:-10px; border:none; padding:0;" />
                                 <span>(возможен пересчет услуг)</span>
                             </li>
                         </ul>
@@ -187,7 +218,7 @@
                         </div>
                         <i class="icon delete"></i>
                     </div>
-                    <div class="order__info empty target"  data-day="2">
+                    <div class="order__info empty target" data-day="2">
                         <ul class="main__titles">
                             <li><h4 class="day__number">День 2</h4></li>
                             <li><p class="date">20.01.2017</p></li>
@@ -599,5 +630,14 @@
     <script src="js/html5gallery.js"></script>
     <script src="js/search_content.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        if (!localStorage.isShownPopap) {
+            $('.description__popap').show();
+        }
+        $(document).on('click', '.description__popap .close', function () {
+            $('.description__popap').hide();
+            localStorage.isShownPopap = 'true';
+        })
+    </script>
 </body>
 </html>
