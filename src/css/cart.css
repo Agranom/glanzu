@@ -39,9 +39,9 @@
     .order .icon.drag {
       background-position: 0 -16px; }
     .order .icon.delete {
-      background-position: -18px -48px; }
+      background-position: -17px -48px; }
       .order .icon.delete:hover {
-        background-position: -18px -33px; }
+        background-position: -17px -33px; }
   .order .other__events {
     margin: 84px 0 75px;
     margin-left: -7px; }
@@ -192,7 +192,7 @@
       right: 14px; }
   .package .package__description__info {
     position: relative;
-    padding: 0 40px 0 59px; }
+    padding: 0 41px 0 59px; }
     .package .package__description__info.even {
       background-color: #d8dfe5; }
   .package .main__info li {
@@ -215,9 +215,14 @@
       display: inline-block;
       font-family: 'PTSans-Bold'; }
 
-.drag__start .package__description {
-  -webkit-box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
-          box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17); }
+.drag__start {
+  /*.package__description {
+        box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
+    }*/
+  opacity: 0; }
+
+.drag__enter {
+  padding-bottom: 80px !important; }
 
 .order__actions {
   margin: 46px 0 0; }
@@ -238,20 +243,24 @@
         margin-right: 0; }
       .order__actions .action__links li span {
         color: #8e9297; }
-  .order__actions .action__btns li {
-    display: inline-block; }
-    .order__actions .action__btns li .bnt {
-      font-size: 16px; }
-  .order__actions .action__btns p {
-    margin: 0; }
-  .order__actions .action__btns .price {
-    margin-right: 32px; }
-  .order__actions .action__btns .action__btn {
-    margin-right: 20px; }
-  .order__actions .action__btns .exchanged {
-    font-size: 21px;
-    display: inline-block;
-    margin-left: 4px; }
+  .order__actions .action__btns {
+    /*.price {
+            margin-right: 32px;
+        }*/ }
+    .order__actions .action__btns li {
+      display: inline-block; }
+      .order__actions .action__btns li .bnt {
+        font-size: 16px; }
+    .order__actions .action__btns p {
+      margin: 0; }
+    .order__actions .action__btns .action__btn {
+      float: right; }
+      .order__actions .action__btns .action__btn:not(:last-child) {
+        margin-left: 20px; }
+    .order__actions .action__btns .exchanged {
+      font-size: 21px;
+      display: inline-block;
+      margin-left: 4px; }
 
 .popap__window {
   display: none;

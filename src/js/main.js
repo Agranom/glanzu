@@ -241,6 +241,8 @@ $(function () {
         el.addEventListener('dragend', handlerDragEnd, false);
     });
     [].forEach.call(target, function (el) {
+        el.addEventListener('dragenter', handlerDragEnter, false);
+        el.addEventListener('dragleave', handlerDragLeave, false);
         el.addEventListener('dragover', handlerDragOver, false);
         el.addEventListener('drop', handlerDrop, false);
     });
@@ -253,6 +255,9 @@ $(function () {
     });
     /*END SHOW DESCRIPTION TOOLTIP */
     /********************************************************/
+
+    $(".destination__time").mask("99 : 99", { placeholder: " " });
+
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -265,9 +270,18 @@ function handlerDragStart(e) {
 function handlerDragEnd(e) {
     this.classList.remove('drag__start');
 }
+function handlerDragEnter(e) {
+    //this.style.paddingBottom = 100 + "px";
+    this.classList.add('drag__enter');
+}
+function handlerDragLeave(e) {
+    this.classList.remove('drag__enter');
+}
 function handlerDragOver(e) {
+    this.classList.add('drag__enter');
     if (e.preventDefault) e.preventDefault();
     return false;
+    
 }
 function handlerDrop(e) {
     e.preventDefault();
@@ -286,6 +300,7 @@ function handlerDrop(e) {
     this.appendChild(element);
     //Hide/show the delete icon
     isEmpty();
+    this.classList.remove('drag__enter');
 }
 
 function isEmpty() {

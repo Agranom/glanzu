@@ -49,10 +49,10 @@
         }
 
         &.delete {
-            background-position: -18px -48px;
+            background-position: -17px -48px;
 
             &:hover {
-                background-position: -18px -33px;
+                background-position: -17px -33px;
             }
         }
     }
@@ -268,7 +268,7 @@
 
     .package__description__info {
         position: relative;
-        padding: 0 40px 0 59px;
+        padding: 0 41px 0 59px;
 
         &.even {
             background-color: #d8dfe5;
@@ -317,9 +317,13 @@
 }
 
 .drag__start {
-    .package__description {
+    /*.package__description {
         box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
-    }
+    }*/
+    opacity:0;
+}
+.drag__enter {
+    padding-bottom:80px!important;
 }
 
 .order__actions {
@@ -369,12 +373,15 @@
             margin: 0;
         }
 
-        .price {
+        /*.price {
             margin-right: 32px;
-        }
+        }*/
 
         .action__btn {
-            margin-right: 20px;
+            float:right;
+            &:not(:last-child) {
+                margin-left:20px;
+            }
         }
 
         .exchanged {
