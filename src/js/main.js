@@ -232,20 +232,20 @@ $(function () {
     /********************************************************/
     /* DRAG AND DROP */
     /********************************************************/
-    var source = document.querySelectorAll('.package'),
-        target = document.querySelectorAll('.target');
+    //var source = document.querySelectorAll('.package'),
+    //    target = document.querySelectorAll('.target');
 
 
-    [].forEach.call(source, function (el) {
-        el.addEventListener('dragstart', handlerDragStart, false);
-        el.addEventListener('dragend', handlerDragEnd, false);
-    });
-    [].forEach.call(target, function (el) {
-        el.addEventListener('dragenter', handlerDragEnter, false);
-        el.addEventListener('dragleave', handlerDragLeave, false);
-        el.addEventListener('dragover', handlerDragOver, false);
-        el.addEventListener('drop', handlerDrop, false);
-    });
+    //[].forEach.call(source, function (el) {
+    //    el.addEventListener('dragstart', handlerDragStart, false);
+    //    el.addEventListener('dragend', handlerDragEnd, false);
+    //});
+    //[].forEach.call(target, function (el) {
+    //    el.addEventListener('dragenter', handlerDragEnter, false);
+    //    el.addEventListener('dragleave', handlerDragLeave, false);
+    //    el.addEventListener('dragover', handlerDragOver, false);
+    //    el.addEventListener('drop', handlerDrop, false);
+    //});
     /* END DRAG AND DROP */
     /********************************************************/
     /* SHOW DESCRIPTION TOOLTIP */
