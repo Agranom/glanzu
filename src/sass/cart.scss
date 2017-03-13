@@ -12,11 +12,16 @@
     line-height: 18px;
     font-family: 'PT Sans Caption', sans-serif;
     vertical-align: bottom;
-    cursor:pointer;
+    cursor: pointer;
+
     &:hover {
-        border-color:#da477c;
-        color:#da477c;
+        border-color: #da477c;
+        color: #da477c;
     }
+}
+
+.pull-right {
+    float: right;
 }
 
 .pseudo__link {
@@ -95,12 +100,14 @@
     }
 
     .subtitle {
-        display:none;
+        display: none;
         margin: 0;
         color: #949692;
+
         &.active {
-            display:block;
+            display: block;
         }
+
         a {
             color: $link-color;
 
@@ -261,7 +268,7 @@
                 display: inline-block;
                 margin: 0;
                 top: 10px;
-                right: 14px;
+                right: 12px;
             }
         }
     }
@@ -320,10 +327,11 @@
     /*.package__description {
         box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);
     }*/
-    opacity:0;
+    opacity: 0;
 }
+
 .drag__enter {
-    padding-bottom:80px!important;
+    padding-bottom: 80px !important;
 }
 
 .order__actions {
@@ -362,7 +370,6 @@
 
     .action__btns {
         li {
-            display: inline-block;
 
             .bnt {
                 font-size: 16px;
@@ -372,22 +379,18 @@
         p {
             margin: 0;
         }
-
-        /*.price {
-            margin-right: 32px;
-        }*/
-
+        .price {
+            margin-right: 19px;
+        }
         .action__btn {
-            float:right;
+
             &:not(:last-child) {
-                margin-left:20px;
+                margin-right: 20px;
             }
         }
-
-        .exchanged {
-            font-size: 21px;
-            display: inline-block;
-            margin-left: 4px;
+        .total__price {
+            font-size:30px;
+            line-height:36px;
         }
     }
 }
@@ -422,12 +425,16 @@
             right: 10px;
             top: 10px;
             cursor: pointer;
+
+            &:hover {
+                background: url('../img/Grey_close_x _hover.png') no-repeat;
+            }
         }
     }
 }
 
 .description__popap {
-    display:none;
+    display: none;
     position: absolute;
     top: -41px;
     right: -588px;
@@ -484,7 +491,4 @@
 
 #ui-datepicker-div {
     z-index: 10 !important;
-}
-.whileDragging {
-    background:red;
 }

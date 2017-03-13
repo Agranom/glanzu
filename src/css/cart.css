@@ -16,6 +16,9 @@
     border-color: #da477c;
     color: #da477c; }
 
+.pull-right {
+  float: right; }
+
 .pseudo__link {
   display: inline-block;
   line-height: 17px;
@@ -189,7 +192,7 @@
       display: inline-block;
       margin: 0;
       top: 10px;
-      right: 14px; }
+      right: 12px; }
   .package .package__description__info {
     position: relative;
     padding: 0 41px 0 59px; }
@@ -243,24 +246,17 @@
         margin-right: 0; }
       .order__actions .action__links li span {
         color: #8e9297; }
-  .order__actions .action__btns {
-    /*.price {
-            margin-right: 32px;
-        }*/ }
-    .order__actions .action__btns li {
-      display: inline-block; }
-      .order__actions .action__btns li .bnt {
-        font-size: 16px; }
-    .order__actions .action__btns p {
-      margin: 0; }
-    .order__actions .action__btns .action__btn {
-      float: right; }
-      .order__actions .action__btns .action__btn:not(:last-child) {
-        margin-left: 20px; }
-    .order__actions .action__btns .exchanged {
-      font-size: 21px;
-      display: inline-block;
-      margin-left: 4px; }
+  .order__actions .action__btns li .bnt {
+    font-size: 16px; }
+  .order__actions .action__btns p {
+    margin: 0; }
+  .order__actions .action__btns .price {
+    margin-right: 19px; }
+  .order__actions .action__btns .action__btn:not(:last-child) {
+    margin-right: 20px; }
+  .order__actions .action__btns .total__price {
+    font-size: 30px;
+    line-height: 36px; }
 
 .popap__window {
   display: none;
@@ -294,6 +290,8 @@
       right: 10px;
       top: 10px;
       cursor: pointer; }
+      .popap__window .action__board .close:hover {
+        background: url("../img/Grey_close_x _hover.png") no-repeat; }
 
 .description__popap {
   display: none;
@@ -340,6 +338,3 @@
 
 #ui-datepicker-div {
   z-index: 10 !important; }
-
-.whileDragging {
-  background: red; }

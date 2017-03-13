@@ -233,7 +233,7 @@ li.item__rollMenu {
     left: 0;
     top: 38px;
     z-index: 100;
-    padding: 8px 0 10px 0;
+    padding: 13px 0;
     background: #fff;
     -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
     box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
@@ -241,8 +241,16 @@ li.item__rollMenu {
 }
 
 .languages__subItem {
-    padding: 13px 3px;
     text-align: center;
+
+    .languages__subLink {
+        display: block;
+        padding: 10px 0 14px;
+
+        &:hover {
+            background-color: #e9ebed;
+        }
+    }
 }
 
 .hidMenu .languages__item {

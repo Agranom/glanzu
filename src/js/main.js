@@ -2,10 +2,22 @@ $(function () {
     /*********************************************************/
     /* START CURRENCIES DROP-DOWN LIST  */
     /********************************************************/
-    $(".js--currencies,.nav__link--curr, .js--languages").click(function (event) {
+    $(document).on('click', ".js--currencies,.nav__link--curr, .js--languages", function (event) {
         event.preventDefault();
         $(this).next('ul').toggle();
     });
+    //Hide if touch event wasn't at lists
+    $(document).on("touchstart click", function (e) {
+        var element = $(".js--currencies,.nav__link--curr, .js--languages");
+        element.each(function () {
+            if (!$(this).is(e.target)
+            && $(this).has(e.target).length === 0) {
+                $($(this)).next('ul').hide();
+            }
+        })
+        
+    });/////////////////  TODO: Создать общую функцию
+
     /*********************************************************/
     /* END CURRENCIES DROP-DOWN LIST  */
     /********************************************************/
@@ -256,7 +268,7 @@ $(function () {
     /*END SHOW DESCRIPTION TOOLTIP */
     /********************************************************/
 
-    $(".destination__time").mask("99 : 99", { placeholder: " " });
+    initInputMask();
 
 });
 /* DRAG AND DROP */
@@ -415,4 +427,7 @@ function initDateInput() {
         $("#dp").datepicker("show");
     });
 };
-
+//Initialization mask for time input
+function initInputMask() {
+    $(".destination__time").mask("99 : 99", { placeholder: " " });
+};
