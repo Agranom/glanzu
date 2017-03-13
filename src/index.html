@@ -9,6 +9,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:700" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
     <link rel="stylesheet" href="css/base/jquery.ui.all.css">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -301,7 +302,7 @@
                             <div class="package__time">
                                 <input type="text" placeholder="00 : 00" class="searchForm__field destination__time"  />
                             </div>
-                            <div class="package__description">
+                            <div class="package__description" draggable="true">
                                 <i class="drag icon"></i>
                                 <div class="package__description__info clearfix">
                                     <ul class="main__info">
@@ -617,14 +618,15 @@
             </div>
         </div>
     </div>
-    <!--<div style="width:90px; height:90px; background:red;" class="go">
+    <!--<div style="width:50px; height:50px; background:red;" id="draggable">
         <div style="width:50px; height:50px; background:white;"></div>
     </div>
-    <div style="width:90px; height:90px; background:blue;" class="drop"></div>-->
+    <div style="width:90px; height:90px; background:blue;" id="droppable" class="ui-droppable"></div>-->
     <!-- ===========================
     NECESSARY SCRIPTS
     =========================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!--build:js js/libs.min.js -->
 
     <script src="js/libs.min.js"></script>
@@ -637,6 +639,7 @@
     <script src="js/html5gallery.js"></script>
     <script src="js/search_content.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/DragDropTouch.js"></script>
     <script src="js/main.js"></script>
     <script>
         if (!localStorage.isShownPopap) {

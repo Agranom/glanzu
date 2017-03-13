@@ -342,6 +342,4 @@
   z-index: 10 !important; }
 
 .whileDragging {
-  background: red;
-  width: 100%;
-  position: absolute; }
+  background: red; }
