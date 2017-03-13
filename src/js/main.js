@@ -5,18 +5,20 @@ $(function () {
     $(document).on('click', ".js--currencies,.nav__link--curr, .js--languages", function (event) {
         event.preventDefault();
         $(this).next('ul').toggle();
+
+        //Hide if touch event wasn't at lists
+        $(document).on("touchstart click", function (e) {
+            var element = $(".js--currencies,.nav__link--curr, .js--languages");
+            element.each(function () {
+                if (!$(this).is(e.target)
+                && $(this).has(e.target).length === 0) {
+                    $(this).next('ul').hide();
+                }
+            })
+
+        });
     });
-    //Hide if touch event wasn't at lists
-    $(document).on("touchstart click", function (e) {
-        var element = $(".js--currencies,.nav__link--curr, .js--languages");
-        element.each(function () {
-            if (!$(this).is(e.target)
-            && $(this).has(e.target).length === 0) {
-                $($(this)).next('ul').hide();
-            }
-        })
-        
-    });/////////////////  TODO: Создать общую функцию
+
 
     /*********************************************************/
     /* END CURRENCIES DROP-DOWN LIST  */
@@ -95,12 +97,6 @@ $(function () {
 
 
     initSelect();
-
-
-
-
-
-
 
     /*********************************************************/
     /* End CUSTOM SELECT  */
@@ -244,6 +240,29 @@ $(function () {
     /********************************************************/
     /* DRAG AND DROP */
     /********************************************************/
+    dragDrop();
+
+    /* END DRAG AND DROP */
+    /********************************************************/
+    /* SHOW DESCRIPTION TOOLTIP */
+    /********************************************************/
+    $(document).on('click', '.order .question__mark', function () {
+        $('.order .description__popap').show();
+    });
+    /*END SHOW DESCRIPTION TOOLTIP */
+    /********************************************************/
+
+    /* SET MASK FOR INPUTS */
+    /********************************************************/
+    initInputMask();
+    /* END SET MASK FOR INPUTS */
+    /********************************************************/
+    
+});
+/* DRAG AND DROP */
+/********************************************************/
+function dragDrop() {
+    var sourceId;
     var source = document.querySelectorAll('.package'),
         target = document.querySelectorAll('.target');
 
@@ -258,72 +277,83 @@ $(function () {
         el.addEventListener('dragover', handlerDragOver, false);
         el.addEventListener('drop', handlerDrop, false);
     });
-    /* END DRAG AND DROP */
-    /********************************************************/
-    /* SHOW DESCRIPTION TOOLTIP */
-    /********************************************************/
-    $(document).on('click', '.order .question__mark', function () {
-        $('.order .description__popap').show();
-    });
-    /*END SHOW DESCRIPTION TOOLTIP */
-    /********************************************************/
 
-    initInputMask();
+    function handlerDragStart(e) {
 
-});
-/* DRAG AND DROP */
-/********************************************************/
-function handlerDragStart(e) {
-
-    this.classList.add('drag__start');
-    e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("Text", this.id);
-}
-function handlerDragEnd(e) {
-    this.classList.remove('drag__start');
-}
-function handlerDragEnter(e) {
-    //this.style.paddingBottom = 100 + "px";
-    this.classList.add('drag__enter');
-}
-function handlerDragLeave(e) {
-    this.classList.remove('drag__enter');
-}
-function handlerDragOver(e) {
-    this.classList.add('drag__enter');
-    if (e.preventDefault) e.preventDefault();
-    return false;
-    
-}
-function handlerDrop(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var id = e.dataTransfer.getData("Text"),
-        element = document.getElementById(id),
-        currentDay,
-        nextDay,
-         nextTarget;
-    //if excursion has 2 parts
-    if (element.dataset.child) {
-        currentDay = parseInt(this.dataset.day);
-        nextDay = document.querySelector(".order__info[data-day='" + ++currentDay + "']");
-        nextDay.appendChild(document.querySelector(".package[data-child-name='" + element.dataset.child + "']"));
+        this.classList.add('drag__start');
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("Text", this.id);
+        getSource(this.id);
     }
-    this.appendChild(element);
-    //Hide/show the delete icon
-    isEmpty();
-    this.classList.remove('drag__enter');
-}
+    function getSource(id) {
+        sourceId = id;
+    }
+    function handlerDragEnd(e) {
+        this.classList.remove('drag__start');
+    }
+    function handlerDragEnter(e) {
 
-function isEmpty() {
-    var days = $('.order__info');
-    days.each(function () {
-        if ($(this).children(".package").length === 0)
-            $(this).addClass("empty");
-        else
-            $(this).removeClass("empty");
+        getCurrentDay(this);
+    }
+    function handlerDragLeave(e) {
+        this.classList.remove('drag__enter');
+    }
+    function handlerDragOver(e) {
 
-    });
+        getCurrentDay(this);
+        if (e.preventDefault) e.preventDefault();
+        return false;
+
+    }
+    function handlerDrop(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var id = e.dataTransfer.getData("Text"),
+            element = document.getElementById(id),
+            currentDay,
+            nextDay,
+            nextTarget;
+        //if excursion has 2 parts
+        if (element.dataset.child) {
+            currentDay = parseInt(this.dataset.day);
+            nextDay = document.querySelector(".order__info[data-day='" + ++currentDay + "']");
+            nextDay.appendChild(document.querySelector(".package[data-child-name='" + element.dataset.child + "']"));
+        }
+        this.appendChild(element);
+        //Hide/show the delete icon
+        isEmpty();
+        this.classList.remove('drag__enter');
+        setSameData();
+    }
+
+    function isEmpty() {
+        var days = $('.order__info');
+        days.each(function () {
+            if ($(this).children(".package").length === 0)
+                $(this).addClass("empty");
+            else
+                $(this).removeClass("empty");
+
+        });
+    }
+    //If drag start and drag over occur in a current day - don't apply any css
+    function getCurrentDay(currentElement) {
+        var tagData;
+        var sourceEl = document.getElementById(sourceId);
+
+        tagData = sourceEl.dataset.day;
+        if (tagData != currentElement.dataset.day) {
+            currentElement.classList.add('drag__enter');
+        }
+    }
+    function setSameData() {
+        var dataFor = document.querySelectorAll('.package');
+        [].forEach.call(dataFor, function (elem) {
+            elem.dataset.day = elem.parentElement.dataset.day;
+        });
+
+    }
+    setSameData();
 }
 /*END DRAG AND DROP */
 /********************************************************/

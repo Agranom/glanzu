@@ -298,7 +298,7 @@
                             <li><h4 class="day__number">День 7</h4></li>
                             <li><p class="date">25.01.2017</p></li>
                         </ul>
-                        <div class="package clearfix" id="source4">
+                        <div class="package clearfix" id="source4" data-day="7">
                             <div class="package__time">
                                 <input type="text" placeholder="00 : 00" class="searchForm__field destination__time"  />
                             </div>
@@ -611,7 +611,7 @@
                         </div>
                     </div>
                     <div class="total">
-                        <p class="total__price">$975 <span class="exchanged">(~ 55 907 руб.)</span></p>
+                        <p class="total__price">$975</p>
                         <button class="bnt cart__btn" type="submit">Сохранить</button>
                     </div>
                 </form>
@@ -639,12 +639,12 @@
     <script src="js/DragDropTouch.js"></script>
     <script src="js/main.js"></script>
     <script>
-        if (!localStorage.isShownPopap) {
-            $('.description__popap').show();
-        }
+        //if (!localStorage.isShownPopap) {
+        //    $('.description__popap').show();
+        //}
         $(document).on('click', '.description__popap .close', function () {
             $('.description__popap').hide();
-            localStorage.isShownPopap = 'true';
+            //localStorage.isShownPopap = 'true';
         })
     </script>
 </body>
