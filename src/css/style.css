@@ -357,9 +357,19 @@ li.item__rollMenu {
 
 .languages__item {
   position: relative; }
+  .languages__item.active {
+    background-color: #515559; }
 
 .inner .languages__item:hover {
   background-color: #515559; }
+
+.inner .currencies__item:hover {
+  background-color: #515559; }
+
+.inner .currencies__link {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 43px; }
 
 .languages__sub {
   position: absolute;
@@ -367,14 +377,15 @@ li.item__rollMenu {
   left: 0;
   top: 38px;
   z-index: 100;
-  padding: 13px 0;
+  padding-top: 10px;
   background: #fff;
   -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
   display: none; }
 
 .languages__subItem {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 10px; }
   .languages__subItem .languages__subLink {
     display: block;
     padding: 10px 0 14px; }
@@ -433,14 +444,8 @@ li.item__rollMenu {
 .currencies__item {
   position: relative;
   margin: 0 0 0 10px; }
-
-.inner .currencies__item:hover {
-  background-color: #515559; }
-
-.inner .currencies__link {
-  display: inline-block;
-  padding: 0 15px;
-  line-height: 43px; }
+  .currencies__item.active {
+    background-color: #515559; }
 
 .currencies__link {
   color: #f8f8f8;
@@ -468,20 +473,23 @@ li.item__rollMenu {
   left: 0;
   top: 38px;
   z-index: 100;
-  padding: 8px 0 10px 0;
+  padding-top: 10px;
   background: #fff;
   -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
   display: none; }
 
 .currencies__subItem {
-  padding: 13px 3px; }
+  margin-bottom: 10px; }
 
 .currencies__subLink {
   color: #495059 !important;
   text-transform: uppercase;
   text-align: center;
-  display: block; }
+  display: block;
+  padding: 10px 0; }
+  .currencies__subLink:hover {
+    background-color: #e9ebed; }
 
 .header .icons {
   cursor: pointer;
@@ -531,14 +539,18 @@ li.item__rollMenu {
     z-index: 2;
     margin: 0; }
   .hidMenu .currencies__item {
-    padding-top: 11px;
-    margin: 0 0 0 25px; }
-    .hidMenu .currencies__item:hover {
-      background-color: transparent; }
+    margin-left: 12px;
+    padding: 10px 15px 0;
+    min-height: 43px; }
+
+.nav__item--hasSub.active {
+  background-color: #515559; }
 
 .hidFirstChild {
   float: left;
   position: relative; }
+  .hidFirstChild.active {
+    background-color: #515559; }
 
 /* MAIN SECTION */
 .main {

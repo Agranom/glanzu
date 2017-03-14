@@ -4,6 +4,7 @@ $(function () {
     /********************************************************/
     $(document).on('click', ".js--currencies,.nav__link--curr, .js--languages", function (event) {
         event.preventDefault();
+        $(this).parent().toggleClass('active');
         $(this).next('ul').toggle();
 
         //Hide if touch event wasn't at lists
@@ -13,6 +14,7 @@ $(function () {
                 if (!$(this).is(e.target)
                 && $(this).has(e.target).length === 0) {
                     $(this).next('ul').hide();
+                    $(this).parent().removeClass('active');
                 }
             })
 

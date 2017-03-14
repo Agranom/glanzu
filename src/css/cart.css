@@ -61,7 +61,8 @@
         margin: 0 0 14px; }
 
 .about_title {
-  padding: 0 228px 0 216px;
+  width: 890px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
