@@ -430,11 +430,13 @@ function initSearch() {
 };
 
 function initDateInput() {
-    $("#datepicker,#datepicker-1").datepicker({
-        dateFormat: "dd.mm.yy"
+    $("#datepicker,#datepicker-1,#datepicker-2").datepicker({
+        dateFormat: "dd.mm.yy",
+        showOtherMonths: true
     });
     $("#dp").datepicker({
         dateFormat: "dd.mm.yy",
+        showOtherMonths: true,
         onSelect: function (dateText, inst) {
             console.log(dateText);
         }

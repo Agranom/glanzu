@@ -88,8 +88,8 @@
 }
 
 .about_title {
-    width:890px;
-    margin:0 auto;
+    width: 890px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -380,18 +380,21 @@
         p {
             margin: 0;
         }
+
         .price {
             margin-right: 19px;
         }
+
         .action__btn {
 
             &:not(:last-child) {
                 margin-right: 20px;
             }
         }
+
         .total__price {
-            font-size:30px;
-            line-height:36px;
+            font-size: 30px;
+            line-height: 36px;
         }
     }
 }
@@ -405,42 +408,27 @@
     top: 0;
     left: 0;
     z-index: 5;
-    /*justify-content: center;
-    align-items: center;*/
 
     .action__board {
         width: 768px;
         background-color: #f4f6f8;
         position: relative;
-        z-index:6;
-        margin:0 auto;
-        padding-top:15px;
+        z-index: 6;
+        margin: 0 auto;
+        padding-top: 15px;
 
         h2 {
             padding-left: 30px;
         }
+
         .mfp-close {
-            font-size:50px;
-            color:rgb(172, 172, 173);
+            font-size: 50px;
+            color: rgb(172, 172, 173);
 
             &:hover {
-               color:rgb(224, 109, 150);
+                color: rgb(224, 109, 150);
             }
         }
-        /*.close {
-            display: inline-block;
-            background: url(../img/Grey_close_x.png) no-repeat;
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: 10px;
-            top: 10px;
-            cursor: pointer;
-
-            &:hover {
-                background: url('../img/Grey_close_x _hover.png') no-repeat;
-            }
-        }*/
     }
 }
 

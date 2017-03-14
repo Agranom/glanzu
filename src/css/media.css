@@ -37,6 +37,8 @@
   li.item__rollMenu {
     display: inline-block;
     padding: 0 12px; }
+  .icons-list li:not(:last-child) {
+    margin-right: 7px; }
   .cart {
     margin-left: 0; }
   .header .icons {

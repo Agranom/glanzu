@@ -267,30 +267,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
-  /*justify-content: center;
-    align-items: center;*/ }
+  z-index: 5; }
   .popap__window .action__board {
     width: 768px;
     background-color: #f4f6f8;
     position: relative;
     z-index: 6;
     margin: 0 auto;
-    padding-top: 15px;
-    /*.close {
-            display: inline-block;
-            background: url(../img/Grey_close_x.png) no-repeat;
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: 10px;
-            top: 10px;
-            cursor: pointer;
-
-            &:hover {
-                background: url('../img/Grey_close_x _hover.png') no-repeat;
-            }
-        }*/ }
+    padding-top: 15px; }
     .popap__window .action__board h2 {
       padding-left: 30px; }
     .popap__window .action__board .mfp-close {

@@ -293,10 +293,11 @@ a.logo {
 
 .rollMenu {
   cursor: pointer;
-  width: 17px;
   position: relative;
-  margin-top: 14px;
-  display: inline-block; }
+  display: inline-block;
+  width: 23px;
+  height: 20px;
+  background: url(../img/svgicons/hamburger.svg) no-repeat; }
   .rollMenu:before, .rollMenu:after {
     content: '';
     width: 30px;

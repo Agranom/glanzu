@@ -140,10 +140,11 @@ a.logo {
 
 .rollMenu {
     cursor: pointer;
-    width: 17px;
     position: relative;
-    margin-top: 14px;
     display: inline-block;
+    width: 23px;
+    height: 20px;
+    background: url(../img/svgicons/hamburger.svg) no-repeat;
 
     &:before, &:after {
         content: '';
@@ -500,32 +501,35 @@ li.item__rollMenu {
     padding: 20px 20px 6px 20px;
 }
 
-.filter__location {
-    padding: 10px;
+.filter__side {
+    .filter__location {
+        padding: 10px;
+    }
+
+    .filter__count, .filter__price {
+        padding: 10px 20px;
+    }
+
+    .filter__rating {
+        padding: 8px 10px 10px 10px;
+    }
+
+    .filter__results {
+        padding: 10px 20px 30px 20px;
+    }
+
+    .filter__search {
+        margin: 0 20px;
+        border: 1px solid #d6d9de;
+        border-width: 1px 0;
+        padding: 30px 0;
+    }
+
+    .filter__settings {
+        padding: 0 20px 20px 20px;
+    }
 }
 
-.filter__count, .filter__price {
-    padding: 10px 20px;
-}
-
-.filter__rating {
-    padding: 8px 10px 10px 10px;
-}
-
-.filter__results {
-    padding: 10px 20px 30px 20px;
-}
-
-.filter__search {
-    margin: 0 20px;
-    border: 1px solid #d6d9de;
-    border-width: 1px 0;
-    padding: 30px 0;
-}
-
-.filter__settings {
-    padding: 0 20px 20px 20px;
-}
 
 .calendar {
     padding: 10px 20px;
@@ -672,6 +676,7 @@ li.item__rollMenu {
 
 .rating {
     padding: 0 0 0 21px;
+    cursor: default;
 }
 
 .rating__item {
@@ -1291,3 +1296,108 @@ li.item__rollMenu {
 .select2-container--nosearchFull.select2-container--open .select2-dropdown {
     z-index: 1002;
 }
+//Custom calendar
+.ui-datepicker {
+    width: 310px;
+    height: 328px;
+    padding: 0;
+    @include border-radius(0);
+
+    .ui-datepicker-header {
+        padding: 9px 0;
+        @include border-radius(0);
+        background: #82868b;
+        color: #fff;
+        font: normal 18px 'PTSans-Regular';
+        border: 0;
+    }
+
+    .ui-state-hover {
+        background: none;
+        border: 0;
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+        top: 50%;
+        margin-top: -.9em;
+        cursor: pointer;
+
+        .ui-icon {
+            width: 10px;
+            height: 11px;
+            background: url(../img/chosen-sprite.png) no-repeat;
+        }
+
+        .ui-icon-circle-triangle-w {
+            background-position: 0 -33px;
+
+            &:hover {
+                background-position: 0 -69px;
+            }
+        }
+
+        .ui-icon-circle-triangle-e {
+            background-position: 0 -45px;
+
+            &:hover {
+                background-position: 0 -57px;
+            }
+        }
+
+        span {
+            margin-top: -6px;
+            margin-left: -5px;
+        }
+    }
+
+    .ui-datepicker-prev {
+        left: 4px;
+    }
+
+    .ui-datepicker-next {
+        right: 4px;
+    }
+
+    td {
+        span, a {
+            border: 0;
+            text-align: center;
+            font-size: 15px;
+            padding: 11px;
+        }
+    }
+}
+
+.ui-datepicker table {
+    font-size: 15px;
+    font-family: 'PTSans-Regular';
+
+    thead {
+        background: #82868b;
+        border-top: 1px solid #fff;
+    }
+
+    th {
+        padding: 15px 0;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .ui-state-default {
+        border: 0;
+        background: none;
+        color: #4c4c4c;
+        @include border-radius(50%);
+    }
+
+    .ui-state-hover {
+        background: #fdd1e1;
+    }
+
+    .ui-state-highlight {
+        background: rgb(248, 103, 154);
+        color: #fff;
+    }
+}
+/*--------------//-----------------*/

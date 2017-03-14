@@ -90,6 +90,77 @@
 
 .filter {
   padding-bottom: 30px; }
+  .filter .filter__results {
+    padding: 15px 30px 30px;
+    background-color: #e8ebef;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .filter .filter__results__col {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      -webkit-flex-basis: 33%;
+          -ms-flex-preferred-size: 33%;
+              flex-basis: 33%;
+      padding-left: 15px; }
+      .filter .filter__results__col:not(:first-child) {
+        border-left: 1px solid #d6dadf; }
+      .filter .filter__results__col .title {
+        font-size: 17px;
+        margin: 0 0 15px;
+        font-family: PTSans-Bold; }
+      .filter .filter__results__col .transfer__selectors li label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        color: #485059;
+        font-size: 15px;
+        position: relative;
+        line-height: 17px; }
+        .filter .filter__results__col .transfer__selectors li label:before {
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          margin-right: 7px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #fff;
+          border: 1px solid #a0a4a9;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%; }
+        .filter .filter__results__col .transfer__selectors li label .tooltip {
+          border-bottom: 1px dashed #a0a4a9;
+          display: inline-block;
+          position: relative; }
+          .filter .filter__results__col .transfer__selectors li label .tooltip:hover {
+            border-bottom: 1px dashed transparent; }
+        .filter .filter__results__col .transfer__selectors li label a {
+          color: #007fbb;
+          border-bottom: 1px dashed #007fbb;
+          display: inline-block;
+          line-height: 17px; }
+          .filter .filter__results__col .transfer__selectors li label a:hover {
+            border-bottom: 1px dashed transparent; }
+        .filter .filter__results__col .transfer__selectors li label .tooltip__link {
+          display: inline-block; }
+      .filter .filter__results__col .transfer__selectors li input[type=radio] {
+        display: none; }
+        .filter .filter__results__col .transfer__selectors li input[type=radio]:checked + label:before {
+          content: "\2022";
+          color: #33363a;
+          font-size: 24px;
+          text-align: center;
+          line-height: 13px; }
+        .filter .filter__results__col .transfer__selectors li input[type=radio]:checked + label .tooltip {
+          color: #da4e80; }
+      .filter .filter__results__col .transfer__selectors li:not(:last-child) {
+        margin-bottom: 35px; }
 
 .action__filter {
   display: -webkit-box;
@@ -127,78 +198,6 @@
         display: inline-block; }
         .action__filter .filter__list li.item a:hover {
           color: #007687; }
-
-.filter__results {
-  padding: 15px 30px 30px;
-  background-color: #e8ebef;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .filter__results__col {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-flex-basis: 33%;
-        -ms-flex-preferred-size: 33%;
-            flex-basis: 33%;
-    padding-left: 15px; }
-    .filter__results__col:not(:first-child) {
-      border-left: 1px solid #d6dadf; }
-    .filter__results__col .title {
-      font-size: 17px;
-      margin: 0 0 15px;
-      font-family: PTSans-Bold; }
-    .filter__results__col .transfer__selectors li label {
-      display: inline-block;
-      cursor: pointer;
-      position: relative;
-      padding-left: 25px;
-      color: #485059;
-      font-size: 15px;
-      position: relative;
-      line-height: 17px; }
-      .filter__results__col .transfer__selectors li label:before {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: 7px;
-        position: absolute;
-        left: 0;
-        top: 1px;
-        background-color: #fff;
-        border: 1px solid #a0a4a9;
-        -webkit-border-radius: 50%;
-                border-radius: 50%; }
-      .filter__results__col .transfer__selectors li label .tooltip {
-        border-bottom: 1px dashed #a0a4a9;
-        display: inline-block;
-        position: relative; }
-        .filter__results__col .transfer__selectors li label .tooltip:hover {
-          border-bottom: 1px dashed transparent; }
-      .filter__results__col .transfer__selectors li label a {
-        color: #007fbb;
-        border-bottom: 1px dashed #007fbb;
-        display: inline-block;
-        line-height: 17px; }
-        .filter__results__col .transfer__selectors li label a:hover {
-          border-bottom: 1px dashed transparent; }
-      .filter__results__col .transfer__selectors li label .tooltip__link {
-        display: inline-block; }
-    .filter__results__col .transfer__selectors li input[type=radio] {
-      display: none; }
-      .filter__results__col .transfer__selectors li input[type=radio]:checked + label:before {
-        content: "\2022";
-        color: #33363a;
-        font-size: 24px;
-        text-align: center;
-        line-height: 13px; }
-      .filter__results__col .transfer__selectors li input[type=radio]:checked + label .tooltip {
-        color: #da4e80; }
-    .filter__results__col .transfer__selectors li:not(:last-child) {
-      margin-bottom: 35px; }
 
 .tooltip__view {
   display: none;

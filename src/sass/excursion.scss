@@ -117,6 +117,107 @@
 
 .filter {
     padding-bottom: 30px;
+
+    .filter__results {
+        padding: 15px 30px 30px;
+        background-color: #e8ebef;
+        display: flex;
+
+        &__col {
+            flex-grow: 1;
+            flex-basis: 33%;
+            padding-left: 15px;
+
+            &:not(:first-child) {
+                border-left: 1px solid #d6dadf;
+            }
+
+            .title {
+                font-size: 17px;
+                margin: 0 0 15px;
+                font-family: PTSans-Bold;
+            }
+
+            .transfer__selectors {
+                li {
+
+                    label {
+                        display: inline-block;
+                        cursor: pointer;
+                        position: relative;
+                        padding-left: 25px;
+                        color: #485059;
+                        font-size: 15px;
+                        position: relative;
+                        line-height: 17px;
+
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            margin-right: 7px;
+                            position: absolute;
+                            left: 0;
+                            top: 1px;
+                            background-color: #fff;
+                            border: 1px solid $border-bottom-dashed;
+                            @include border-radius(50%);
+                        }
+
+                        .tooltip {
+                            border-bottom: 1px dashed $border-bottom-dashed;
+                            display: inline-block;
+                            position: relative;
+
+                            &:hover {
+                                border-bottom: 1px dashed transparent;
+                            }
+                        }
+
+                        a {
+                            color: $link-color;
+                            border-bottom: 1px dashed $link-color;
+                            display: inline-block;
+                            line-height: 17px;
+
+                            &:hover {
+                                border-bottom: 1px dashed transparent;
+                            }
+                        }
+
+                        .tooltip__link {
+                            display: inline-block;
+                        }
+                    }
+
+                    input[type=radio] {
+                        display: none;
+
+                        &:checked {
+                            + label:before {
+                                content: "\2022";
+                                color: #33363a;
+                                font-size: 24px;
+                                text-align: center;
+                                line-height: 13px;
+                            }
+
+                            + label {
+                                .tooltip {
+                                    color: $page-link-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                li:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
 }
 
 .action__filter {
@@ -171,106 +272,7 @@
     }
 }
 
-.filter__results {
-    padding: 15px 30px 30px;
-    background-color: #e8ebef;
-    display: flex;
 
-    &__col {
-        flex-grow: 1;
-        flex-basis: 33%;
-        padding-left: 15px;
-
-        &:not(:first-child) {
-            border-left: 1px solid #d6dadf;
-        }
-
-        .title {
-            font-size: 17px;
-            margin: 0 0 15px;
-            font-family: PTSans-Bold;
-        }
-
-        .transfer__selectors {
-            li {
-
-                label {
-                    display: inline-block;
-                    cursor: pointer;
-                    position: relative;
-                    padding-left: 25px;
-                    color: #485059;
-                    font-size: 15px;
-                    position: relative;
-                    line-height: 17px;
-
-                    &:before {
-                        content: "";
-                        display: inline-block;
-                        width: 15px;
-                        height: 15px;
-                        margin-right: 7px;
-                        position: absolute;
-                        left: 0;
-                        top: 1px;
-                        background-color: #fff;
-                        border: 1px solid $border-bottom-dashed;
-                        @include border-radius(50%);
-                    }
-
-                    .tooltip {
-                        border-bottom: 1px dashed $border-bottom-dashed;
-                        display: inline-block;
-                        position: relative;
-
-                        &:hover {
-                            border-bottom: 1px dashed transparent;
-                        }
-                    }
-
-                    a {
-                        color: $link-color;
-                        border-bottom: 1px dashed $link-color;
-                        display: inline-block;
-                        line-height: 17px;
-
-                        &:hover {
-                            border-bottom: 1px dashed transparent;
-                        }
-                    }
-
-                    .tooltip__link {
-                        display: inline-block;
-                    }
-                }
-
-                input[type=radio] {
-                    display: none;
-
-                    &:checked {
-                        + label:before {
-                            content: "\2022";
-                            color: #33363a;
-                            font-size: 24px;
-                            text-align: center;
-                            line-height: 13px;
-                        }
-
-                        + label {
-                            .tooltip {
-                                color: $page-link-color;
-                            }
-                        }
-                    }
-                }
-            }
-
-            li:not(:last-child) {
-                margin-bottom: 35px;
-            }
-        }
-    }
-}
 
 .tooltip__view {
     display: none;
