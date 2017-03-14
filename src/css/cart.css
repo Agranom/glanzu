@@ -260,7 +260,7 @@
     line-height: 36px; }
 
 .popap__window {
-  display: none;
+  display: block;
   background: rgba(124, 124, 124, 0.5);
   width: 100%;
   height: 100%;
@@ -268,31 +268,36 @@
   top: 0;
   left: 0;
   z-index: 5;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  /*justify-content: center;
+    align-items: center;*/ }
   .popap__window .action__board {
     width: 768px;
     background-color: #f4f6f8;
-    position: relative; }
+    position: relative;
+    z-index: 6;
+    margin: 0 auto;
+    padding-top: 15px;
+    /*.close {
+            display: inline-block;
+            background: url(../img/Grey_close_x.png) no-repeat;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: url('../img/Grey_close_x _hover.png') no-repeat;
+            }
+        }*/ }
     .popap__window .action__board h2 {
       padding-left: 30px; }
-    .popap__window .action__board .close {
-      display: inline-block;
-      background: url(../img/Grey_close_x.png) no-repeat;
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: 10px;
-      top: 10px;
-      cursor: pointer; }
-      .popap__window .action__board .close:hover {
-        background: url("../img/Grey_close_x _hover.png") no-repeat; }
+    .popap__window .action__board .mfp-close {
+      font-size: 50px;
+      color: #acacad; }
+      .popap__window .action__board .mfp-close:hover {
+        color: #e06d96; }
 
 .description__popap {
   display: none;

@@ -397,7 +397,7 @@
 }
 
 .popap__window {
-    display: none;
+    display: block;
     background: rgba(124,124,124,0.5);
     width: 100%;
     height: 100%;
@@ -405,19 +405,29 @@
     top: 0;
     left: 0;
     z-index: 5;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
 
     .action__board {
         width: 768px;
         background-color: #f4f6f8;
         position: relative;
+        z-index:6;
+        margin:0 auto;
+        padding-top:15px;
 
         h2 {
             padding-left: 30px;
         }
+        .mfp-close {
+            font-size:50px;
+            color:rgb(172, 172, 173);
 
-        .close {
+            &:hover {
+               color:rgb(224, 109, 150);
+            }
+        }
+        /*.close {
             display: inline-block;
             background: url(../img/Grey_close_x.png) no-repeat;
             position: absolute;
@@ -430,7 +440,7 @@
             &:hover {
                 background: url('../img/Grey_close_x _hover.png') no-repeat;
             }
-        }
+        }*/
     }
 }
 

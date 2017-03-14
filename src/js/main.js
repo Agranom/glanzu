@@ -222,22 +222,7 @@ $(function () {
 
     /* SHOW FILTER */
     /********************************************************/
-    $(document).on('click', '.other__info .variants', function () {
-        $('.popap__window').css('display', 'flex');
-
-        $(document).on('click', '.popap__window .close', function () {
-            $('.popap__window').css('display', 'none');
-        });
-        $(document).on("touchstart click", function (e) {
-            var element = $(".action__board"),
-                element2 = $('.other__info .variants');
-            if (!element.is(e.target)
-                && element.has(e.target).length === 0 && !element2.is(e.target)) {
-                $(".popap__window").css('display', 'none');
-
-            }
-        });
-    });
+    ininPopap();
     /* END SHOW FILTER */
     /********************************************************/
     /* DRAG AND DROP */
@@ -463,3 +448,12 @@ function initDateInput() {
 function initInputMask() {
     $(".destination__time").mask("99 : 99", { placeholder: " " });
 };
+//Initialization filter popap
+function ininPopap() {
+    $('.variants').magnificPopup({
+        type: 'inline',
+        mainClass: "popap__window",
+        closeOnBgClick: true,
+        closeBtnInside: true
+    });
+}
