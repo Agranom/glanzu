@@ -42,7 +42,7 @@
   .cart {
     margin-left: 0; }
   .header .icons {
-    padding: 0 12px; } }
+    padding: 10px 12px 6px; } }
 
 @media only screen and (max-width: 1320px) {
   .catalogList__title, .catalogList__entry {

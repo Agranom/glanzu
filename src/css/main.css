@@ -1,3 +1,6 @@
+html {
+  overflow-y: scroll !important; }
+
 html, body {
   width: 100%;
   height: 100%; }
@@ -219,7 +222,7 @@ a.logo {
   font-size: 15px;
   text-transform: uppercase;
   padding: 0 16px;
-  line-height: 44px;
+  line-height: 43px;
   display: inline-block; }
 
 .nav__link--curr:after {
@@ -246,7 +249,7 @@ a.logo {
   position: relative;
   display: inline-block;
   width: 23px;
-  height: 20px;
+  height: 21px;
   background: url(../img/svgicons/hamburger.svg) no-repeat; }
   .rollMenu:before, .rollMenu:after {
     content: '';
@@ -263,7 +266,7 @@ a.logo {
 .icons-list li {
   display: inline-block;
   /*padding: 0 17px;*/
-  line-height: 34px; }
+  /*line-height: 34px;*/ }
   .icons-list li:not(.item__rollMenu):hover {
     background-color: #515559; }
 
@@ -280,27 +283,6 @@ li.item__rollMenu {
 
 .rollMenu.active .rollMenu__row {
   background: #9fe09f; }
-
-.nav__sub {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 38px;
-  z-index: 100;
-  padding: 8px 0 10px 0;
-  background: #fff;
-  -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
-  display: none; }
-
-.nav__subItem {
-  padding: 13px 4px; }
-
-.nav__subLink {
-  color: #495059 !important;
-  text-transform: uppercase;
-  text-align: center;
-  display: block; }
 
 .languages {
   margin: 0 0 0 50px;
@@ -320,9 +302,9 @@ li.item__rollMenu {
 .inner .currencies__link {
   display: inline-block;
   padding: 0 15px;
-  line-height: 43px; }
+  line-height: 42px; }
 
-.languages__sub {
+.sub__menu {
   position: absolute;
   width: 100%;
   left: 0;
@@ -332,16 +314,22 @@ li.item__rollMenu {
   background: #fff;
   -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
-  display: none; }
-
-.languages__subItem {
-  text-align: center;
-  margin-bottom: 10px; }
-  .languages__subItem .languages__subLink {
+  display: none;
+  text-align: center; }
+  .sub__menu a:hover {
+    background-color: #e9ebed; }
+  .sub__menu .sub__link {
+    color: #495059 !important;
+    text-transform: uppercase;
+    text-align: center;
     display: block;
-    padding: 10px 0 14px; }
-    .languages__subItem .languages__subLink:hover {
-      background-color: #e9ebed; }
+    padding: 10px 0; }
+  .sub__menu .sub__Item {
+    margin-bottom: 10px; }
+
+.languages__subLink {
+  display: block;
+  padding: 10px 0 14px; }
 
 .hidMenu .languages__item {
   padding: 10px 15px 0;
@@ -349,9 +337,9 @@ li.item__rollMenu {
 
 .inner .languages__link {
   display: inline-block;
-  line-height: 41px;
+  line-height: 39px;
   padding: 0 15px;
-  min-height: 43px; }
+  min-height: 42px; }
 
 .languages__link:after {
   content: "";
@@ -418,35 +406,10 @@ li.item__rollMenu {
     height: 100%;
     vertical-align: middle; }
 
-.currencies__sub {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 38px;
-  z-index: 100;
-  padding-top: 10px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.35);
-  display: none; }
-
-.currencies__subItem {
-  margin-bottom: 10px; }
-
-.currencies__subLink {
-  color: #495059 !important;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  padding: 10px 0; }
-  .currencies__subLink:hover {
-    background-color: #e9ebed; }
-
 .header .icons {
   cursor: pointer;
-  margin-top: 10px;
   display: inline-block;
-  padding: 0 17px; }
+  padding: 10px 17px 6px; }
 
 .cart__icon {
   background: url(../img/svgicons/cart.svg) no-repeat;
@@ -1198,6 +1161,9 @@ li.item__rollMenu {
   .ui-datepicker table .ui-state-hover {
     background: #fdd1e1; }
   .ui-datepicker table .ui-state-highlight {
+    background: #d6d9de;
+    color: #fff; }
+  .ui-datepicker table .ui-state-active {
     background: #f8679a;
     color: #fff; }
 

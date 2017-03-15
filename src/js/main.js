@@ -142,18 +142,10 @@ $(function () {
     /********************************************************/
     $(".settingsList input").click(function () {
         if ($(this).prop("checked")) {
-            $(this).parent('.checkboxWrap').nextAll(".settingsList__popap").show();
+            $(this).parent('.checkboxWrap').nextAll(".settingsList__popap").toggle();
         }
-        else {
-            $(this).parent('.checkboxWrap').nextAll(".settingsList__popap").hide();
-        }
-    });
-    $(document).mouseup(function (e) {
-        var element = $(".settingsList input");
-        if (!element.is(e.target)
-            && element.has(e.target).length === 0) {
-            $(".settingsList__popap").hide();
-        }
+
+        hideTooltip(".settingsList input", ".settingsList__popap");
     });
 
     /*********************************************************/
@@ -207,15 +199,15 @@ $(function () {
     $(document).on('mouseout', '.tooltip', function () {
         $(this).children('.tooltip__view').css('display', 'none');
     });
+    hideTooltip(".tooltip", ".tooltip__view");
+    //$(document).on("touchstart", function (e) {
+    //    var element = $(".tooltip");
+    //    if (!element.is(e.target)
+    //        && element.has(e.target).length === 0) {
+    //        $(".tooltip__view").hide();
 
-    $(document).on("touchstart", function (e) {
-        var element = $(".tooltip");
-        if (!element.is(e.target)
-            && element.has(e.target).length === 0) {
-            $(".tooltip__view").hide();
-
-        }
-    });
+    //    }
+    //});
 
     /* END SHOW TOOLTIP */
     /********************************************************/
@@ -234,8 +226,13 @@ $(function () {
     /* SHOW DESCRIPTION TOOLTIP */
     /********************************************************/
     $(document).on('click', '.order .question__mark', function () {
-        $('.order .description__popap').show();
+        $('.order .description__popap').toggle();
+        hideTooltip('.order .description__popap', '.order .description__popap', '.order .question__mark');
     });
+    $(document).on('click', '.description__popap .close', function () {
+        $('.description__popap').hide();
+    })
+    
     /*END SHOW DESCRIPTION TOOLTIP */
     /********************************************************/
 
@@ -244,7 +241,7 @@ $(function () {
     initInputMask();
     /* END SET MASK FOR INPUTS */
     /********************************************************/
-    
+
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -432,13 +429,19 @@ function initSearch() {
 function initDateInput() {
     $("#datepicker,#datepicker-1,#datepicker-2").datepicker({
         dateFormat: "dd.mm.yy",
-        showOtherMonths: true
+        showOtherMonths: true,
+        beforeShow: function (input, inst) {
+            inst.dpDiv.css({ marginTop: '5px'});
+        }
     });
     $("#dp").datepicker({
         dateFormat: "dd.mm.yy",
         showOtherMonths: true,
         onSelect: function (dateText, inst) {
             console.log(dateText);
+        },
+        beforeShow: function (input, inst) {
+            inst.dpDiv.css({ marginTop: '5px' });
         }
     });
 
@@ -456,6 +459,25 @@ function ininPopap() {
         type: 'inline',
         mainClass: "popap__window",
         closeOnBgClick: true,
-        closeBtnInside: true
+        closeBtnInside: true,
+    });
+}
+//Hide tooltip if click was near that tooltip
+function hideTooltip(element, elementToHide, element2) {
+
+    $(document).on("touchstart click", function (e) {
+        if (element2) {
+            if (!$(element).is(e.target)
+            && $(element).has(e.target).length === 0 && !$(element2).is(e.target)) {
+                $(elementToHide).hide();
+            }
+        }
+        else {
+            if (!$(element).is(e.target)
+            && $(element).has(e.target).length === 0) {
+                $(elementToHide).hide();
+            }
+        }
+
     });
 }
