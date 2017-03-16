@@ -495,3 +495,119 @@
 #ui-datepicker-div {
     z-index: 10 !important;
 }
+
+.footer {
+    background: #5d6168;
+    width: 1335px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    z-index: 1100;
+    margin-left: -667.5px;
+
+    .copyright {
+        float: left;
+        color: #fff;
+        margin: 0;
+        line-height: 43px;
+    }
+
+    .bottom__menu {
+        float: right;
+    }
+
+    .inner {
+        padding: 0 90px 0 20px;
+        position: relative;
+    }
+
+    .info {
+        width: 44px;
+        height: 44px;
+        @include border-radius(50%);
+        background-color: #f4f6f8;
+        border: 3px solid #5a6169;
+        display: inline-block;
+        position: absolute;
+        right: 23px;
+        bottom: 6px;
+        font: normal 28.8px 'GothamProNarrow-Bold';
+        text-align: center;
+        line-height: 37px;
+        cursor: pointer;
+    }
+}
+
+.search__group {
+    position: relative;
+
+    .search__field {
+        width: 300px;
+        height: 43px;
+        background-color: #727981;
+        border: 0;
+        color: #fff;
+        @include border-radius(0);
+        font-size: 16px;
+    }
+
+    .search__btn {
+        border: 0;
+        background: url(../img/chosen-sprite.png) no-repeat -38px -40px;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        right: 15px;
+    }
+}
+
+.bottom__menu {
+    li {
+        display: inline-block;
+        margin-left: -0.25em;
+    }
+
+    &__btn {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: #fff;
+        padding: 0 30px;
+        font-size: 16px;
+        height: 43px;
+
+        .icon {
+            margin-right: 5px;
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+        }
+    }
+
+    .star {
+        &:hover {
+            background-image: url(../img/svgicons/star.svg);
+        }
+    }
+
+    .count {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        @include border-radius(50%);
+        vertical-align: initial;
+        background-color: #f4f6f8;
+        color: $text-color;
+        font-family: 'PTSans-Bold';
+        line-height: 24px;
+        margin: 0 3px;
+    }
+
+
+    .cart__btn {
+        background-color: $cart-color;
+    }
+}
