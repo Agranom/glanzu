@@ -195,7 +195,7 @@ body {
 
 a.logo {
   display: block;
-  background: url(../img/mx.png) 0 -32px no-repeat;
+  background: url(../img/logo_sprite.png) -5px -5px no-repeat;
   width: 123px;
   height: 27px;
   text-indent: -9000px;
@@ -203,7 +203,7 @@ a.logo {
   text-decoration: none;
   margin: 7px 0 0 20px; }
   a.logo:hover {
-    background-position: 0 -63px; }
+    background-position: -5px -106px; }
 
 .nav {
   padding: 0 0 0 1px;

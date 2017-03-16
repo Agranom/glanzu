@@ -193,13 +193,13 @@ $(function () {
 
 
 
-    $(document).on('mouseover', '.tooltip', function () {
-        $(this).children('.tooltip__view').css('display', 'block');
-    });
-    $(document).on('mouseout', '.tooltip', function () {
-        $(this).children('.tooltip__view').css('display', 'none');
-    });
-    hideTooltip(".tooltip", ".tooltip__view");
+    //$(document).on('mouseover', '.tooltip', function () {
+    //    $(this).children('.tooltip__view').css('display', 'block');
+    //});
+    //$(document).on('mouseout', '.tooltip', function () {
+    //    $(this).children('.tooltip__view').css('display', 'none');
+    //});
+    //hideTooltip(".tooltip", ".tooltip__view");
     //$(document).on("touchstart", function (e) {
     //    var element = $(".tooltip");
     //    if (!element.is(e.target)
@@ -232,7 +232,7 @@ $(function () {
     $(document).on('click', '.description__popap .close', function () {
         $('.description__popap').hide();
     })
-    
+
     /*END SHOW DESCRIPTION TOOLTIP */
     /********************************************************/
 
@@ -344,46 +344,61 @@ function dragDrop() {
 
 
 function initSelect() {
+
+    if (!device.mobile()) {
+        $(".nosearchFull-select").select2({
+            theme: "nosearchFull",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", setNiceScroll);
+
+        $(".nosearch-select").select2({
+            theme: "nosearch",
+            minimumResultsForSearch: Infinity
+        }).on("select2:open", setNiceScroll);
+
+        $(".classic-select").select2({
+            theme: "classic"
+        }).on("select2:open", setNiceScroll);
+    }
+    else {
+        $(".nosearchFull-select").select2({
+            theme: "nosearchFull",
+            minimumResultsForSearch: Infinity
+        });
+
+        $(".time__select").select2({
+            theme: "nosearchFull",
+            minimumResultsForSearch: Infinity
+        });
+
+        $(".classic-select").select2({
+            theme: "classic"
+        });
+    }
+
     $(".chosen-select").select2();
 
     $(".classic-select").select2({
         theme: "classic"
     }).on("select2:open", addShadow);
 
-    $(".classic-select").select2({
-        theme: "classic"
-    }).on("select2:open", setNiceScroll);
-
     $(".nosearch-select").select2(
     {
         theme: "nosearch",
         minimumResultsForSearch: Infinity
     }).on("select2:open", addShadow);
 
-    $(".nosearch-select").select2(
-    {
-        theme: "nosearch",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", setNiceScroll);
+    //$(".nosearch-select").select2(
+    //{
+    //    theme: "nosearch",
+    //    minimumResultsForSearch: Infinity
+    //}).on("select2:open", setNiceScroll);
 
     $(".nosearchFull-select").select2(
     {
         theme: "nosearchFull",
         minimumResultsForSearch: Infinity
     }).on("select2:open", addShadow);
-
-
-    $(".nosearchFull-select").select2(
-    {
-        theme: "nosearchFull",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", setNiceScroll)
-
-    $(".time__select").select2(
-    {
-        theme: "nosearchFull",
-        minimumResultsForSearch: Infinity
-    }).on("select2:open", setNiceScroll)
 };
 
 function setNiceScroll() {
@@ -431,7 +446,7 @@ function initDateInput() {
         dateFormat: "dd.mm.yy",
         showOtherMonths: true,
         beforeShow: function (input, inst) {
-            inst.dpDiv.css({ marginTop: '5px'});
+            inst.dpDiv.css({ marginTop: '5px' });
         }
     });
     $("#dp").datepicker({

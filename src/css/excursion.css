@@ -199,37 +199,68 @@
         .action__filter .filter__list li.item a:hover {
           color: #007687; }
 
-.tooltip__view {
-  display: none;
+.tooltip_templates {
+  display: none; }
+
+/*--------Customization tooltipster---------*/
+.tooltipster-base span {
+  display: inline-block;
+  font-size: 15px;
+  margin: 15px 0 0 0;
+  line-height: 1.125em;
+  padding: 0 10px;
+  color: #485059; }
+
+.tooltipster-sidetip .tooltipster-box {
+  background: none;
+  border: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   background-color: #f4f8fb;
   padding: 16px;
   width: 360px;
   -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
-  position: absolute;
-  z-index: 10;
-  bottom: -117px;
-  left: -410px; }
-  .tooltip__view:after {
-    content: "";
-    width: 34px;
-    height: 22px;
-    background: url(../img/mx.png) -500px 0 no-repeat;
-    position: absolute;
-    right: -27px;
-    top: 50%;
-    margin-top: -11px;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg); }
-  .tooltip__view span {
-    display: inline-block;
-    font-size: 15px;
-    margin: 15px 0 0 0;
-    line-height: 1.125em;
-    padding: 0 10px;
-    color: #485059; }
+  z-index: 10; }
 
+.tooltipster-sidetip .tooltipster-content {
+  color: #485059;
+  line-height: normal;
+  padding: 0; }
+
+.tooltipster-sidetip .tooltipster-arrow-uncropped {
+  display: none; }
+
+.tooltipster-sidetip .tooltipster-arrow {
+  width: 34px !important;
+  height: 22px !important;
+  background: url(../img/mx.png) -500px 0 no-repeat;
+  z-index: 10; }
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow {
+  top: -14px; }
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow {
+  bottom: -14px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow {
+  margin-top: -11px;
+  left: -20px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow {
+  margin-top: -11px;
+  right: -20px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+/*--------//Customization tooltipster---------*/
 /*-----FOR SINGLE COLUMN-----*/
 .single__result .demonstration {
   display: -webkit-box;
