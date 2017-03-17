@@ -40,7 +40,7 @@
 }
 
 .order {
-    padding: 115px 0 75px;
+    padding: 115px 0 0;
     background-color: #fff;
 
     .icon {
@@ -54,7 +54,7 @@
         z-index: 2;
 
         &.drag {
-            background-position: 0 -16px;
+            background-position: -37px -56px;
         }
 
         &.delete {
@@ -67,26 +67,49 @@
     }
 
     .other__events {
-        margin: 84px 0 75px;
-        margin-left: -7px;
-
-        h3 {
+        .other__events__discount {
             margin: 0;
-            font-size: 18px;
+            font-size: 20px;
             color: $text-color;
+        }
+
+        .other__events__discount-value {
+            font-size: 23px;
+            color: #e44c82;
+        }
+
+        .other__events__discount-descr {
+            font-family: 'PTSans-Regular';
+            font-size: 16px;
         }
 
         .place {
             padding-left: 20px;
 
             &:nth-child(even) {
-                margin: 25px 0 15px;
+                margin: 25px 0 3px;
             }
 
             h5 {
                 color: $text-color;
-                margin: 0 0 14px;
+                margin: 0 0 8px;
             }
+        }
+    }
+
+    .other__events_theme_cart {
+        margin: 33px 0 21px;
+    }
+
+    .recommendation__info {
+        width: 100%;
+        background-color: #f4f6f8;
+        margin: 60px 0 0;
+        padding: 0 0 70px;
+
+
+        .order__view {
+            margin: 0 auto;
         }
     }
 }
@@ -128,6 +151,7 @@
     width: 844px;
 }
 
+
 .order__info {
     padding: 19px 0 25px;
     position: relative;
@@ -143,7 +167,7 @@
     }
 
     &:nth-child(odd) {
-        background: linear-gradient(to right, rgb(196, 206, 216) 0%, rgb(196, 206, 216) 50%, transparent 50%, transparent 100%) repeat-x left top, linear-gradient(to right, rgb(196, 206, 216) 0%, rgb(196, 206, 216) 50%, transparent 50%, transparent 100%) repeat-x left bottom;
+        background: linear-gradient(to right, #ced7df 0%, #ced7df 50%, transparent 50%, transparent 100%) repeat-x left top, linear-gradient(to right, #ced7df 0%, #ced7df 50%, transparent 50%, transparent 100%) repeat-x left bottom;
         background-size: 17px 1px;
     }
 
@@ -236,7 +260,7 @@
             width: 25px;
             height: 1px;
             display: inline-block;
-            background-color: rgb(210, 234, 238);
+            background-color: #c4ccd5;
             position: absolute;
             top: 50%;
             right: -25px;
@@ -259,12 +283,11 @@
         cursor: pointer;
 
 
-
         .icon {
 
             &.drag {
                 top: 10px;
-                left: 12px;
+                left: 14px;
                 margin: 0;
             }
 
@@ -272,14 +295,27 @@
                 display: inline-block;
                 margin: 0;
                 top: 10px;
-                right: 12px;
+                right: 14px;
             }
+        }
+    }
+
+    .package__description_child {
+        width: 700px;
+        cursor: default;
+
+        .part__icon {
+            position: absolute;
+            top: 5px;
+            left: 17px;
+            font-size: 18px;
+            color: #646a64;
         }
     }
 
     .package__description__info {
         position: relative;
-        padding: 0 41px 0 59px;
+        padding: 0 49px;
 
         &.even {
             background-color: #d8dfe5;
@@ -295,11 +331,10 @@
             line-height: 36px;
 
             &:not(:last-child) {
-                margin-right: 24px;
+                margin-right: 29px;
             }
 
             &.title {
-                font-family: 'PTSans-Bold';
 
                 a {
                     font-family: PTSans-Regular;
@@ -315,14 +350,16 @@
         .other__info {
             float: right;
 
-            .variants {
-                margin-right: 28px;
-            }
-
             .price {
                 display: inline-block;
-                font-family: 'PTSans-Bold';
             }
+        }
+
+        .other__info__inner {
+            width: 115px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
@@ -384,20 +421,18 @@
             margin: 0;
         }
 
-        .price {
-            margin-right: 19px;
+        .prepay {
+            margin: 0 19px;
         }
 
-        .action__btn {
-
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
-        }
 
         .total__price {
             font-size: 30px;
             line-height: 36px;
+        }
+
+        .total__price_colored {
+            color: #e44c82;
         }
     }
 }
@@ -496,7 +531,7 @@
     position: fixed;
     left: 50%;
     bottom: 0;
-    z-index: 1100;
+    z-index: 1000;
     margin-left: -667.5px;
 
     .copyright {
@@ -508,7 +543,7 @@
 
     .bottom__menu {
         float: right;
-        display:flex;
+        display: flex;
     }
 
     .inner {
@@ -530,6 +565,9 @@
         text-align: center;
         line-height: 37px;
         cursor: pointer;
+        &:hover {
+            background-color:#c9f7c9;
+        }
     }
 }
 
@@ -544,6 +582,18 @@
         color: #fff;
         @include border-radius(0);
         font-size: 16px;
+        &:hover {
+            background-color: #6a6e75;
+        }
+        &:focus {
+            background-color: #727981;
+        }
+        &::-webkit-input-placeholder {
+            color:#fff;
+        }
+        &::-moz-placeholder {
+            color:#fff;
+        }
     }
 
     .search__btn {
@@ -557,12 +607,25 @@
         margin-top: -7px;
         right: 15px;
     }
+
+    #tipue_drop_content {
+        bottom: 48px;
+        top: auto;
+    }
 }
 
 .bottom__menu {
     li {
         display: inline-block;
         margin-left: -0.25em;
+    }
+
+    .cart__btn {
+        background-color: $cart-color;
+
+        &:hover {
+            background-color: $cart-color-hover;
+        }
     }
 
     &__btn {
@@ -573,12 +636,17 @@
         padding: 0 30px;
         font-size: 16px;
         height: 43px;
+        font-family: 'PTSans-Regular';
 
         .icon {
             margin-right: 5px;
             vertical-align: middle;
             position: relative;
             bottom: 1px;
+        }
+
+        &:hover {
+            background-color: #52555b;
         }
     }
 
@@ -599,10 +667,5 @@
         font-family: 'PTSans-Bold';
         line-height: 24px;
         margin: 0 3px;
-    }
-
-
-    .cart__btn {
-        background-color: $cart-color;
     }
 }

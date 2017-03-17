@@ -423,6 +423,7 @@ function addShadow() {
 
 function initSearch() {
     $('#search').tipuedrop();
+    $('.search__field').tipuedrop();
 };
 
 function initDateInput() {
@@ -484,6 +485,7 @@ function hideTooltip(element, elementToHide, element2) {
 //Init tooltipster plugin
 function initTooltip() {
     $('.tooltip').tooltipster({
+        trigger: !device.desktop() ? "click" : "hover",
         contentAsHTML: true,
         delay: 0,
         minWidth: 360,

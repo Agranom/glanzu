@@ -89,9 +89,9 @@
       width: 200px; }
 
 .filter {
-  padding-bottom: 30px; }
+  /*padding-bottom: 15px;*/ }
   .filter .filter__results {
-    padding: 15px 30px 30px;
+    padding: 25px 30px 30px;
     background-color: #e8ebef;
     display: -webkit-box;
     display: -webkit-flex;
@@ -161,6 +161,9 @@
           color: #da4e80; }
       .filter .filter__results__col .transfer__selectors li:not(:last-child) {
         margin-bottom: 35px; }
+  .filter .filter__results_shadow {
+    -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.05); }
 
 .action__filter {
   display: -webkit-box;
@@ -175,17 +178,14 @@
   .action__filter .filter__list li {
     display: inline-block;
     line-height: 2.4em; }
-    .action__filter .filter__list li.title {
-      margin-right: 60px; }
-      .action__filter .filter__list li.title h4 {
-        font-size: 19px;
-        margin: 0;
-        font-family: PTSans-Bold; }
+    .action__filter .filter__list li.title h4 {
+      font-size: 19px;
+      margin: 0;
+      font-family: PTSans-Bold; }
     .action__filter .filter__list li.item {
-      margin-right: 20px; }
+      margin-left: 20px; }
       .action__filter .filter__list li.item.active a {
         color: #da4e80;
-        border-bottom: 2px solid #da4e80;
         padding: 0 5px;
         line-height: 20px; }
         .action__filter .filter__list li.item.active a:hover {
@@ -285,7 +285,7 @@
 
 /*-----//FOR SINGLE COLUMN-----*/
 .total__price {
-  font-size: 24px;
+  font-size: 30px;
   font-family: GothamProNarrow-Bold;
   display: inline-block;
   vertical-align: middle; }
@@ -295,13 +295,21 @@
     font-family: GothamProNarrow-Medium; }
 
 .total {
-  padding: 0 30px 30px;
+  /*padding: 0 30px 15px;*/
   text-align: right; }
   .total .total__price {
-    margin: 0 15px 0 0; }
+    margin: 0 15px 0; }
+  .total .subtitle {
+    font-size: 15px;
+    display: inline-block;
+    line-height: 13px;
+    color: #8e9297;
+    margin: 0;
+    vertical-align: middle; }
   .total .cart__btn {
     background-color: #f8679a;
-    font-size: 16px; }
+    font-size: 16px;
+    margin: 20px 30px 20px 0; }
     .total .cart__btn:hover {
       background-color: #e95b8d; }
 
@@ -352,7 +360,7 @@
     .useful__info .useful__link .exclamation_2:before {
       margin-left: -2.8px; }
 
-.other__events {
+.other__events_theme_excursion-single {
   margin: 60px 0; }
 
 .place {
