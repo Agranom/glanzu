@@ -186,8 +186,7 @@
             box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
     background-color: #e6ecf2;
     position: relative;
-    cursor: pointer;
-    z-index: 2; }
+    cursor: pointer; }
     .package .package__description .icon.drag {
       top: 10px;
       left: 12px;
@@ -269,13 +268,11 @@
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 5; }
+  left: 0; }
   .popap__window .action__board {
     width: 768px;
     background-color: #f4f6f8;
     position: relative;
-    z-index: 6;
     margin: 0 auto;
     padding-top: 15px; }
     .popap__window .action__board h2 {
@@ -327,10 +324,7 @@
     top: 10px; }
 
 .select2-container--nosearch.select2-container--open .select2-dropdown {
-  z-index: 6; }
-
-#ui-datepicker-div {
-  z-index: 10 !important; }
+  z-index: 1046; }
 
 .footer {
   background: #5d6168;
@@ -346,7 +340,11 @@
     margin: 0;
     line-height: 43px; }
   .footer .bottom__menu {
-    float: right; }
+    float: right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .footer .inner {
     padding: 0 90px 0 20px;
     position: relative; }

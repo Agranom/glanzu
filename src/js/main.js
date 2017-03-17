@@ -191,23 +191,7 @@ $(function () {
     /* SHOW TOOLTIP */
     /********************************************************/
 
-
-
-    //$(document).on('mouseover', '.tooltip', function () {
-    //    $(this).children('.tooltip__view').css('display', 'block');
-    //});
-    //$(document).on('mouseout', '.tooltip', function () {
-    //    $(this).children('.tooltip__view').css('display', 'none');
-    //});
-    //hideTooltip(".tooltip", ".tooltip__view");
-    //$(document).on("touchstart", function (e) {
-    //    var element = $(".tooltip");
-    //    if (!element.is(e.target)
-    //        && element.has(e.target).length === 0) {
-    //        $(".tooltip__view").hide();
-
-    //    }
-    //});
+    initTooltip();
 
     /* END SHOW TOOLTIP */
     /********************************************************/
@@ -494,5 +478,19 @@ function hideTooltip(element, elementToHide, element2) {
             }
         }
 
+    });
+}
+
+//Init tooltipster plugin
+function initTooltip() {
+    $('.tooltip').tooltipster({
+        contentAsHTML: true,
+        delay: 0,
+        minWidth: 360,
+        side: ["left", "right"],
+        animationDuration: 0,
+        distance: 43,
+        contentCloning: true,
+        delayTouch: [0, 400]
     });
 }

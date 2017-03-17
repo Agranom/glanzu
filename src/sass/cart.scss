@@ -257,7 +257,6 @@
         background-color: #e6ecf2;
         position: relative;
         cursor: pointer;
-        z-index: 2;
 
 
 
@@ -411,13 +410,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
 
     .action__board {
         width: 768px;
         background-color: #f4f6f8;
         position: relative;
-        z-index: 6;
         margin: 0 auto;
         padding-top: 15px;
 
@@ -489,12 +486,9 @@
 }
 
 .select2-container--nosearch.select2-container--open .select2-dropdown {
-    z-index: 6;
+    z-index: 1046;
 }
 
-#ui-datepicker-div {
-    z-index: 10 !important;
-}
 
 .footer {
     background: #5d6168;
@@ -514,6 +508,7 @@
 
     .bottom__menu {
         float: right;
+        display:flex;
     }
 
     .inner {

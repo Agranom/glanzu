@@ -52,7 +52,7 @@ body {
     position: fixed;
     left: 50%;
     top: 0;
-    z-index: 1100;
+    z-index: 1000;
     margin-left: -667.5px;
 }
 
@@ -1214,13 +1214,13 @@ li.item__rollMenu {
     background-color: #fff;
     display: inline-block;
     position: absolute;
-    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.65);
     bottom: 204px;
 }
 
 .shadowAfter::after {
     bottom: 0;
-    box-shadow: 0px -7px 8px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -4px 7px -4px rgba(0, 0, 0, 0.65);
 }
 
 .nosearchFull-select, .classic-select, .nosearch-select {
@@ -1250,7 +1250,7 @@ li.item__rollMenu {
 }
 
 .select2-container--nosearchFull.select2-container--open .select2-dropdown {
-    z-index: 1002;
+    z-index: 1046;
 }
 //Custom calendar
 .ui-datepicker {
