@@ -90,7 +90,12 @@
         width: 40%; }
     .info__blok .action__side {
       width: 100%; }
-  /*---//SINGLE EXCURCION---*/ }
+  /*---//SINGLE EXCURCION---*/
+  /*---CART---*/
+  .footer .inner {
+    padding-right: 0; }
+  .footer .info {
+    display: none; } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   body {

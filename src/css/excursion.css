@@ -186,7 +186,6 @@
       margin-left: 20px; }
       .action__filter .filter__list li.item.active a {
         color: #da4e80;
-        padding: 0 5px;
         line-height: 20px; }
         .action__filter .filter__list li.item.active a:hover {
           color: #da4e80; }

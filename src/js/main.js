@@ -226,6 +226,22 @@ $(function () {
     /* END SET MASK FOR INPUTS */
     /********************************************************/
 
+    /* CHANGE SEARCH BUTTON*/
+    /********************************************************/
+    var searchField = document.querySelector('.search__group .search__field'),
+        searchBtn = document.querySelector('.search__group .search__btn')
+    searchField.addEventListener('input', function () {
+        if (this.value.length != 0) {
+            searchBtn.classList.add('search__btn--active');
+
+        }
+        else {
+            searchBtn.classList.remove('search__btn--active');
+        }
+    });
+    /* END CHANGE SEARCH BUTTON*/
+    /********************************************************/
+
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -249,6 +265,7 @@ function dragDrop() {
     function handlerDragStart(e) {
 
         this.classList.add('drag__start');
+
         e.dataTransfer.effectAllowed = "move";
         e.dataTransfer.setData("Text", this.id);
         getSource(this.id);
@@ -372,11 +389,6 @@ function initSelect() {
         minimumResultsForSearch: Infinity
     }).on("select2:open", addShadow);
 
-    //$(".nosearch-select").select2(
-    //{
-    //    theme: "nosearch",
-    //    minimumResultsForSearch: Infinity
-    //}).on("select2:open", setNiceScroll);
 
     $(".nosearchFull-select").select2(
     {
@@ -427,7 +439,7 @@ function initSearch() {
 };
 
 function initDateInput() {
-    $("#datepicker,#datepicker-1,#datepicker-2").datepicker({
+    $("#datepicker,#datepicker-1").datepicker({
         dateFormat: "dd.mm.yy",
         showOtherMonths: true,
         beforeShow: function (input, inst) {
@@ -452,6 +464,7 @@ function initDateInput() {
 //Initialization mask for time input
 function initInputMask() {
     $(".destination__time").mask("99 : 99", { placeholder: " " });
+    $("#datepicker-2").mask("99.99.9999", { placeholder: " " });
 };
 //Initialization filter popap
 function ininPopap() {
