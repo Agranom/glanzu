@@ -253,15 +253,6 @@ $(function () {
             }
         });
     })
-    //searchField.addEventListener('input', function () {
-    //    if (this.value.length != 0) {
-    //        searchBtn.classList.add('search__btn--active');
-
-    //    }
-    //    else {
-    //        searchBtn.classList.remove('search__btn--active');
-    //    }
-    //});
     /* END CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
 
@@ -487,7 +478,7 @@ function initDateInput() {
 //Initialization mask for time input
 function initInputMask() {
     $(".destination__time").mask("99 : 99", { placeholder: " " });
-    $("#datepicker-2").mask("99.99.9999", { placeholder: " " });
+    $("#datepicker-2").mask("99.99.9999", { placeholder: "_" });
 };
 //Initialization filter popap
 function ininPopap() {

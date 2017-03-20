@@ -1,0 +1,718 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta name="viewport" content="width=1299">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/base/jquery.ui.all.css">
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/libs.min.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link href="css/tooltipster.bundle.min.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/excursion.css" rel="stylesheet" />
+    <link href="css/cart.css" rel="stylesheet" />
+    <link href="css/payment.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="wrapper">
+        <div id="up__btn">
+        </div>
+        <header class="header">
+            <div class="inner">
+                <div class="header__col1">
+                    <a class="logo" href="index.html" title="">&nbsp;</a>
+                </div>
+                <div class="header__col2">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Турпакеты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="hotels.html" title="">Отели</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Трансфер / Билеты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="excursions.html" title="">Экскурсии</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#" title="">Медпрограммы</a>
+                            </li>
+                            <li class="nav__item nav__item--hasSub">
+                                <a class="nav__link nav__link--curr js-link" href="#" title="">Информация</a>
+                                <ul class="nav__sub js-sub sub__menu">
+                                    <li class="sub__Item">
+                                        <a class="nav__subLink sub__link" href="#" title="">1</a>
+                                    </li>
+                                    <li class="sub__Item">
+                                        <a class="nav__subLink sub__link" href="#" title="">2</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__col3">
+                    <ul class="icons-list">
+                        <li class="item__rollMenu">
+                            <a href="#" class="rollMenu js-roll">
+                            </a>
+                        </li>
+                        <li class="nav__item--activ">
+                            <a href="#" class="cart icons">
+                                <span class="cart__icon"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="profile icons">
+                                <span class="profile__icon"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="languages">
+                        <li class="languages__item">
+                            <a class="languages__link js--languages" href="#" title="">
+                                <span class="flag flag-ru"></span>
+                            </a>
+                            <ul class="languages__sub sub__menu">
+                                <li class="sub__Item">
+                                    <a class="languages__subLink" href="#" title="">
+                                        <span class="flag flag-gb"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="currencies">
+                        <li class="currencies__item">
+                            <a class="currencies__link js--currencies" href="#" title="">RUB</a>
+                            <ul class="currencies__sub sub__menu">
+                                <li class="sub__Item">
+                                    <a class="currencies__subLink sub__link" href="#" title="">USD</a>
+                                </li>
+                                <li class="sub__Item">
+                                    <a class="currencies__subLink sub__link" href="#" title="">EUR</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="order">
+            <div class="inner clearfix">
+                <div class="about_title">
+                    <h1 class="title">
+                        Настройка турпакета <span class="question__mark">?</span>
+                        <div class="description__popap">
+                            <i class="close icon delete"></i>
+                            <p class="text">
+                                В нашей умной корзине все добавляемые Вами услуги встают по дням
+                                в виде турпакета
+                            </p>
+                            <h6>Здесь вы можете:</h6>
+                            <ul>
+                                <li>Удалять и добавлять дни</li>
+                                <li>Удалять и редактировать услуги, а также перетаскивать  их на другие дни</li>
+                                <li>Добавить готовый турпакет и дополнить / изменить его состав</li>
+                                <li>
+                                    Сохранить для сравнения (и на потом) несколько вариантов турпакетов
+                                    (нужно авторизоваться)
+                                </li>
+                            </ul>
+                            <h6>Примечания</h6>
+                            <p style="margin-bottom:15px;">Услуги учитывают время на их выполнение, указывайте его, где возможно</p>
+                            <p>
+                                При изменении даты начала тура пересчитаются даты всех услуг в туре,
+                                что может изменить условия их предоставления (мы сообщим об этом)
+                            </p>
+                        </div>
+                    </h1>
+                    <p class="subtitle active">
+                        Вы можете добавлять в качестве основы <a href="#">готовые турпакеты</a>
+                    </p>
+                    <p class="subtitle">
+                        В качестве основы был добавлен <a href="#">этот турпакет</a>
+                    </p>
+
+                </div>
+                <div class="order__view">
+                    <div class="order__info target" data-day="1">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 1</h4></li>
+                            <li><p class="date start__date">19.01.2017</p></li>
+                            <li style="position:relative;">
+                                <a href="#" class="change__date" id="date__change">Изменить дату  начала тура </a>
+                                <input type="text" id="dp" style="width:0; position:absolute; left:0; top:-10px; border:none; padding:0;" />
+                                <span>(возможен пересчет услуг)</span>
+                            </li>
+                        </ul>
+                        <div class="package clearfix" id="source1">
+                            <div class="package__time">
+                                <input type="text" placeholder="00 : 00" class="searchForm__field destination__time" />
+                            </div>
+                            <div class="package__description" draggable="true">
+                                <i class="drag icon" title="Услуги можно перетаскивать на другие дни"></i>
+                                <div class="package__description__info clearfix">
+
+                                    <ul class="main__info">
+                                        <li class="title">
+                                            Трансфер <a href="#">Бангкок - Ко Чанг</a>
+                                            <span class="vehicle">(Такси)</span>
+                                        </li>
+                                        <li class="period">С 10 до 22</li>
+                                        <li class="other__info">
+                                            <div class="other__info__inner">
+                                                <a class="variants pseudo__link" href="#popap__filter">Варианты</a>
+                                                <span class="price">$54</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <i class="icon delete"></i>
+                            </div>
+                        </div>
+                        <div class="package even clearfix" id="source2">
+                            <div class="package__time">
+                                <input type="text" placeholder="00 : 00" class="searchForm__field destination__time" />
+                            </div>
+                            <div class="package__description" draggable="true">
+                                <i class="drag icon" title="Услуги можно перетаскивать на другие дни"></i>
+                                <div class="package__description__info clearfix">
+
+                                    <ul class="main__info">
+                                        <li class="title">Въезд в отель <a href="#">Sichang Shine Khao Resort</a></li>
+                                        <li class="period">После 12:00</li>
+                                        <li class="other__info">
+                                            <div class="other__info__inner">
+                                                <a class="variants pseudo__link" href="#popap__filter">Варианты</a>
+                                                <span class="price">$135</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <i class="icon delete"></i>
+                            </div>
+                        </div>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info empty target" data-day="2">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 2</h4></li>
+                            <li><p class="date">20.01.2017</p></li>
+                        </ul>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info empty target" data-day="3">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 3</h4></li>
+                            <li><p class="date">21.01.2017</p></li>
+                        </ul>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info target" data-day="4">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 4</h4></li>
+                            <li><p class="date">22.01.2017</p></li>
+                        </ul>
+                        <div class="package clearfix" id="source3" data-child="test">
+                            <div class="package__time">
+                                <select class="time__select nosearchFull-select" style="width:75px">
+                                    <option>10:30</option>
+                                    <option>11:30</option>
+                                </select>
+                            </div>
+                            <div class="package__description" draggable="true">
+                                <i class="drag icon" title="Услуги можно перетаскивать на другие дни"></i>
+                                <div class="package__description__info clearfix">
+
+                                    <ul class="main__info">
+                                        <li class="title">
+                                            Экскурсия <a href="#">Камбоджа 2 дня из г. Ко Чанг </a>(День 1)
+                                        </li>
+                                        <li class="other__info">
+                                            <div class="other__info__inner">
+                                                <a class="variants pseudo__link" href="#popap__filter">Варианты</a>
+                                                <span class="price">$45</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <i class="icon delete"></i>
+                            </div>
+                        </div>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info target" data-day="5">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 5</h4></li>
+                            <li><p class="date">23.01.2017</p></li>
+                        </ul>
+                        <div class="package clearfix" data-child-name="test">
+                            <div class="package__description package__description_child">
+                                <span class="part__icon">&#11172;</span>
+                                <div class="package__description__info clearfix">
+
+                                    <ul class="main__info">
+                                        <li class="title">
+                                            Экскурсия <a href="#">Камбоджа 2 дня из г. Ко Чанг </a>(День 2)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info empty target" data-day="6">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 6</h4></li>
+                            <li><p class="date">24.01.2017</p></li>
+                        </ul>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__info target" data-day="7">
+                        <ul class="main__titles">
+                            <li><h4 class="day__number">День 7</h4></li>
+                            <li><p class="date">25.01.2017</p></li>
+                        </ul>
+                        <div class="package clearfix" id="source4" data-day="7">
+                            <div class="package__time">
+                                <input type="text" placeholder="00 : 00" class="searchForm__field destination__time" />
+                            </div>
+                            <div class="package__description" draggable="true">
+                                <i class="drag icon" title="Услуги можно перетаскивать на другие дни"></i>
+                                <div class="package__description__info clearfix">
+                                    <ul class="main__info">
+                                        <li class="title">
+                                            Выезд из отеля <a href="#">Sichang Shine Khao Resort</a>
+                                            <span class="term">(Ночей: 6)</span>
+                                        </li>
+                                        <li class="period">До 12:00</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <i class="icon delete"></i>
+                    </div>
+                    <div class="order__actions clearfix">
+                        <ul class="action__links clearfix">
+                            <li><a href="#" class="pseudo__link">Добавить день</a></li>
+                            <li><a href="#" class="pseudo__link">Действия со списком</a></li>
+                            <li class="authorization">
+                                <a href="#" class="pseudo__link">Авторизуйтесь</a> <span>для сохранения</span>
+                            </li>
+                            <li class="loged__in">
+                                <a href="#" class="pseudo__link">Сохранить получившийся турпакет в избранные</a>
+                            </li>
+                        </ul>
+                        <ul class="action__btns clearfix">
+                            <li><p class="subtitle">Возможна оплата по частям</p></li>
+                            <li><p class="total__price">$234</p></li>
+                            <li>
+                                <button class="bnt">Перейти к оформлению брони</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommendation__info clearfix">
+                    <div class="order__view">
+                        <div class="other__events other__events_theme_cart">
+                            <h3 class="other__events__discount order__view__discount">
+                                Хотите скидку
+                                <span class="other__events__discount-value">10%</span>?
+                                <span class="other__events__discount-descr">Добавьте услуг на сумму от $30</span>
+                            </h3>
+                            <h3 class="other__events__discount order__view__discount">
+                                Шоу летающих слонов
+                                <span class="other__events__discount-value other__events__discount-value_size_m">в подарок</span>!
+                                <span class="other__events__discount-descr">
+                                    Просто выберите отель
+                                    <a href="#" class="other__events__link">Best Exotic Marigold Hotel</a>
+                                </span>
+                            </h3>
+                            <div class="other__events other__events-menu">
+                                <div class="place">
+                                    <h5>Услуги в г. Ко Чанг:</h5>
+                                    <ul class="events__list">
+                                        <li><a href="#">Экскурсии (17)</a></li>
+                                        <li><a href="#">VIP-сервисы (10)</a></li>
+                                        <li><a href="#">Трансфер (24)</a></li>
+                                        <li><a href="#">Турпакеты (4)</a></li>
+                                        <li><a href="#">Отели (15)</a></li>
+                                    </ul>
+                                </div>
+                                <div class="place">
+                                    <h5>Услуги в г. Бангкок:</h5>
+                                    <ul class="events__list">
+                                        <li><a href="#">Экскурсии (163) </a></li>
+                                        <li><a href="#">Медпрограммы (31) </a></li>
+                                        <li><a href="#">VIP-сервисы (86) </a></li>
+                                        <li><a href="#">Трансфер (114)</a></li>
+                                        <li><a href="#">Турпакеты (57)</a></li>
+                                        <li><a href="#">Отели (104)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="inner clearfix">
+                <p class="copyright">&copy; Glanzu 2017</p>
+                <ul class="bottom__menu">
+                    <li>
+                        <form action="/" method="post">
+                            <div class="search__group">
+                                <input type="text" placeholder="Поиск по сайту" class="search__field" id="search" autocomplete="off" />
+                                <input id="search__button" type="submit" class="search__btn" value="" />
+                                <div id="tipue_drop_content"></div>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <button class="bottom__menu__btn">
+                            <i class="star icon"></i>
+                            Избранное
+                            <span class="count">1</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="bottom__menu__btn cart__btn">
+                            <i class="cart__icon icon"></i>
+                            Корзина
+                            <span class="count">3</span>
+                            <span class="price">$452</span>
+                        </button>
+                    </li>
+                </ul>
+                <span class="info">?</span>
+            </div>
+        </footer>
+
+        <div class="action__board mfp-hide" id="popap__filter">
+            <h2>Экскурсия „Камбоджа 3 дня / 2 ночи“ из г. Ко Чанг</h2>
+            <form name="excursion" action="">
+                <div class="select__fields clearfix">
+                    <div class="field date required">
+                        <input id="datepicker" class="calendar__field" type="text" placeholder="09.02.2017" required readonly>
+                    </div>
+                    <div class="field adults">
+                        <span>Взрослых</span>
+                        <select class="nosearch-select" style="width:50px;">
+                            <option selected value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="field kids">
+                        <span>Детей</span>
+                        <select class="nosearch-select" style="width:50px;">
+                            <option selected value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="field guide">
+                        <select class="nosearchFull-select">
+                            <option>Рускоязычный гид</option>
+                            <option>Англоязычный гид</option>
+                        </select>
+                    </div>
+                    <div class="field kid__bithd required">
+                        <input id="datepicker-2" class="calendar__field" type="text" placeholder="Дата рождения ребёнка">
+                    </div>
+                </div>
+                <div class="filter">
+                    <div class="action__filter">
+                        <ul class="filter__list">
+                            <li class="title"><h4>Выберите варианты:</h4></li>
+                            <li class="item">
+                                <a href="#">Эконом</a>
+                                <span class="price"> $300</span>
+                            </li>
+                            <li class="item active">
+                                <a href="#">Стандарт</a>
+                                <span class="price"> $975</span>
+                            </li>
+                            <li class="item">
+                                <a href="#">VIP</a>
+                                <span class="price"> $1600</span>
+                            </li>
+                            <li class="item"><a href="#">Свой</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter__results">
+                        <div class="filter__results__col">
+                            <h5 class="title">Трансфер</h5>
+                            <ul class="transfer__selectors">
+                                <li>
+                                    <input type="radio" name="vehicle" value="cab" id="cab" />
+                                    <label for="cab">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Такси
+                                        </span>
+                                        <span class="price">
+                                            (2 шт по $22) $44
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="vehicle" value="bigCab" id="bigCab" />
+                                    <label for="bigCab">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Маршрутное такси
+                                        </span>
+                                        <span class="price">
+                                            $30
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="vehicle" value="microBus" id="microBus" />
+                                    <label for="microBus">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Микроавтобус
+                                        </span>
+                                        <span class="price">
+                                            $55
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="vehicle" value="bus" id="bus" />
+                                    <label for="bus">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Автобус - групповая
+                                        </span>
+                                        <span class="tooltip__link">
+                                            (<a href="#">расписание</a>)
+                                        </span>
+                                        <span class="price">
+                                            $80
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="vehicle" value="limo" id="limo" />
+                                    <label for="limo">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Лимузин
+                                        </span>
+                                        <span class="price">
+                                            $120
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter__results__col">
+                            <h5 class="title">Ужин</h5>
+                            <ul class="transfer__selectors">
+                                <li>
+                                    <input type="radio" name="dinner" value="thai" id="thai" />
+                                    <label for="thai">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Тайское
+                                        </span>
+                                        <span class="price">
+                                            $15
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dinner" value="euro" id="euro" />
+                                    <label for="euro">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Европейское
+                                        </span>
+                                        <span class="price">
+                                            $20
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dinner" value="veg" id="veg" />
+                                    <label for="veg">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Вегетарианское
+                                        </span>
+                                        <span class="price">
+                                            $15
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter__results__col">
+                            <h5 class="title">Обед</h5>
+                            <ul class="transfer__selectors">
+                                <li>
+                                    <input type="radio" name="lunch" value="none" id="none" />
+                                    <label for="none">
+                                        <span>Не нужно</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="lunch" value="сambodia" id="сambodia" />
+                                    <label for="сambodia">
+                                        <span class="tooltip" data-tooltip-content="#tooltip__view">
+                                            Камбоджийское
+                                        </span>
+                                        <span class="price">
+                                            $15
+                                        </span>
+                                    </label>
+                                    <div class="tooltip_templates">
+                                        <div id="tooltip__view">
+                                            <img src="img/bulli.jpg" />
+                                            <span>
+                                                Комфортная поездка на микроавтобусе Volkswagen
+                                                Bulli подарит Вам нереальное счастье!
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <p class="subtitle">Возможна оплата по частям</p>
+                    <p class="total__price">$85</p>
+                    <button class="bnt cart__btn" type="submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--build:js js/libs.min.js -->
+
+    <script src="js/libs.min.js"></script>
+
+
+    <!-- endbuild -->
+    <script src="js/datepicker-ru.min.js"></script>
+    <script src="js/tipuedrop.js"></script>
+    <script src="js/device.js"></script>
+    <script src="js/html5gallery.js"></script>
+    <script src="js/search_content.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/DragDropTouch.js"></script>
+    <script src="libs/jquery.magnific-popup.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

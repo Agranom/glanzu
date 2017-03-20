@@ -1,0 +1,122 @@
+﻿@import "_variables.scss";
+
+.flex-menu {
+    display: flex;
+    align-items: center;
+}
+
+.default-link {
+    color: $link-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.subtitle-default {
+    color: $subtitle-color;
+}
+
+.main-content {
+    padding: 115px 0 50px;
+    background-color: #fff;
+}
+
+.title-menu {
+    width: 890px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.title-menu__title {
+    display: inline-block;
+}
+
+.title-menu__title_theme_payment {
+    margin-right: 20px;
+}
+
+.order-menu {
+    h4, p {
+        margin: 0;
+    }
+}
+
+.order-menu__item {
+    margin-bottom: 20px;
+}
+
+.order-heading {
+    li {
+        margin-right: 20px;
+    }
+}
+
+.order-heading_filled {
+    margin-bottom: 20px;
+}
+
+.order-heading__title {
+    font-size: 18px;
+    font-family: 'PTSans-Regular';
+    color: #495159;
+}
+
+.package-menu {
+    justify-content: space-between;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.package-menu_theme_confirmed {
+    background-color: #e7f1fa;
+
+    .package-menu__status {
+        background-color: #cbdff4;
+    }
+}
+
+.package-menu_theme_wait {
+    background-color: #ffeee0;
+
+    .package-menu__status {
+        background-color: #fbd8bc;
+    }
+}
+
+.package-menu_theme_paid {
+    background-color: #e4fac5;
+
+    .package-menu__status {
+        background-color: #c5e794;
+    }
+}
+
+.package-menu_not-first {
+    margin-top: 15px;
+}
+
+.package-menu__order-list {
+    padding-left: 20px;
+    flex-wrap: wrap;
+
+    li {
+        line-height: 36px;
+
+        margin-right:27px;
+    }
+}
+
+.package-menu__status {
+    padding: 8px 12px 0;
+    align-self: stretch;
+    min-width: 280px;
+    max-width: 280px;
+    font-size:15px;
+}
+
+.package-menu__price {
+    font-family: 'PTSans-Bold';
+    font-size:16px;
+}
