@@ -786,9 +786,6 @@ li.item__rollMenu {
   .searchForm:hover .searchForm__field, .searchForm:hover .searchForm__btn {
     border-color: #999da0; }
 
-.searchForm__field[type="text"] {
-  position: relative; }
-
 .searchForm__btn {
   border: 1px solid #c4ccd5;
   border-left: 0;
@@ -804,11 +801,8 @@ li.item__rollMenu {
   border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 2px;
   border-bottom-right-radius: 2px; }
-  .searchForm__btn:hover {
-    border-color: #0097ad !important;
-    background: #0097ad; }
-    .searchForm__btn:hover:before {
-      background-position: -210px -16px; }
+  .searchForm__btn.search__btn--active:before {
+    background-position: -210px -16px; }
   .searchForm__btn:before {
     content: "";
     background: url(../img/mx.png) -210px 0 no-repeat;

@@ -872,9 +872,6 @@ li.item__rollMenu {
     }
 }
 
-.searchForm__field[type="text"] {
-    position: relative;
-}
 
 .searchForm__btn {
     border: 1px solid #c4ccd5;
@@ -892,9 +889,7 @@ li.item__rollMenu {
     -webkit-border-bottom-right-radius: 2px;
     border-bottom-right-radius: 2px;
 
-    &:hover {
-        border-color: #0097ad !important;
-        background: #0097ad;
+    &.search__btn--active {
 
         &:before {
             background-position: -210px -16px;

@@ -226,20 +226,43 @@ $(function () {
     /* END SET MASK FOR INPUTS */
     /********************************************************/
 
-    /* CHANGE SEARCH BUTTON*/
+    /* CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
-    var searchField = document.querySelector('.search__group .search__field'),
-        searchBtn = document.querySelector('.search__group .search__btn')
-    searchField.addEventListener('input', function () {
-        if (this.value.length != 0) {
-            searchBtn.classList.add('search__btn--active');
+    //var searchField = document.querySelector('.search__group .search__field'),
+    //    searchBtn = document.querySelector('.search__group .search__btn')
+    //searchField.addEventListener('input', function () {
+    //    if (this.value.length != 0) {
+    //        searchBtn.classList.add('search__btn--active');
 
-        }
-        else {
-            searchBtn.classList.remove('search__btn--active');
-        }
-    });
-    /* END CHANGE SEARCH BUTTON*/
+    //    }
+    //    else {
+    //        searchBtn.classList.remove('search__btn--active');
+    //    }
+    //});
+
+    var searchField = document.querySelectorAll('.search__group .search__field, .searchForm__field'),
+        searchBtn = document.querySelectorAll('#search__button');
+    [].forEach.call(searchField, function (elem) {
+        elem.addEventListener('input', function () {
+            if (this.value.length != 0) {
+                this.nextElementSibling.classList.add('search__btn--active');
+
+            }
+            else {
+                this.nextElementSibling.classList.remove('search__btn--active');
+            }
+        });
+    })
+    //searchField.addEventListener('input', function () {
+    //    if (this.value.length != 0) {
+    //        searchBtn.classList.add('search__btn--active');
+
+    //    }
+    //    else {
+    //        searchBtn.classList.remove('search__btn--active');
+    //    }
+    //});
+    /* END CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
 
 });
