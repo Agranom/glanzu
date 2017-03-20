@@ -53,7 +53,7 @@
     font-size: 20px;
     color: #485059; }
   .order .other__events .order__view__discount {
-    margin-bottom: 24px; }
+    margin-bottom: 19px; }
   .order .other__events .other__events__discount-value {
     font-size: 23px;
     color: #e44c82; }
@@ -66,7 +66,7 @@
     margin: 17px 0 3px; }
   .order .other__events .place h5 {
     color: #485059;
-    margin: 0 0 8px;
+    margin: 0 0 14px;
     font-size: 18px; }
   .order .other__events .other__events__link {
     color: #007fbb; }
@@ -78,7 +78,7 @@
       padding: 0; }
   .order .other__events-menu {
     border-top: 1px solid #dedede;
-    padding-top: 26px; }
+    padding-top: 28px; }
   .order .recommendation__info {
     width: 100%;
     background-color: #f4f6f8;
@@ -391,7 +391,7 @@
   margin-left: -667.5px; }
   .footer .copyright {
     float: left;
-    color: #fff;
+    color: #dbdee3;
     margin: 0;
     line-height: 43px; }
   .footer .bottom__menu {
@@ -404,8 +404,8 @@
     padding: 0 90px 0 20px;
     position: relative; }
   .footer .info {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     -webkit-border-radius: 50%;
             border-radius: 50%;
     background-color: #f4f6f8;
@@ -413,7 +413,7 @@
     display: inline-block;
     position: absolute;
     right: 23px;
-    bottom: 6px;
+    bottom: 2px;
     font: normal 28.8px 'GothamProNarrow-Bold';
     text-align: center;
     line-height: 37px;
@@ -428,7 +428,7 @@
     height: 43px;
     background-color: #727981;
     border: 0;
-    color: #fff;
+    color: #f4f6f8;
     -webkit-border-radius: 0;
             border-radius: 0;
     font-size: 16px; }
@@ -444,27 +444,29 @@
     border: 0;
     position: absolute;
     right: 0;
-    width: 37px;
+    width: 51px;
     height: 43px;
     top: 50%;
     margin-top: -21.5px;
-    background-image: url("../img/search_icon.png");
+    background-image: url("../img/svgicons/1490019946_common-search-lookup-glyph.svg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center right 16px;
     background-color: transparent;
     cursor: pointer; }
   .search__group .search__btn--active {
     background-color: #0097ad; }
+    .search__group .search__btn--active:hover {
+      background-color: #008da1; }
   .search__group #tipue_drop_content {
     bottom: 48px;
     top: auto; }
 
 .bottom__menu li {
-  display: inline-block;
-  margin-left: -0.25em; }
+  display: inline-block; }
 
 .bottom__menu .cart__btn {
-  background-color: #f8679a; }
+  background-color: #f8679a;
+  color: #fff; }
   .bottom__menu .cart__btn:hover {
     background-color: #cc5b8a; }
 
@@ -472,13 +474,13 @@
   display: block;
   border: 0;
   background-color: transparent;
-  color: #fff;
+  color: #f4f6f8;
   padding: 0 30px;
   font-size: 16px;
   height: 43px;
   font-family: 'PTSans-Regular'; }
   .bottom__menu__btn .icon {
-    margin-right: 5px;
+    margin-right: 6px;
     vertical-align: middle;
     position: relative;
     bottom: 1px; }
@@ -499,7 +501,7 @@
   color: #485059;
   font-family: 'PTSans-Bold';
   line-height: 24px;
-  margin: 0 3px; }
+  margin: 0 2px; }
 
 #datepicker-2 {
   -webkit-border-radius: 2px;

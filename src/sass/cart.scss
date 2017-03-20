@@ -74,7 +74,7 @@
         }
 
         .order__view__discount {
-            margin-bottom: 24px;
+            margin-bottom: 19px;
         }
 
         .other__events__discount-value {
@@ -99,7 +99,7 @@
 
             h5 {
                 color: $text-color;
-                margin: 0 0 8px;
+                margin: 0 0 14px;
                 font-size: 18px;
             }
         }
@@ -123,7 +123,7 @@
 
     .other__events-menu {
         border-top: 1px solid #dedede;
-        padding-top: 26px;
+        padding-top: 28px;
     }
 
     .recommendation__info {
@@ -567,7 +567,7 @@
 
     .copyright {
         float: left;
-        color: #fff;
+        color: #dbdee3;
         margin: 0;
         line-height: 43px;
     }
@@ -583,15 +583,15 @@
     }
 
     .info {
-        width: 44px;
-        height: 44px;
+        width: 46px;
+        height: 46px;
         @include border-radius(50%);
         background-color: #f4f6f8;
         border: 3px solid #5a6169;
         display: inline-block;
         position: absolute;
         right: 23px;
-        bottom: 6px;
+        bottom: 2px;
         font: normal 28.8px 'GothamProNarrow-Bold';
         text-align: center;
         line-height: 37px;
@@ -611,7 +611,7 @@
         height: 43px;
         background-color: #727981;
         border: 0;
-        color: #fff;
+        color: #f4f6f8;
         @include border-radius(0);
         font-size: 16px;
 
@@ -636,18 +636,21 @@
         border: 0;
         position: absolute;
         right: 0;
-        width: 37px;
+        width: 51px;
         height: 43px;
         top: 50%;
         margin-top: -21.5px;
-        background-image: url('../img/search_icon.png');
+        background-image: url('../img/svgicons/1490019946_common-search-lookup-glyph.svg');
         background-repeat:no-repeat;
-        background-position:center center;
+        background-position: center right 16px;
         background-color:transparent;
         cursor:pointer;
     }
     .search__btn--active {
         background-color:#0097ad;
+        &:hover {
+            background-color:#008da1;
+        }
     }
 
     #tipue_drop_content {
@@ -659,11 +662,11 @@
 .bottom__menu {
     li {
         display: inline-block;
-        margin-left: -0.25em;
     }
 
     .cart__btn {
         background-color: $cart-color;
+        color:#fff;
 
         &:hover {
             background-color: $cart-color-hover;
@@ -674,14 +677,14 @@
         display: block;
         border: 0;
         background-color: transparent;
-        color: #fff;
+        color: #f4f6f8;
         padding: 0 30px;
         font-size: 16px;
         height: 43px;
         font-family: 'PTSans-Regular';
 
         .icon {
-            margin-right: 5px;
+            margin-right: 6px;
             vertical-align: middle;
             position: relative;
             bottom: 1px;
@@ -708,7 +711,7 @@
         color: $text-color;
         font-family: 'PTSans-Bold';
         line-height: 24px;
-        margin: 0 3px;
+        margin: 0 2px;
     }
 }
 
