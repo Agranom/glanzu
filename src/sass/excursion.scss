@@ -1,6 +1,7 @@
 ﻿@import "_variables.scss";
 
 .required {
+    position:relative;
     &:before {
         content: '*';
         font-size: 40px;

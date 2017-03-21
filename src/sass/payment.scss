@@ -16,14 +16,15 @@
 .subtitle-default {
     color: $subtitle-color;
 }
-
+.payment {
+    padding: 95px 0 50px;
+}
 .main-content {
-    padding: 115px 0 50px;
     background-color: #fff;
 }
 
 .title-menu {
-    width: 890px;
+    width: 899px;
     margin: 0 auto;
     justify-content: space-between;
     align-items: baseline;
@@ -34,7 +35,7 @@
 }
 
 .title-menu__title_theme_payment {
-    margin-right: 20px;
+    margin-right: 13px;
 }
 
 .order-menu {
@@ -54,7 +55,7 @@
 }
 
 .order-heading_filled {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 
 .order-heading__title {
@@ -103,20 +104,230 @@
 
     li {
         line-height: 36px;
-
-        margin-right:27px;
+        margin-right: 27px;
     }
 }
-
+.package-menu__order-list_time {
+    li {
+        &:first-child {
+            margin-right:15px;
+        }
+    }
+}
 .package-menu__status {
     padding: 8px 12px 0;
     align-self: stretch;
     min-width: 280px;
     max-width: 280px;
-    font-size:15px;
+    font-size: 15px;
 }
 
 .package-menu__price {
     font-family: 'PTSans-Bold';
-    font-size:16px;
+    font-size: 16px;
+}
+
+.client-data {
+    padding: 50px 80px 50px 115px;
+    border-top: 1px solid rgb(224, 229, 234);
+    border-bottom: 1px solid rgb(224, 229, 234);
+
+    h4, p {
+        margin: 0;
+    }
+}
+
+.payment__client-data {
+    margin: 50px 0;
+}
+
+.client-data__title {
+    font-size: 18px;
+    color: $text-color;
+    font-family: 'PTSans-Bold';
+    line-height: 13px;
+}
+
+.client-data__subtitle {
+    line-height: normal;
+}
+
+.client-form {
+    display: flex;
+
+    textarea {
+        resize: none;
+    }
+}
+
+.payment__client-form {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.client-form__col {
+    &:nth-child(odd) {
+        margin-right: 55px;
+    }
+}
+
+.client-form__col_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.client-form__control {
+    width: 290px;
+    display: flex;
+
+    &:not(:first-child) {
+        margin-top: 15px;
+    }
+}
+
+.client-form__field_size_lg {
+    height: 55px;
+}
+
+.pseudo__link_default {
+    line-height: 17px;
+    display: inline-block;
+    border-bottom: 1px dashed $text-color;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 0;
+    }
+}
+
+.bill-form {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        margin: 0;
+    }
+}
+
+.bill-form__menu {
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.bill-form__menu_size_lg {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .bill-form__control {
+        padding-left: 20px;
+    }
+}
+
+.bill-form__menu_size_m {
+    width: 290px;
+}
+
+.bill-form__price {
+    font-size: 18px;
+    font-family: 'PTSans-Bold';
+}
+
+.bill-form_paid {
+    color: #678c32;
+}
+
+.bill-form_due {
+    color: #da4e80;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bill-form__label {
+    font-size: 15px;
+}
+
+.bill-form__btn {
+    width: 100%;
+}
+
+.bill-form__text {
+    font-size: 17px;
+}
+
+.form-control_type_radio {
+    input[type=radio] {
+        display: none;
+
+        &:checked {
+            + label {
+                &:before {
+                    content: "\2022";
+                    color: #33363a;
+                    font-size: 24px;
+                    text-align: center;
+                    line-height: 13px;
+                }
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 7px;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            background-color: #fff;
+            border: 1px solid #a0a4a9;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.form-control_type_checkbox {
+    input[type=checkbox] {
+        display: none;
+
+        &:checked {
+            + label {
+                &:before {
+                    background: url(../img/checkbox-small-checked-bg.png) no-repeat;
+                }
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            background: url(../img/checkbox-small-bg.png) no-repeat;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            left: 0;
+            top: 0px;
+        }
+    }
 }

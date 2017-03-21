@@ -124,14 +124,15 @@
                 <ul class="title-menu flex-menu">
                     <li>
                         <h1 class="title-menu__title title-menu__title_theme_payment">
-                            Оформление и оплата турпакета №1351
+                            Оформление и оплата турпакета
                         </h1>
                         <a href="#" class="title-menu__link default-link">К настройкам турпакета</a>
                     </li>
 
                     <li>
                         <p class="title-menu__subtitle subtitle-default">
-                            Сохранено в 10:46
+                            <a href="#" class="pseudo__link">Авторизуйтесь</a>
+                            для сохранения
                         </p>
                     </li>
                 </ul>
@@ -146,9 +147,9 @@
                             </ul>
                             <ul class="package-menu flex-menu package-menu_theme_confirmed">
                                 <li>
-                                    <ul class="package-menu__order-list flex-menu">
+                                    <ul class="package-menu__order-list package-menu__order-list_time flex-menu">
                                         <li>
-                                            10 : 00
+                                            10:00
                                         </li>
                                         <li>
                                             Трансфер <a href="#" class="default-link">Бангкок - Ко Чанг</a>
@@ -163,9 +164,9 @@
                             </ul>
                             <ul class="package-menu flex-menu package-menu_theme_wait package-menu_not-first">
                                 <li>
-                                    <ul class="package-menu__order-list flex-menu">
+                                    <ul class="package-menu__order-list flex-menu package-menu__order-list_time">
                                         <li>
-                                            11 : 00
+                                            11:00
                                         </li>
                                         <li>
                                             Въезд в отель <a href="#" class="default-link">Sichang Shine Khao Resort</a>
@@ -212,9 +213,9 @@
                             </ul>
                             <ul class="package-menu flex-menu package-menu_theme_paid">
                                 <li>
-                                    <ul class="package-menu__order-list flex-menu">
+                                    <ul class="package-menu__order-list flex-menu package-menu__order-list_time">
                                         <li>
-                                            10 : 30
+                                            10:30
                                         </li>
                                         <li>
                                             Экскурсия <a href="#" class="default-link">
@@ -275,9 +276,9 @@
                             </ul>
                             <ul class="package-menu flex-menu package-menu_theme_confirmed">
                                 <li>
-                                    <ul class="package-menu__order-list flex-menu">
+                                    <ul class="package-menu__order-list flex-menu package-menu__order-list_time">
                                         <li>
-                                            12 : 00
+                                            12:00
                                         </li>
                                         <li>
                                             Выезд из отеля <a href="#" class="default-link">
@@ -289,6 +290,102 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="client-data payment__client-data">
+                        <h4 class="client-data__title">Имена и фамилии всех туристов</h4>
+                        <p class="client-data__subtitle subtitle-default">(латынью из загран. паспорта - IVAN IVANOV)</p>
+                        <form action="/" method="post" class="client-form payment__client-form">
+                            <div class="client-form__col">
+                                <div class="required client-form__control">
+                                    <input class="client-form__field" type="text" placeholder="Первый турист (заказчик турпакета)" />
+                                </div>
+                                <div class="required client-form__control">
+                                    <input class="client-form__field" type="text" placeholder="Второй турист" />
+                                </div>
+                                <div class="required client-form__control">
+                                    <input class="client-form__field" type="text" placeholder="Третий турист (ребенок)" />
+                                </div>
+                                <div class="required client-form__control">
+                                    <input id="datepicker-2" class="client-form__field calendar__field" type="text" placeholder="День рождения ребёнка" />
+                                </div>
+                                
+                            </div>
+                            <div class="client-form__col client-form__col_flex">
+                                <div class="required client-form__control">
+                                    <select class="client-form__field nosearchFull-select" style="width:100%">
+                                        <option>Способ оплаты</option>
+                                        <option>Visa</option>
+                                        <option>Mastercard</option>
+                                    </select>
+                                </div>
+                                <div class="client-form__control">
+                                    <textarea class="client-form__field client-form__field_size_lg" 
+                                              placeholder="Контакты для срочной связи  (мобильные телефоны, скайп и т.д.)"></textarea>
+                                </div>
+                                <div class="client-form__control">
+                                    <textarea class="client-form__field client-form__field_size_lg"
+                                              placeholder="Примечания"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payment-bill">
+                        <form class="bill-form">
+                            <ul class="bill-form__menu bill-form__menu_size_lg">
+                                <li>
+                                    <p class="bill-form__text">
+                                        Итого <span class="bill-form__price">$229</span>,
+                                        оплачено <span class="bill-form_paid bill-form__price">$130</span>,
+                                        к оплате <span class="bill-form_due bill-form__price">$99</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="bill-form__control form-control_type_radio">
+                                        <input type="radio" value="full-paid" name="payment-type" id="full-paid" />
+                                        <label for="full-paid" class="bill-form__label">
+                                            Полная оплата подтвержденных услуг <span class="bill-form__price_size_lg">$54</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bill-form__control form-control_type_radio">
+                                        <input type="radio" value="part-paid" name="payment-type" id="part-paid" />
+                                        <label for="part-paid" class="bill-form__label">
+                                            <span class="pseudo__link_default">Предоплата</span> подтвержденных услуг
+                                            <span class="bill-form__price_size_lg">$5,4</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bill-form__control">
+                                        <button class="bnt bnt--repl bill-form__btn">Сообщить, когда все подтвердят</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="bill-form__menu bill-form__menu_size_m">
+                                <li>
+                                    <div class="bill-form__control">
+                                        <button class="bnt bnt--repl bill-form__btn">Пересчитать (вдруг что изменилось)</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bill-form__control form-control_type_checkbox">
+                                        <input type="checkbox" value="agreed" name="isAgreed" id="isAgreed" />
+                                        <label for="isAgreed" class="bill-form__label">
+                                            Согласен с <span class="pseudo__link_default">условиями отмены и брони</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bill-form__control">
+                                        <button class="bnt bill-form__btn" type="submit" disabled>Оплатить подтвержденное</button>
+                                    </div>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="default-link">Статусы, документы и инструкции по  оплаченным услугам в личном</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>

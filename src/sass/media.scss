@@ -83,6 +83,17 @@
 }
 
 @media only screen and (max-width: 1299px) {
+    .header, .footer {
+        position: static;
+    }
+    .footer {
+        .info {
+            line-height:47px;
+        }
+    }
+    .main {
+        margin: 0;
+    }
     /*---HOTELS END EXCURCIONS---*/
     .catalog__item {
         padding-left: 25px;
@@ -171,11 +182,11 @@
 }
 
 @media screen and (max-device-width: 1024px) {
-    .header {
+    /*.header {
         position: static;
     }
 
     .main {
         margin: 0;
-    }
+    }*/
 }
