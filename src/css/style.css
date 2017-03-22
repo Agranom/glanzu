@@ -197,7 +197,7 @@ textarea:hover {
 
 body {
   background: #e1c298 url(../img/body-bg.png);
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   font-family: 'PTSans-Regular', sans-serif;
   font-size: 16px;
   color: #485059;

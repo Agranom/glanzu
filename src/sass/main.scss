@@ -55,7 +55,9 @@ body {
     z-index: 1000;
     margin-left: -667.5px;
 }
-
+.header_fixed {
+    display:none;
+}
 .header__col1 {
     background: url(../img/header__col1-bg.png) no-repeat;
     float: left;

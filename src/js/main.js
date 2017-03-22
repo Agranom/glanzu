@@ -255,6 +255,9 @@ $(function () {
     })
     /* END CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
+
+    /* APPLY POINTER EVENTS */
+    /********************************************************/
     var body = document.body,
     timer;
 
@@ -268,6 +271,15 @@ $(function () {
             body.classList.remove('disable-hover')
         }, 500);
     }, false);
+    /* END APPLY POINTER EVENTS */
+    /********************************************************/
+    /* MAKE FIXED HEADER FOR MOBILES */
+    /********************************************************/
+    if (!device.desktop()) {
+        fixHeader();
+    }
+    /* END MAKE FIXED HEADER FOR MOBILES */
+    /********************************************************
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -542,4 +554,19 @@ function initTooltip() {
         animationDuration: 0,
         delayTouch: [0, 400]
     });
+}
+//Fixed header for mobile
+function fixHeader() {
+    var header = $('.header'),
+    timer;
+    $(window).scroll(function () {
+        clearInterval(tt);
+        if (!header.hasClass('header_fixed')) {
+            header.addClass('header_fixed');
+        }
+        timer = setTimeout(function () {
+            header.removeClass('header_fixed');
+            header.css('top', $(window).scrollTop() + 'px');
+        }, 50);
+    })
 }
