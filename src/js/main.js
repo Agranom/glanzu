@@ -255,7 +255,19 @@ $(function () {
     })
     /* END CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
+    var body = document.body,
+    timer;
 
+    window.addEventListener('scroll', function () {
+        clearTimeout(timer);
+        if (!body.classList.contains('disable-hover')) {
+            body.classList.add('disable-hover')
+        }
+
+        timer = setTimeout(function () {
+            body.classList.remove('disable-hover')
+        }, 500);
+    }, false);
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -520,6 +532,14 @@ function initTooltip() {
         animationDuration: 0,
         distance: 43,
         contentCloning: true,
+        delayTouch: [0, 400]
+    });
+    $('.tooltip-vertical').tooltipster({
+        trigger: !device.desktop() ? "click" : "hover",
+        contentAsHTML: true,
+        delay: 0,
+        minWidth: 360,
+        animationDuration: 0,
         delayTouch: [0, 400]
     });
 }

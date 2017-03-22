@@ -128,7 +128,7 @@
 }
 
 .client-data {
-    padding: 50px 80px 50px 115px;
+    padding: 50px 80px 52px 96px;
     border-top: 1px solid rgb(224, 229, 234);
     border-bottom: 1px solid rgb(224, 229, 234);
 
@@ -142,7 +142,7 @@
 }
 
 .client-data__title {
-    font-size: 18px;
+    font-size: 17px;
     color: $text-color;
     font-family: 'PTSans-Bold';
     line-height: 13px;
@@ -150,6 +150,7 @@
 
 .client-data__subtitle {
     line-height: normal;
+    font-size:15px;
 }
 
 .client-form {
@@ -162,12 +163,12 @@
 
 .payment__client-form {
     padding-left: 20px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .client-form__col {
     &:nth-child(odd) {
-        margin-right: 55px;
+        margin-right: 61px;
     }
 }
 
@@ -214,7 +215,7 @@
 
     li {
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
     }
 }
@@ -235,8 +236,11 @@
 }
 
 .bill-form__price {
-    font-size: 18px;
+    font-size: 21px;
     font-family: 'PTSans-Bold';
+}
+.bill-form__price_size_lg {
+    font-size:24px;
 }
 
 .bill-form_paid {
@@ -330,4 +334,17 @@
             top: 0px;
         }
     }
+}
+
+#tooltip__view {
+    p {
+        margin:0;
+        &:not(:first-child) {
+            margin-top:15px;
+        }
+    }
+}
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
 }

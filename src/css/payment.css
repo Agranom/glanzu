@@ -111,7 +111,7 @@
   font-size: 16px; }
 
 .client-data {
-  padding: 50px 80px 50px 115px;
+  padding: 50px 80px 52px 96px;
   border-top: 1px solid #e0e5ea;
   border-bottom: 1px solid #e0e5ea; }
   .client-data h4, .client-data p {
@@ -121,13 +121,14 @@
   margin: 50px 0; }
 
 .client-data__title {
-  font-size: 18px;
+  font-size: 17px;
   color: #485059;
   font-family: 'PTSans-Bold';
   line-height: 13px; }
 
 .client-data__subtitle {
-  line-height: normal; }
+  line-height: normal;
+  font-size: 15px; }
 
 .client-form {
   display: -webkit-box;
@@ -139,10 +140,10 @@
 
 .payment__client-form {
   padding-left: 20px;
-  margin-top: 20px; }
+  margin-top: 24px; }
 
 .client-form__col:nth-child(odd) {
-  margin-right: 55px; }
+  margin-right: 61px; }
 
 .client-form__col_flex {
   display: -webkit-box;
@@ -192,7 +193,7 @@
     margin: 0; }
 
 .bill-form__menu li:not(:last-child) {
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 
 .bill-form__menu_size_lg {
   width: 350px;
@@ -216,8 +217,11 @@
   width: 290px; }
 
 .bill-form__price {
-  font-size: 18px;
+  font-size: 21px;
   font-family: 'PTSans-Bold'; }
+
+.bill-form__price_size_lg {
+  font-size: 24px; }
 
 .bill-form_paid {
   color: #678c32; }
@@ -281,3 +285,12 @@
     position: absolute;
     left: 0;
     top: 0px; }
+
+#tooltip__view p {
+  margin: 0; }
+  #tooltip__view p:not(:first-child) {
+    margin-top: 15px; }
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important; }

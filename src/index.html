@@ -342,7 +342,8 @@
                                     <div class="bill-form__control form-control_type_radio">
                                         <input type="radio" value="full-paid" name="payment-type" id="full-paid" />
                                         <label for="full-paid" class="bill-form__label">
-                                            Полная оплата подтвержденных услуг <span class="bill-form__price_size_lg">$54</span>
+                                            Полная оплата подтвержденных услуг
+                                            <span class="bill-form__price bill-form__price_size_lg">$54</span>
                                         </label>
                                     </div>
                                 </li>
@@ -350,9 +351,29 @@
                                     <div class="bill-form__control form-control_type_radio">
                                         <input type="radio" value="part-paid" name="payment-type" id="part-paid" />
                                         <label for="part-paid" class="bill-form__label">
-                                            <span class="pseudo__link_default">Предоплата</span> подтвержденных услуг
-                                            <span class="bill-form__price_size_lg">$5,4</span>
+                                            <span class="pseudo__link_default tooltip-vertical"
+                                                  data-tooltip-content="#tooltip__view">Предоплата</span> подтвержденных услуг
+                                            <span class="bill-form__price bill-form__price_size_lg">$5,4</span>
                                         </label>
+                                        <div class="tooltip_templates">
+                                            <div id="tooltip__view">
+                                                <p>
+                                                    Окончательный расчет до 15.05.17 (по курсу на день оплаты), 
+                                                    мы Вам напомним
+                                                </p>
+                                                <p>
+                                                    Отель <a href="#" class="default-link">Sichang Shine Khao Resort</a> - только 100%,
+                                                    остальные услуги - 10%
+                                                </p>
+                                                <p>
+                                                    Glanzu оставляет за собой право оставить себе предоплату в случае
+                                                    отмены заказа или его важной части
+                                                </p>
+                                                <p>
+                                                    В случае участия в получении скидки по акции может потребоваться полная оплата
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>

@@ -49,7 +49,7 @@
     font-size: 14px; } }
 
 @media only screen and (max-width: 1299px) {
-  .header, .footer {
+  .header {
     position: static; }
   .footer .info {
     line-height: 47px; }
