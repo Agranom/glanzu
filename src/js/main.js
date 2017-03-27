@@ -185,6 +185,16 @@ $(function () {
     }
 
     $(window).on('load resize', windowSize);
+    //fixTopBottom();
+    //function fixTopBottom() {
+    //    var parentEl = $('.wrapper'),
+    //        childrenEl = $('.fixed, .footer');
+    //    //footer = $('.footer');
+    //    $(window).on('load resize', function () {
+
+    //        childrenEl.css('width', parentEl.width() + 'px');
+    //    });
+    //}
 
     /* END SCROLL TOP */
     /********************************************************/
@@ -240,7 +250,7 @@ $(function () {
     //    }
     //});
 
-    var searchField = document.querySelectorAll('.search__group .search__field, .searchForm__field'),
+    var searchField = document.querySelectorAll('.search__group .search__field'),
         searchBtn = document.querySelectorAll('#search__button');
     [].forEach.call(searchField, function (elem) {
         elem.addEventListener('input', function () {
@@ -273,13 +283,6 @@ $(function () {
     }, false);
     /* END APPLY POINTER EVENTS */
     /********************************************************/
-    /* MAKE FIXED HEADER FOR MOBILES */
-    /********************************************************/
-    if (!device.desktop()) {
-        fixHeader();
-    }
-    /* END MAKE FIXED HEADER FOR MOBILES */
-    /********************************************************
 });
 /* DRAG AND DROP */
 /********************************************************/
@@ -555,18 +558,4 @@ function initTooltip() {
         delayTouch: [0, 400]
     });
 }
-//Fixed header for mobile
-function fixHeader() {
-    var header = $('.header'),
-    timer;
-    $(window).scroll(function () {
-        clearInterval(tt);
-        if (!header.hasClass('header_fixed')) {
-            header.addClass('header_fixed');
-        }
-        timer = setTimeout(function () {
-            header.removeClass('header_fixed');
-            header.css('top', $(window).scrollTop() + 'px');
-        }, 50);
-    })
-}
+

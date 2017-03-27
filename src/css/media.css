@@ -50,7 +50,7 @@
 
 @media only screen and (max-width: 1299px) {
   .header {
-    position: absolute; }
+    position: static; }
   .footer .info {
     line-height: 47px; }
   .main {
