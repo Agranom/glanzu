@@ -55,6 +55,8 @@ body {
     top: 0;
     z-index: 1000;
     margin-left: -667.5px;
+    box-shadow:-14px -9px 39px 5px rgba(0,0,0,0.3), 
+                14px -9px 39px 5px rgba(0,0,0,0.3);
 }
 
 .header__col1 {
@@ -858,6 +860,9 @@ li.item__rollMenu {
     &:hover {
         background-image: url(../img/svgicons/star.svg);
     }
+}
+.star-active {
+    background-image: url(../img/svgicons/star.svg);
 }
 
 .searchForm {

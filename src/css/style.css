@@ -197,7 +197,7 @@ textarea:hover {
 
 body {
   background: #e1c298 url(../img/body-bg.png);
-  /*background-attachment: fixed;*/
+  background-attachment: fixed;
   font-family: 'PTSans-Regular', sans-serif;
   font-size: 16px;
   color: #485059;
@@ -228,9 +228,6 @@ body {
   top: 0;
   z-index: 1000;
   margin-left: -667.5px; }
-
-.fixed {
-  display: none; }
 
 .header__col1 {
   background: url(../img/header__col1-bg.png) no-repeat;
@@ -854,7 +851,8 @@ li.item__rollMenu {
   -webkit-border-top-right-radius: 2px;
   border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  border-bottom-right-radius: 2px;
+  cursor: default; }
   .searchForm__btn.search__btn--active:before {
     background-position: -210px -16px; }
   .searchForm__btn:before {

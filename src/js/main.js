@@ -262,26 +262,21 @@ $(function () {
                 this.nextElementSibling.classList.remove('search__btn--active');
             }
         });
-    })
+    });
     /* END CHANGE FOOTER SEARCH BUTTON*/
     /********************************************************/
 
     /* APPLY POINTER EVENTS */
     /********************************************************/
-    var body = document.body,
-    timer;
+    hideHover();
 
-    window.addEventListener('scroll', function () {
-        clearTimeout(timer);
-        if (!body.classList.contains('disable-hover')) {
-            body.classList.add('disable-hover')
-        }
-
-        timer = setTimeout(function () {
-            body.classList.remove('disable-hover')
-        }, 500);
-    }, false);
     /* END APPLY POINTER EVENTS */
+    /********************************************************/
+
+    /* SET PREVIOUS STARS ACTIVE */
+    /********************************************************/
+    setStarActive();
+    /* END SET PREVIOUS STARS ACTIVE */
     /********************************************************/
 });
 /* DRAG AND DROP */
@@ -558,4 +553,28 @@ function initTooltip() {
         delayTouch: [0, 400]
     });
 }
+//Set pointer events
+function hideHover() {
+    var body = document.body,
+    timer;
 
+    window.addEventListener('scroll', function () {
+        clearTimeout(timer);
+        if (!body.classList.contains('disable-hover')) {
+            body.classList.add('disable-hover')
+        }
+
+        timer = setTimeout(function () {
+            body.classList.remove('disable-hover')
+        }, 500);
+    }, false);
+}
+//Previous stars active
+function setStarActive() {
+    $('.rating__item').on('mouseover', function () {
+        $(this).prevAll().children('.rating__link').addClass('star-active');
+    });
+    $('.rating__item').on('mouseout', function () {
+        $(this).prevAll().children('.rating__link').removeClass('star-active');
+    });
+}
