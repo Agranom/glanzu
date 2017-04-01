@@ -227,7 +227,9 @@ body {
   left: 50%;
   top: 0;
   z-index: 1000;
-  margin-left: -667.5px; }
+  margin-left: -667.5px;
+  -webkit-box-shadow: -14px -9px 39px 5px rgba(0, 0, 0, 0.3), 14px -9px 39px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -14px -9px 39px 5px rgba(0, 0, 0, 0.3), 14px -9px 39px 5px rgba(0, 0, 0, 0.3); }
 
 .header__col1 {
   background: url(../img/header__col1-bg.png) no-repeat;
@@ -828,6 +830,9 @@ li.item__rollMenu {
   background-image: url(../img/svgicons/star-default.svg); }
   .star-default:hover {
     background-image: url(../img/svgicons/star.svg); }
+
+.star-active {
+  background-image: url(../img/svgicons/star.svg); }
 
 .searchForm {
   background: #fff;

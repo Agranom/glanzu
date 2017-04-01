@@ -30,6 +30,50 @@
 .order {
   padding: 115px 0 0;
   background-color: #fff; }
+  .order .package-menu_theme_confirmed {
+    background-color: #e6ecf2; }
+  .order .package-menu_theme_wait {
+    background-color: #e6ecf2; }
+  .order .package-menu {
+    margin: 20px 0 0 17px; }
+    .order .package-menu li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .order .package-menu .other-info {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end;
+      line-height: 36px; }
+  .order .package-menu__main {
+    padding: 0 40px 0 15px;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .order .package-menu__main .icon.delete {
+      display: inline-block;
+      margin: 0;
+      top: 10px;
+      right: 14px; }
+    .order .package-menu__main .icon.drag {
+      display: inline-block;
+      margin: 0;
+      top: 10px;
+      left: 14px; }
+  .order .package-menu__order-list {
+    padding-left: 0;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .order .package-menu__order-list li {
+      line-height: 36px;
+      margin-right: 27px; }
+  .order .package-menu__order-list_time li:first-child {
+    margin-right: 15px; }
   .order .icon {
     display: inline-block;
     width: 15px;
@@ -45,6 +89,8 @@
       background-position: -17px -48px; }
       .order .icon.delete:hover {
         background-position: -17px -33px; }
+    .order .icon.pencil {
+      background-position: 0 -80px; }
   .order .other__events .other__events__discount {
     margin: 0;
     font-size: 20px;
@@ -85,7 +131,7 @@
       margin: 0 auto; }
 
 .about_title {
-  width: 890px;
+  width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -116,7 +162,7 @@
 
 .order__view {
   margin: 30px auto 0;
-  width: 844px; }
+  width: 1045px; }
 
 .order__info {
   padding: 19px 0 25px;
@@ -135,6 +181,9 @@
     right: 0;
     top: 50%;
     margin-top: -7.5px; }
+  .order__info .icon.pencil {
+    right: -18px;
+    top: 3px; }
   .order__info .main__titles {
     margin-top: -5px; }
     .order__info .main__titles li {
@@ -163,13 +212,21 @@
 
 .package {
   padding-left: 17px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .package.even {
     margin-top: 17px; }
   .package .package__time {
     position: relative;
     float: left;
-    width: 75px;
+    width: 77px;
     text-align: center; }
     .package .package__time .time__select {
       width: 75px;
@@ -189,13 +246,21 @@
       color: #485059; }
     .package .package__time:after {
       content: '';
-      width: 25px;
+      width: 30px;
       height: 1px;
       display: inline-block;
       background-color: #c4ccd5;
       position: absolute;
       top: 50%;
-      right: -25px; }
+      right: -30px; }
+  .package .package-menu {
+    width: 100%;
+    margin: 0 0 0 30px;
+    -webkit-box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
+            box-shadow: 1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24); }
+  .package .package-menu__main {
+    padding: 0 40px;
+    cursor: pointer; }
   .package .select2-container .select2-selection--single {
     margin: 0 !important; }
   .package .package__description {
@@ -245,20 +310,6 @@
     float: right; }
     .package .main__info .other__info .price {
       display: inline-block; }
-  .package .main__info .other__info__inner {
-    width: 115px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
 
 .drag__start .package__description {
   -webkit-box-shadow: 0.105px 1.997px 4.8px 1.2px rgba(0, 0, 0, 0.17);

@@ -37,6 +37,66 @@
 }
 
 .order {
+    .package-menu_theme_confirmed {
+        background-color: #e6ecf2;
+    }
+    .package-menu_theme_wait {
+        background-color: #e6ecf2;
+    }
+    .package-menu {
+        margin: 20px 0 0 17px;
+
+        li {
+            display: flex;
+        }
+
+        .other-info {
+            align-self: flex-end;
+            line-height: 36px;
+        }
+    }
+
+    .package-menu__main {
+        padding: 0 40px 0 15px;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+
+        .icon {
+            &.delete {
+                display: inline-block;
+                margin: 0;
+                top: 10px;
+                right: 14px;
+            }
+            &.drag {
+                display: inline-block;
+                margin: 0;
+                top: 10px;
+                left: 14px;
+            }
+        }
+    }
+
+    .package-menu__order-list {
+        padding-left: 0;
+        flex-wrap: wrap;
+
+        li {
+            line-height: 36px;
+            margin-right: 27px;
+        }
+    }
+
+    .package-menu__order-list_time {
+        li {
+            &:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
+
+
     padding: 115px 0 0;
     background-color: #fff;
 
@@ -60,6 +120,10 @@
             &:hover {
                 background-position: -17px -33px;
             }
+        }
+
+        &.pencil {
+            background-position: 0 -80px;
         }
     }
 
@@ -137,7 +201,7 @@
 }
 
 .about_title {
-    width: 890px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -170,7 +234,7 @@
 
 .order__view {
     margin: 30px auto 0;
-    width: 844px;
+    width: 1045px;
 }
 
 
@@ -199,6 +263,11 @@
             right: 0;
             top: 50%;
             margin-top: -7.5px;
+        }
+
+        &.pencil {
+            right: -18px;
+            top: 3px;
         }
     }
 
@@ -247,6 +316,8 @@
 .package {
     padding-left: 17px;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
 
     &.even {
         margin-top: 17px;
@@ -255,7 +326,7 @@
     .package__time {
         position: relative;
         float: left;
-        width: 75px;
+        width: 77px;
         text-align: center;
 
         .time__select {
@@ -279,16 +350,25 @@
 
         &:after {
             content: '';
-            width: 25px;
+            width: 30px;
             height: 1px;
             display: inline-block;
             background-color: #c4ccd5;
             position: absolute;
             top: 50%;
-            right: -25px;
+            right: -30px;
         }
     }
 
+    .package-menu {
+        width: 100%;
+        margin: 0 0 0 30px;
+        box-shadow:1.414px 1.414px 0px 0px rgba(57, 60, 64, 0.24);
+    }
+    .package-menu__main {
+        padding: 0 40px;
+        cursor:pointer;
+    }
     .select2-container {
         .select2-selection--single {
             margin: 0 !important;
@@ -375,13 +455,6 @@
             .price {
                 display: inline-block;
             }
-        }
-
-        .other__info__inner {
-            width: 115px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
     }
 }
