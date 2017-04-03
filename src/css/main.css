@@ -157,8 +157,6 @@ body {
   width: 1335px;
   margin: 0 auto;
   background: #f4f6f8;
-  -webkit-box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.35);
   position: relative; }
 
 .inner:before {
@@ -177,9 +175,7 @@ body {
   left: 50%;
   top: 0;
   z-index: 1000;
-  margin-left: -667.5px;
-  -webkit-box-shadow: -14px -9px 39px 5px rgba(0, 0, 0, 0.3), 14px -9px 39px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: -14px -9px 39px 5px rgba(0, 0, 0, 0.3), 14px -9px 39px 5px rgba(0, 0, 0, 0.3); }
+  margin-left: -667.5px; }
 
 .header__col1 {
   background: url(../img/header__col1-bg.png) no-repeat;

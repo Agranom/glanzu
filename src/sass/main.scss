@@ -29,8 +29,6 @@ body {
     width: 1335px;
     margin: 0 auto;
     background: #f4f6f8;
-    -webkit-box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.35);
     position:relative;
 }
 
@@ -55,8 +53,6 @@ body {
     top: 0;
     z-index: 1000;
     margin-left: -667.5px;
-    box-shadow:-14px -9px 39px 5px rgba(0,0,0,0.3), 
-                14px -9px 39px 5px rgba(0,0,0,0.3);
 }
 
 .header__col1 {
