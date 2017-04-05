@@ -111,68 +111,69 @@
   font-family: 'PTSans-Bold';
   font-size: 16px; }
 
-.client-data {
-  padding: 50px 80px 52px 96px;
-  border-top: 1px solid #e0e5ea;
-  border-bottom: 1px solid #e0e5ea; }
-  .client-data h4, .client-data p {
-    margin: 0; }
+/*.client-data {
+    padding: 50px 80px 52px 96px;
+    border-top: 1px solid rgb(224, 229, 234);
+    border-bottom: 1px solid rgb(224, 229, 234);
+
+    h4, p {
+        margin: 0;
+    }
+}
 
 .payment__client-data {
-  margin: 50px 0; }
+    margin: 50px 0;
+}
 
 .client-data__title {
-  font-size: 17px;
-  color: #485059;
-  font-family: 'PTSans-Bold';
-  line-height: 13px; }
+    font-size: 17px;
+    color: $text-color;
+    font-family: 'PTSans-Bold';
+    line-height: 13px;
+}
 
 .client-data__subtitle {
-  line-height: normal;
-  font-size: 15px; }
+    line-height: normal;
+    font-size:15px;
+}
 
 .client-form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .client-form textarea {
-    resize: none; }
+    display: flex;
+
+    textarea {
+        resize: none;
+    }
+}
 
 .payment__client-form {
-  padding-left: 20px;
-  margin-top: 24px; }
+    padding-left: 20px;
+    margin-top: 24px;
+}
 
-.client-form__col:nth-child(odd) {
-  margin-right: 61px; }
+.client-form__col {
+    &:nth-child(odd) {
+        margin-right: 61px;
+    }
+}
 
 .client-form__col_flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .client-form__control {
-  width: 290px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .client-form__control:not(:first-child) {
-    margin-top: 15px; }
+    width: 290px;
+    display: flex;
+
+    &:not(:first-child) {
+        margin-top: 15px;
+    }
+}
 
 .client-form__field_size_lg {
-  height: 55px; }
-
+    height: 55px;
+}*/
 .pseudo__link_default {
   line-height: 17px;
   display: inline-block;
